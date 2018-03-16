@@ -1,0 +1,130 @@
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 15:57:37:909[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-15 15:57:37:925[::1] /web/
+ERROR CODE: 1003
+Autoload file[mytestAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('mytestAction')
+#1 E:\github\web\web\lib\business\TXFactory.php(68): spl_autoload_call('mytestAction')
+#2 E:\github\web\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('mytestAction', 'mytestAction')
+#3 E:\github\web\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('mytestAction')
+#4 E:\github\web\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\web\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 16:42:32:830[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:375[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:391[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:53:40:391[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-15 20:53:40:406[::1] /
+ERROR CODE: 1003
+Autoload file[mytestAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('mytestAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('mytestAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('mytestAction', 'mytestAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('mytestAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-15 20:54:59:537[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-15 20:54:59:553[::1] /
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-15 20:54:59:584[::1] /
+ERROR CODE: 2005
+template [mytest/index] is not Exist
+#0 E:\github\web\lib\business\TXResponse.php(120): biny\lib\TXResponse->getContent()
+#1 E:\github\web\lib\business\TXController.php(107): biny\lib\TXResponse->__toString()
+#2 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#3 E:\github\web\index.php(21): TXApp::run()
+#4 {main}

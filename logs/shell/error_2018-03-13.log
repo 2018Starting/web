@@ -1,0 +1,102 @@
+[NOTICE]2018-03-13 17:45:14:224[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:225[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:225[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:226[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:226[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:226[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:227[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:14:227[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-13 17:45:14:229[localhost] 
+ERROR CODE: 1003
+Autoload file[indexShell] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('indexShell')
+#1 E:\github\web\web\lib\business\TXFactory.php(68): spl_autoload_call('indexShell')
+#2 E:\github\web\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('indexShell', 'indexShell')
+#3 E:\github\web\web\lib\business\TXController.php(125): biny\lib\TXFactory::create('indexShell')
+#4 E:\github\web\web\lib\TXApp.php(185): biny\lib\TXController->shellStart()
+#5 E:\github\web\web\shell.php(21): TXApp::shell()
+#6 {main}
+[NOTICE]2018-03-13 17:45:34:378[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:379[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:379[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:379[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:380[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:380[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:380[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 17:45:34:381[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-13 17:45:34:383[localhost] 
+ERROR CODE: 1003
+Autoload file[indexShell] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('indexShell')
+#1 E:\github\web\web\lib\business\TXFactory.php(68): spl_autoload_call('indexShell')
+#2 E:\github\web\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('indexShell', 'indexShell')
+#3 E:\github\web\web\lib\business\TXController.php(125): biny\lib\TXFactory::create('indexShell')
+#4 E:\github\web\web\lib\TXApp.php(185): biny\lib\TXController->shellStart()
+#5 E:\github\web\web\shell.php(21): TXApp::shell()
+#6 {main}
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:372[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:382[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 20:42:43:382[localhost] 
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-13 20:42:43:382[localhost] 
+ERROR CODE: 1003
+Autoload file[indexShell] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('indexShell')
+#1 E:\github\web\web\lib\business\TXFactory.php(68): spl_autoload_call('indexShell')
+#2 E:\github\web\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('indexShell', 'indexShell')
+#3 E:\github\web\web\lib\business\TXController.php(125): biny\lib\TXFactory::create('indexShell')
+#4 E:\github\web\web\lib\TXApp.php(185): biny\lib\TXController->shellStart()
+#5 E:\github\web\web\shell.php(21): TXApp::shell()
+#6 {main}
