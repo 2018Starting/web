@@ -2,9 +2,9 @@
 return array(
     'database' => array(
         'host'     => '127.0.0.1',
-        'database' => 'Biny',
+        'database' => 'mice',
         'user'     => 'root',
-        'password' => 'root',
+        'password' => '123',
         'encode' => 'utf8',
         'port' => 3306,
         'keep-alive' => true,
