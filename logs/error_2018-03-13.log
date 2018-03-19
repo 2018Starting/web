@@ -1,0 +1,73 @@
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-13 18:41:14:695[::1] /web/
+WARNING => Array to string conversion
+#1 E:\github\web\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-13 18:41:14:695[::1] /web/
+ERROR CODE: 1003
+Autoload file[mainAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('mainAction')
+#1 E:\github\web\web\lib\business\TXFactory.php(68): spl_autoload_call('mainAction')
+#2 E:\github\web\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('mainAction', 'mainAction')
+#3 E:\github\web\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('mainAction')
+#4 E:\github\web\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\web\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-13 18:41:44:795[::1] /web/
+ERROR CODE: 2002
+Method [action_index] not exists in [app\controller\baseAction]
+#0 E:\github\web\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\baseAction), 'action_index')
+#1 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\web\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-13 18:41:46:285[::1] /web/
+ERROR CODE: 2002
+Method [action_index] not exists in [app\controller\baseAction]
+#0 E:\github\web\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\baseAction), 'action_index')
+#1 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\web\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-13 18:41:47:245[::1] /web/
+ERROR CODE: 2002
+Method [action_index] not exists in [app\controller\baseAction]
+#0 E:\github\web\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\baseAction), 'action_index')
+#1 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\web\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-13 18:41:53:565[::1] /web/
+ERROR CODE: 2002
+Method [action_index] not exists in [app\controller\baseAction]
+#0 E:\github\web\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\baseAction), 'action_index')
+#1 E:\github\web\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\web\web\index.php(21): TXApp::run()
+#5 {main}
