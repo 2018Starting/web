@@ -6,7 +6,7 @@ use TXApp;
 
 ini_set("display_errors", "on");
 
-require_once(dirname(__FILE__) . '/api_sdk/vendor/autoload.php');
+require_once(TXApp::$base_root.'/api_sdk/vendor/autoload.php');
 
 use Aliyun\Core\Config;
 use Aliyun\Core\Profile\DefaultProfile;
@@ -227,7 +227,7 @@ class regAction extends baseAction
 
         $tel = $_POST['mobile'];
 
-//查询是否注册
+//查询是否注册 verifyData('Tel', $tel)
         if (verifyData('Tel', $tel)) {
             $result['error'] = 1;
             $result['msg'] = "已经注册。";
