@@ -447,3 +447,920 @@ Autoload file[imgAction] is fails
 #7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
 #8 E:\github\web\index.php(21): TXApp::run()
 #9 {main}
+[NOTICE]2018-03-19 20:30:15:714[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:715[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:715[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:716[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:716[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:716[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:717[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:15:717[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-19 20:30:15:720[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-19 20:30:18:681[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-19 20:30:18:681[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-19 20:30:18:822[::1] /reg/bootstrap/css/bootstrap.css
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:848[::1] /reg/css/animations.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:862[::1] /reg/css/style.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:868[::1] /reg/plugins/jquery.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:879[::1] /reg/css/custom.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:903[::1] /reg/fonts/font-awesome/css/font-awesome.css
+ERROR CODE: 2002
+Method [action_fonts] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_fonts')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:18:931[::1] /img/decoration.png
+ERROR CODE: 1003
+Autoload file[imgAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imgAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imgAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imgAction', 'imgAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imgAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-19 20:30:18:936[::1] /reg/images/logo.png
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:046[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:059[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:070[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:081[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:085[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:097[::1] /reg/bootstrap/js/bootstrap.min.js
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:109[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:201[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:243[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:274[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:310[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:344[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:381[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:447[::1] /reg/images/favicon.ico
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:19:472[::1] /reg/images/favicon.ico
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-19 20:30:23:408[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-19 20:30:23:408[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-19 20:30:23:521[::1] /reg/fonts/font-awesome/css/font-awesome.css
+ERROR CODE: 2002
+Method [action_fonts] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_fonts')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:541[::1] /reg/bootstrap/css/bootstrap.css
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:573[::1] /reg/css/custom.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:579[::1] /reg/plugins/jquery.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:581[::1] /reg/css/animations.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:607[::1] /reg/css/style.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-19 20:30:23:655[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:656[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:656[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:657[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:658[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:658[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:659[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:30:23:659[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-19 20:30:23:661[::1] /img/decoration.png
+ERROR CODE: 1003
+Autoload file[imgAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imgAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imgAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imgAction', 'imgAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imgAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-19 20:30:23:661[::1] /reg/images/logo.png
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:692[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:698[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:700[::1] /reg/bootstrap/js/bootstrap.min.js
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:736[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:748[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:761[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:809[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:828[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:864[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:896[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:948[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:23:983[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:24:015[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:24:081[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:24:092[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-19 20:30:26:749[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-19 20:30:26:749[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-19 20:30:26:877[::1] /reg/bootstrap/css/bootstrap.css
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:906[::1] /reg/css/custom.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:916[::1] /reg/fonts/font-awesome/css/font-awesome.css
+ERROR CODE: 2002
+Method [action_fonts] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_fonts')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:925[::1] /reg/plugins/jquery.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:976[::1] /reg/bootstrap/js/bootstrap.min.js
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:998[::1] /reg/css/animations.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:26:997[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:005[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:020[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:027[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:029[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:038[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:045[::1] /reg/css/style.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:072[::1] /reg/images/logo.png
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:095[::1] /img/decoration.png
+ERROR CODE: 1003
+Autoload file[imgAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imgAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imgAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imgAction', 'imgAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imgAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-19 20:30:27:132[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:178[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:208[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:239[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:30:27:273[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-19 20:42:22:090[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-19 20:42:22:090[::1] /reg/
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-19 20:42:22:279[::1] /reg/bootstrap/css/bootstrap.css
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:294[::1] /reg/fonts/font-awesome/css/font-awesome.css
+ERROR CODE: 2002
+Method [action_fonts] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_fonts')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:301[::1] /reg/plugins/jquery.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:320[::1] /reg/bootstrap/js/bootstrap.min.js
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:336[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:350[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:367[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:369[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:382[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:401[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:411[::1] /reg/css/style.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:453[::1] /reg/css/animations.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:463[::1] /reg/css/custom.css
+ERROR CODE: 2002
+Method [action_css] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_css')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:497[::1] /reg/images/logo.png
+ERROR CODE: 2002
+Method [action_images] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_images')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:504[::1] /reg/bootstrap/js/bootstrap.min.js
+ERROR CODE: 2002
+Method [action_bootstrap] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_bootstra...')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-19 20:42:22:515[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:515[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:516[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:517[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:517[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:518[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:519[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-19 20:42:22:519[::1] /img/decoration.png
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-19 20:42:22:522[::1] /img/decoration.png
+ERROR CODE: 1003
+Autoload file[imgAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imgAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imgAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imgAction', 'imgAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imgAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-19 20:42:22:555[::1] /reg/plugins/modernizr.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:605[::1] /reg/plugins/isotope/isotope.pkgd.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:633[::1] /reg/plugins/jquery.backstretch.min.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:668[::1] /reg/plugins/jquery.appear.js
+ERROR CODE: 2002
+Method [action_plugins] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_plugins')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:699[::1] /reg/js/template.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-19 20:42:22:728[::1] /reg/js/custom.js
+ERROR CODE: 2002
+Method [action_js] not exists in [app\controller\regAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\regAction), 'action_js')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}

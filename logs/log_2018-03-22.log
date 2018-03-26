@@ -1,0 +1,5 @@
+[INFO]2018-03-22 21:06:30:187 [::1] request: http://localhost/
+[INFO]2018-03-22 21:06:35:792 [::1] request: http://localhost/images/favicon.ico
+[INFO]2018-03-22 21:06:35:882 [::1] request: http://localhost/images/favicon.ico
+[INFO]2018-03-22 21:07:10:446 [::1] request: http://localhost/reg
+[INFO]2018-03-22 21:11:46:975 [::1] request: http://localhost/demo

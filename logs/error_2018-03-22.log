@@ -1,0 +1,80 @@
+[NOTICE]2018-03-22 21:06:36:094[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:094[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:094[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:095[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:095[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:095[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:096[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:096[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:096[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:096[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:097[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:097[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:097[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:097[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:098[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-22 21:06:36:098[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-22 21:06:36:147[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-22 21:06:36:147[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-22 21:07:10:534[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-22 21:07:10:534[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
