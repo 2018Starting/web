@@ -45,7 +45,7 @@ class TXAction
      * csrf验证
      * @var bool
      */
-    protected $csrfValidate = true;
+    protected $csrfValidate = false;
 
     /**
      * restful接口

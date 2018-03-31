@@ -7,6 +7,6 @@
  */
 return array(
     'dbConfig' => array(
-        'test' => 'Biny_Test'
+        'cus' => 'cus'
     )
 );

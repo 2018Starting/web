@@ -159,6 +159,7 @@ class TXApp
 
     /**
      * 核心初始化
+     *TXAutoload,TXEvent,TXFactory
      */
     private static function init()
     {

@@ -1,0 +1,12 @@
+[INFO]2018-03-29 11:51:05:624 [::1] request: http://localhost/
+[INFO]2018-03-29 11:51:07:170 [::1] request: http://localhost/images/favicon.ico
+[INFO]2018-03-29 11:51:08:239 [::1] request: http://localhost/reg
+[INFO]2018-03-29 11:51:27:067 [::1] request: http://localhost/reg/getcode
+[INFO]2018-03-29 11:56:08:334 [::1] request: http://localhost/reg
+[INFO]2018-03-29 11:56:09:164 [::1] request: http://localhost/favicon.ico
+[INFO]2018-03-29 11:56:15:438 [::1] request: http://localhost/reg/getcode
+[INFO]2018-03-29 11:56:20:533 [::1] request: http://localhost/reg
+[INFO]2018-03-29 11:57:04:461 [::1] request: http://localhost/reg/getcode
+[INFO]2018-03-29 11:57:33:785 [::1] request: http://localhost/reg
+[INFO]2018-03-29 11:57:41:144 [::1] request: http://localhost/reg/getcode
+[INFO]2018-03-29 12:38:45:879 [::1] request: http://localhost/demo
