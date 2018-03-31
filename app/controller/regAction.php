@@ -157,11 +157,11 @@ header('Content-Type: text/plain; charset=utf-8');
 function verifyData($data, $query)
 {
     //1.连接数据库
-    @$db = mysql_connect("qdm114948652.my3w.com", "qdm114948652", "4bX6fR9yM6yR");
+    @$db = mysql_connect("localhost", "root", "123");
     if (!$db)
         die("连接数据库失败");
     //2.验证数据是否存在
-    mysql_select_db('qdm114948652_db', $db);
+    mysql_select_db('mice', $db);
     $sql = "select $query from user where $query = '{$data}'";
     $res = mysql_query($sql);
     //此处存在错误
@@ -189,18 +189,18 @@ class regAction extends baseAction
      */
     public function action_index()
     {
-        if (TXApp::$model->person->exist()) {
+        if (TXApp::$model->cus->exist()) {
             TXApp::$base->request->redirect('/');
         }
-        $username = $this->param('username');
+        $username = $this->param('name');
         if (!$username) {
             return $this->display('mytest/reg');
         }
-        if ($user = $this->userDAO->filter(['name' => $username])->find()) {
-            TXApp::$model->person($user['id'])->login();
+        if ($user = $this->cusDAO->filter(['Name' => $username])->find()) {
+            TXApp::$model->cus($user['id'])->login();
         } else {
-            $id = $this->userDAO->add(['name' => $username, 'registerTime' => time()]);
-            TXApp::$model->person($id)->login();
+            $id = $this->cusDAO->add(['name' => $username, 'registerTime' => time()]);
+            TXApp::$model->cus($id)->login();
         }
         if ($lastUrl = TXApp::$base->session->lastUrl) {
             unset(TXApp::$base->session->lastUrl);
@@ -210,6 +210,18 @@ class regAction extends baseAction
         }
     }
 
+    //添加用户name=bo&A=&company=&title=&mobile=&yzm=&email=
+    public function action_adduser()
+    {
+         $username = $this->param('name');
+         $sex =$this->param('A');
+         $company = $this->param('company');
+         $title =$this->param('title');
+         $mobile = $this->param('mobile');
+         $email = $this->param('email');
+         $cjxm = implode(',',$this->param('B')); 
+         $id = $this->cusDAO->add(['Name' => $username,'Sex'=> $sex, 'Company'=>$company,'Position'=>$title,'Tel'=>$mobile,'Email'=>$email,'CJXM'=>$cjxm,'RegDate'=>date("Y/m/d"),'RegTime'=>date("h:i:s")]);
+    }
     //测试方法  http://localhost/reg/print   reg  模块  print 方法
 
     public function action_print()

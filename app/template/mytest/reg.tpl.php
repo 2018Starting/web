@@ -140,7 +140,7 @@
         <h4 class="col-sm-offset-1" style="margin-bottom: 50px">报名时预留的手机号码或者邮箱即可收到我们发送的短信或邮件，请注意查收。</h4>
     </div>
     <div class="box">
-        <form action="../reg.php" class="demoform">
+        <form action="/reg/adduser" class="demoform">
 
             <div class="col-xs-12">
                 <label class="col-xs-4 col-xs-offset-0 col-md-2 col-md-offset-1 text-right">姓名：</label>

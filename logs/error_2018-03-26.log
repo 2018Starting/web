@@ -1,0 +1,884 @@
+[NOTICE]2018-03-26 16:15:01:242[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:275[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:276[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:276[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:277[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:278[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:278[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:15:01:279[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 16:15:01:282[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 16:19:02:288[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:289[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:289[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:290[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:290[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:290[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:291[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:19:02:291[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 16:19:02:292[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[WARNING]2018-03-26 16:19:07:170[::1] /reg
+WARNING => require_once(E:\github\web\app\controller/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:19:07:191[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required 'E:\github\web\app\controller/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:19:07:192[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[ERROR]2018-03-26 16:19:07:476[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-26 16:19:07:501[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-03-26 16:30:39:013[::1] /base
+ERROR CODE: 2002
+Method [action_index] not exists in [app\controller\baseAction]
+#0 E:\github\web\lib\business\TXController.php(66): biny\lib\TXController->getArgs(Object(app\controller\baseAction), 'action_index')
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-26 16:52:24:665[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:666[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:667[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:668[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:668[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:669[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:669[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 16:52:24:669[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 16:52:24:672[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[WARNING]2018-03-26 16:54:19:838[::1] /reg
+WARNING => require_once(E:\github\web\app\controller/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:54:19:854[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required 'E:\github\web\app\controller/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:54:19:854[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:54:29:979[::1] /reg
+WARNING => require_once(E:\github\web\app\controller/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:54:29:979[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required 'E:\github\web\app\controller/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:54:29:979[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:58:03:587[::1] /reg
+WARNING => require_once(&lt;? = webroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:58:03:587[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;? = webroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:58:03:587[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:58:28:549[::1] /reg
+WARNING => require_once(&lt;? = $webroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:58:28:549[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;? = $webroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:58:28:549[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:59:05:388[::1] /reg
+WARNING => require_once(&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:59:05:388[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:59:05:404[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:59:06:605[::1] /reg
+WARNING => require_once(&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:59:06:605[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:59:06:605[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 16:59:07:292[::1] /reg
+WARNING => require_once(&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 16:59:07:307[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?= $webRoot ?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 16:59:07:307[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:01:00:034[::1] /reg
+WARNING => require_once(../api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:01:00:050[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '../api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:01:00:050[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:09:24:193[::1] /reg
+WARNING => require_once(&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:09:24:193[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:09:24:193[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:09:38:331[::1] /reg
+WARNING => require_once(&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:09:38:347[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:09:38:347[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:09:39:798[::1] /reg
+WARNING => require_once(&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:09:39:813[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:09:39:813[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:09:41:498[::1] /reg
+WARNING => require_once(&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:09:41:498[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:09:41:498[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:09:42:325[::1] /reg
+WARNING => require_once(&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:09:42:325[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=baseroot?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:09:42:325[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[ERROR]2018-03-26 17:09:59:003[::1] /reg
+ERROR CODE: 1000
+System Error [syntax error, unexpected '<']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-03-26 17:10:35:417[::1] /reg
+ERROR CODE: 1000
+System Error [syntax error, unexpected '<']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-03-26 17:10:37:164[::1] /reg
+ERROR CODE: 1000
+System Error [syntax error, unexpected '<']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:10:46:602[::1] /reg
+WARNING => require_once(&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:10:46:602[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:10:46:602[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:10:48:552[::1] /reg
+WARNING => require_once(&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:10:48:552[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:10:48:552[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:10:49:426[::1] /reg
+WARNING => require_once(&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:10:49:426[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:10:49:426[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[WARNING]2018-03-26 17:10:50:596[::1] /reg
+WARNING => require_once(&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php): failed to open stream: No such file or directory
+#1 E:\github\web\app\controller\regAction.php(9)
+[ERROR]2018-03-26 17:10:50:596[::1] /reg
+ERROR CODE: 1000
+System Error [require_once(): Failed opening required '&lt;?=base_root?&gt;/api_sdk/vendor/autoload.php' (include_path='.;C:\php\pear')]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:10:50:596[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[ERROR]2018-03-26 17:15:33:435[::1] /reg
+ERROR CODE: 1000
+System Error [Undefined class constant 'base_root']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[WARNING]2018-03-26 17:15:33:435[::1] /reg
+WARNING => Cannot modify header information - headers already sent by (output started at E:\github\web\app\controller\regAction.php:9)
+#1 E:\github\web\lib\exception\TXException.php(38)
+[NOTICE]2018-03-26 17:15:56:447[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:15:56:447[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:17:12:874[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:17:12:874[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:17:20:627[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:17:20:627[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:31:44:625[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:31:44:625[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-26 17:32:18:839[::1] /reg.php
+ERROR CODE: 2001
+Action[reg.phpAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-26 17:32:32:493[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:32:32:493[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:34:55:019[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:019[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:019[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:035[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:035[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:035[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:035[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 17:34:55:035[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 17:34:55:042[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 17:34:57:789[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:34:57:789[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:37:49:079[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:37:49:079[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:48:07:689[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:48:07:689[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:48:41:399[::1] /reg/getcode
+WARNING => Undefined index: mobile
+#1 E:\github\web\app\controller\regAction.php(228)
+[NOTICE]2018-03-26 17:48:47:249[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 17:48:47:249[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 18:32:07:175[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:175[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:176[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:176[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:176[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:177[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:177[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:32:07:178[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 18:32:07:179[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 18:32:07:480[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 18:34:20:213[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:213[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:214[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:214[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:214[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:215[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:215[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:34:20:216[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 18:34:20:217[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 18:34:24:316[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 18:34:24:317[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 18:38:52:573[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:573[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:574[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:574[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:575[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:575[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:575[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:38:52:576[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 18:38:52:578[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 18:38:52:817[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 18:52:15:862[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:862[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:863[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:863[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:863[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:864[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:864[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 18:52:15:865[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 18:52:15:867[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 18:52:15:944[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 18:56:40:161[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 18:56:40:163[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-26 18:56:40:544[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-26 19:02:40:235[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:236[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:517[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:518[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:751[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:751[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:919[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:02:40:920[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:06:28:389[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:391[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:391[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:392[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:393[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:394[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:394[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:06:28:395[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 19:06:28:397[127.0.0.1] /pagead/html/r20180319/r20170110/zrt_lookup.html
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 19:06:28:542[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 19:06:28:796[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 19:06:28:846[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 19:06:28:970[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[ERROR]2018-03-26 19:06:28:980[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-26 19:08:05:039[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:05:040[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:05:877[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:05:878[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:205[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:205[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:448[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:448[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:673[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:674[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:900[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:08:06:901[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:11:10:197[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:11:10:198[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[WARNING]2018-03-26 19:11:13:863[::1] /reg/getcode
+WARNING => mysql_connect(): mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file
+#1 E:\github\web\app\controller\regAction.php(160)
+[NOTICE]2018-03-26 19:12:22:698[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:12:22:699[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-26 19:20:03:579[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:580[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:580[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:581[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:582[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:582[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:583[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-26 19:20:03:583[127.0.0.1] /pagead/ads
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-26 19:20:03:586[127.0.0.1] /pagead/ads
+ERROR CODE: 1003
+Autoload file[pageadAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pageadAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pageadAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pageadAction', 'pageadAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pageadAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}

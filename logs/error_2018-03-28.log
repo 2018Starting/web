@@ -1,0 +1,111 @@
+[NOTICE]2018-03-28 12:19:35:800[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:849[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:850[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:850[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:851[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:851[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:852[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:19:35:853[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-28 12:19:35:855[127.0.0.1] /pixel
+ERROR CODE: 1003
+Autoload file[pixelAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pixelAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pixelAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pixelAction', 'pixelAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pixelAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-28 12:24:28:235[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:236[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:236[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:237[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:237[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:238[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:239[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:28:239[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-28 12:24:28:242[127.0.0.1] /pixel
+ERROR CODE: 1003
+Autoload file[pixelAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pixelAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pixelAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pixelAction', 'pixelAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pixelAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-28 12:24:52:769[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:771[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:772[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:772[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:773[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:775[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:781[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-28 12:24:52:782[127.0.0.1] /pixel
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-28 12:24:52:788[127.0.0.1] /pixel
+ERROR CODE: 1003
+Autoload file[pixelAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('pixelAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('pixelAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('pixelAction', 'pixelAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('pixelAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}

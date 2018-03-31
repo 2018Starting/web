@@ -1,0 +1,73 @@
+[NOTICE]2018-03-29 11:51:07:259[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:260[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:260[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:261[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:261[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:262[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:262[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-03-29 11:51:07:262[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-03-29 11:51:07:277[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-03-29 11:51:08:565[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-29 11:51:08:566[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[WARNING]2018-03-29 11:51:27:351[::1] /reg/getcode
+WARNING => mysql_connect(): mysqlnd cannot connect to MySQL 4.1+ using the old insecure authentication. Please use an administration tool to reset your password with the command SET PASSWORD = PASSWORD('your_existing_password'). This will store a new, and more secure, hash value in mysql.user. If this user is used in other scripts executed by PHP 5.2 or earlier you might need to remove the old-passwords flag from your my.cnf file
+#1 E:\github\web\app\controller\regAction.php(160)
+[NOTICE]2018-03-29 11:56:08:397[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-29 11:56:08:398[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-03-29 11:56:09:165[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(177): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-03-29 11:56:20:595[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-29 11:56:20:595[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-29 11:57:33:854[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-03-29 11:57:33:854[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
