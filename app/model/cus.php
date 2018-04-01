@@ -57,18 +57,11 @@ class cus extends baseModel
     }
 
     /**
-    *添加用户
-    */
-    public function adduser()
-    {
-        
-    }
-    /**
      * 登录
      */
     public function login()
     {
-        $this->DAO->updateByPk($this->_pk, ['loginTime'=>time(), 'count'=>['+'=>1]]);
+        //$this->DAO->updateByPk($this->_pk, ['loginTime'=>time(), 'count'=>['+'=>1]]);
         TXApp::$base->session->userId = $this->_pk;
     }
 

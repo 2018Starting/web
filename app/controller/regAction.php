@@ -153,24 +153,7 @@ class SmsDemo
 // 调用示例：
 
 header('Content-Type: text/plain; charset=utf-8');
-//检查是否重复
-function verifyData($data, $query)
-{
-    //1.连接数据库
-    @$db = mysql_connect("localhost", "root", "123");
-    if (!$db)
-        die("连接数据库失败");
-    //2.验证数据是否存在
-    mysql_select_db('mice', $db);
-    $sql = "select $query from user where $query = '{$data}'";
-    $res = mysql_query($sql);
-    //此处存在错误
-    $row = mysql_num_rows($res);
-    //3.关闭数据库
-    mysql_close($db);
-    return $row > 0 ? True : False;
-    //return  is_null($res)? False:True;
-}
+
 
 
 /**
@@ -190,23 +173,27 @@ class regAction extends baseAction
     public function action_index()
     {
         if (TXApp::$model->cus->exist()) {
-            TXApp::$base->request->redirect('/');
+            echo $user['ID'];
+            //TXApp::$base->request->redirect('/');
         }
         $username = $this->param('name');
         if (!$username) {
             return $this->display('mytest/reg');
         }
         if ($user = $this->cusDAO->filter(['Name' => $username])->find()) {
+
             TXApp::$model->cus($user['id'])->login();
         } else {
-            $id = $this->cusDAO->add(['name' => $username, 'registerTime' => time()]);
+            $id = $this->cusDAO->add(['name' => $username, 'RegTime' => time()]);
             TXApp::$model->cus($id)->login();
         }
         if ($lastUrl = TXApp::$base->session->lastUrl) {
             unset(TXApp::$base->session->lastUrl);
             TXApp::$base->request->redirect($lastUrl);
         } else {
-            TXApp::$base->request->redirect('/');
+            echo "last";
+            echo $user['ID'];
+            //TXApp::$base->request->redirect('/');
         }
     }
 
@@ -221,6 +208,9 @@ class regAction extends baseAction
          $email = $this->param('email');
          $cjxm = implode(',',$this->param('B')); 
          $id = $this->cusDAO->add(['Name' => $username,'Sex'=> $sex, 'Company'=>$company,'Position'=>$title,'Tel'=>$mobile,'Email'=>$email,'CJXM'=>$cjxm,'RegDate'=>date("Y/m/d"),'RegTime'=>date("h:i:s")]);
+         TXApp::$model->cus($id)->login();//TXApp::$base->session->userId = $this->_pk;
+         TXApp::$base->request->redirect('/regok');
+         //return $this->display('mytest/regok',$id);
     }
     //测试方法  http://localhost/reg/print   reg  模块  print 方法
 
@@ -237,12 +227,14 @@ class regAction extends baseAction
             "IAkqLZTgkbHlx5P3BA6Hocv1gh9OTH"
         );
 
-        $tel = $_POST['mobile'];
+        //$tel = $_POST['mobile'];
+        $tel = $this->param('mobile');
 
 //查询是否注册 verifyData('Tel', $tel)
-        if (verifyData('Tel', $tel)) {
+       
+        if ($this->cusDAO->filter(['Tel' => $tel])->find()) {
             $result['error'] = 1;
-            $result['msg'] = "已经注册。";
+            $result['msg'] ="已经注册。";
             echo json_encode($result);
         } else {
 //随机生成一个4位数的数字验证码  
