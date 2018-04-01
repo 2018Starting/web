@@ -7,6 +7,6 @@
  */
 return array(
     'dbConfig' => array(
-        'cus' => 'cus'
+        //'cus' => 'cus'
     )
 );
