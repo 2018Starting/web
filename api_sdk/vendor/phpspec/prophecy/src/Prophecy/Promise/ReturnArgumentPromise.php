@@ -48,7 +48,7 @@ class ReturnArgumentPromise implements PromiseInterface
     /**
      * Returns nth argument if has one, null otherwise.
      *
-     * @param array          $args
+     * @param array $args
      * @param ObjectProphecy $object
      * @param MethodProphecy $method
      *

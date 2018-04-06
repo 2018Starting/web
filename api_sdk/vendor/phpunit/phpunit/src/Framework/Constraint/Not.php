@@ -43,28 +43,28 @@ class PHPUnit_Framework_Constraint_Not extends PHPUnit_Framework_Constraint
     {
         return str_replace(
             array(
-            'contains ',
-            'exists',
-            'has ',
-            'is ',
-            'are ',
-            'matches ',
-            'starts with ',
-            'ends with ',
-            'reference ',
-            'not not '
+                'contains ',
+                'exists',
+                'has ',
+                'is ',
+                'are ',
+                'matches ',
+                'starts with ',
+                'ends with ',
+                'reference ',
+                'not not '
             ),
             array(
-            'does not contain ',
-            'does not exist',
-            'does not have ',
-            'is not ',
-            'are not ',
-            'does not match ',
-            'starts not with ',
-            'ends not with ',
-            'don\'t reference ',
-            'not '
+                'does not contain ',
+                'does not exist',
+                'does not have ',
+                'is not ',
+                'are not ',
+                'does not match ',
+                'starts not with ',
+                'ends not with ',
+                'don\'t reference ',
+                'not '
             ),
             $string
         );
@@ -80,9 +80,9 @@ class PHPUnit_Framework_Constraint_Not extends PHPUnit_Framework_Constraint
      * a boolean value instead: true in case of success, false in case of a
      * failure.
      *
-     * @param mixed  $other        Value or object to evaluate.
-     * @param string $description  Additional information about the test
-     * @param bool   $returnResult Whether to return a result or throw an exception
+     * @param mixed $other Value or object to evaluate.
+     * @param string $description Additional information about the test
+     * @param bool $returnResult Whether to return a result or throw an exception
      *
      * @return mixed
      *

@@ -77,7 +77,7 @@ final class TypeResolver
      * This method only works as expected if the namespace and aliases are set;
      * no dynamic reflection is being performed here.
      *
-     * @param string $type     The relative or absolute type.
+     * @param string $type The relative or absolute type.
      * @param Context $context
      *
      * @uses Context::getNamespace()        to determine with what to prefix the type name.

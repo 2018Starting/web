@@ -11,7 +11,7 @@ namespace biny\lib;
 
 /**
  * 多表数据库
- * @method TXDoubleCond limit($len, $start=0)
+ * @method TXDoubleCond limit($len, $start = 0)
  * @method TXDoubleCond group($groupby)
  * @method TXDoubleCond having($having)
  * @method TXDoubleCond order($orderby)
@@ -46,7 +46,7 @@ class TXDoubleDAO extends TXDAO
     public function __construct($DAOs, $relates, $db)
     {
         $this->dbConfig = $db;
-        if (count($relates) !== count($DAOs)-1){
+        if (count($relates) !== count($DAOs) - 1) {
             throw new TXException(3002, [json_encode($DAOs)]);
         }
         $this->DAOs = $DAOs;
@@ -70,11 +70,11 @@ class TXDoubleDAO extends TXDAO
      */
     protected function getTable()
     {
-        if (!$this->table){
+        if (!$this->table) {
             $dbtbs = [];
             $i = 0;
-            foreach ($this->DAOs as $name => $table){
-                if (!$dbtbs){
+            foreach ($this->DAOs as $name => $table) {
+                if (!$dbtbs) {
                     $dbtbs[] = "{$table} `$name`";
                 } else {
                     $relate = $this->relates[$i++];
@@ -83,16 +83,16 @@ class TXDoubleDAO extends TXDAO
                     $dbtbs[] = $join;
                     $dbtbs[] = "{$table} `$name`";
                     $ons = [];
-                    foreach ($on as $val){
+                    foreach ($on as $val) {
                         $key = $val[0];
                         $value = $val[1];
-                        if (is_array($value)){
+                        if (is_array($value)) {
                             $ons[] = "{$key} {$value[0]} {$value[1]}";
                         } else {
                             $ons[] = "{$key}={$value}";
                         }
                     }
-                    $dbtbs[] = "on ".join(' and ', $ons);
+                    $dbtbs[] = "on " . join(' and ', $ons);
                 }
             }
             $this->table = join(" ", $dbtbs);
@@ -108,13 +108,13 @@ class TXDoubleDAO extends TXDAO
      * @return $this|TXDoubleDAO
      * @throws TXException
      */
-    protected function _join($dao, $relateD, $type='join')
+    protected function _join($dao, $relateD, $type = 'join')
     {
         $daoClass = substr($dao->getCalledClass(), 0, -3);
-        if (isset($this->doubles[$daoClass])){
+        if (isset($this->doubles[$daoClass])) {
             return $this;
         }
-        if (!$this->checkConfig($dao)){
+        if (!$this->checkConfig($dao)) {
             throw new TXException(3002, "DAOs must be the same Host");
         }
         $DAOs = $this->DAOs;
@@ -122,17 +122,17 @@ class TXDoubleDAO extends TXDAO
 
         $relates = $this->relates;
         $join = [];
-        foreach ($relateD as $k => $relate){
-            if (is_string($k) && in_array($k, $this->doubles)){
+        foreach ($relateD as $k => $relate) {
+            if (is_string($k) && in_array($k, $this->doubles)) {
                 $table = $k;
-            } else if (isset($this->doubles[$k])){
+            } else if (isset($this->doubles[$k])) {
                 $table = $this->doubles[$k];
             } else {
                 continue;
             }
-            foreach ($relate as $key => $value){
+            foreach ($relate as $key => $value) {
                 $key = "`{$this->real_escape_string($table)}`.`{$this->real_escape_string($key)}`";
-                if (is_array($value) && count($value)>=2 && in_array($value[0], $this->extracts)){
+                if (is_array($value) && count($value) >= 2 && in_array($value[0], $this->extracts)) {
                     $join[] = [$key, [$value[0], "`{$this->real_escape_string($daoClass)}`.`{$this->real_escape_string($value[1])}`"]];
                 } else {
                     $join[] = [$key, "`{$this->real_escape_string($daoClass)}`.`{$this->real_escape_string($value)}`"];
@@ -149,35 +149,35 @@ class TXDoubleDAO extends TXDAO
      * @param string $type
      * @return string
      */
-    public function buildWhere($conds, $type='and')
+    public function buildWhere($conds, $type = 'and')
     {
         if (empty($conds)) {
             return '';
         }
         $doubles = $this->doubles;
         $where = [];
-        foreach ($conds as $k => $cond){
-            if (is_string($k) && in_array($k, $doubles)){
+        foreach ($conds as $k => $cond) {
+            if (is_string($k) && in_array($k, $doubles)) {
                 $table = $k;
-            } else if (isset($doubles[$k])){
+            } else if (isset($doubles[$k])) {
                 $table = $doubles[$k];
             } else {
                 continue;
             }
-            foreach($cond as $key => $value) {
+            foreach ($cond as $key => $value) {
                 $key = $this->real_escape_string($key);
-                if (in_array(strtolower($key), $this->extracts)){
-                    foreach ($value as $arrk => $arrv){
+                if (in_array(strtolower($key), $this->extracts)) {
+                    foreach ($value as $arrk => $arrv) {
                         $arrk = $this->real_escape_string($arrk);
-                        if (is_null($arrv)){
+                        if (is_null($arrv)) {
                             $where[] = "`{$table}`.`{$arrk}`{$key} NULL";
-                        } else if (is_string($arrv)){
+                        } else if (is_string($arrv)) {
                             $arrv = $this->real_escape_string($arrv);
                             $where[] = "`{$table}`.`{$arrk}`{$key}'{$arrv}'";
-                        } else if ($arrv instanceof \stdClass){
+                        } else if ($arrv instanceof \stdClass) {
                             $where[] = "`{$table}`.`{$arrk}`{$key}{$arrv->scalar}";
-                        } else if (is_array($arrv)){
-                            foreach ($arrv as $av){
+                        } else if (is_array($arrv)) {
+                            foreach ($arrv as $av) {
                                 $arrv = $this->real_escape_string($av);
                                 $where[] = "`{$table}`.`{$arrk}`{$key}'{$arrv}'";
                             }
@@ -185,16 +185,16 @@ class TXDoubleDAO extends TXDAO
                             $where[] = "`{$table}`.`{$arrk}`{$key}{$arrv}";
                         }
                     }
-                } elseif ($key === '__like__'){
-                    foreach ($cond[$key] as $arrk => $arrv){
+                } elseif ($key === '__like__') {
+                    foreach ($cond[$key] as $arrk => $arrv) {
                         $arrk = $this->real_escape_string($arrk);
-                        if (is_array($arrv)){
-                            foreach ($arrv as $like){
+                        if (is_array($arrv)) {
+                            foreach ($arrv as $like) {
                                 $like = $this->real_like_string($like);
-                                if (substr($like, 0, 1) !== '^'){
-                                    $like = '%'.$like;
+                                if (substr($like, 0, 1) !== '^') {
+                                    $like = '%' . $like;
                                 }
-                                if (substr($like, -1, 1) !== '$'){
+                                if (substr($like, -1, 1) !== '$') {
                                     $like .= '%';
                                 }
                                 $like = trim($like, "^$");
@@ -202,35 +202,35 @@ class TXDoubleDAO extends TXDAO
                             }
                         } else {
                             $arrv = $this->real_like_string($arrv);
-                            if (substr($arrv, 0, 1) !== '^'){
-                                $arrv = '%'.$arrv;
+                            if (substr($arrv, 0, 1) !== '^') {
+                                $arrv = '%' . $arrv;
                             }
-                            if (substr($arrv, -1, 1) !== '$'){
+                            if (substr($arrv, -1, 1) !== '$') {
                                 $arrv .= '%';
                             }
                             $arrv = trim($arrv, "^$");
                             $where[] = "`{$table}`.`{$arrk}` like '{$arrv}'";
                         }
                     }
-                } elseif (is_null($value)){
+                } elseif (is_null($value)) {
                     $where[] = "`{$table}`.`{$key}`is NULL";
                 } elseif ($value instanceof \stdClass) {
                     $where[] = "`{$table}`.`{$key}`={$value->scalar}";
                 } elseif (is_string($value)) {
                     $value = $this->real_escape_string($value);
                     $where[] = "`{$table}`.`{$key}`='{$value}'";
-                } elseif (is_array($value)){
-                    if (!$value){
+                } elseif (is_array($value)) {
+                    if (!$value) {
                         $where[] = 'FALSE';
                         continue;
                     }
-                    foreach ($value as &$val){
-                        if (is_string($val)){
+                    foreach ($value as &$val) {
+                        if (is_string($val)) {
                             $val = "'{$this->real_escape_string($val)}'";
                         }
                     }
                     unset($val);
-                    $value = "(". join(",", $value).")";
+                    $value = "(" . join(",", $value) . ")";
                     $where[] = "`{$table}`.`{$key}` in {$value}";
                 } else {
                     $where[] = "`{$table}`.`{$key}`={$value}";
@@ -247,65 +247,66 @@ class TXDoubleDAO extends TXDAO
      * @return string
      * @throws TXException
      */
-    protected function buildFields($fields, $group=[]){
-        if (is_array($fields)){
+    protected function buildFields($fields, $group = [])
+    {
+        if (is_array($fields)) {
             $temps = [];
-            foreach ($fields as $k => $field){
-                if (is_string($k) && in_array($k, $this->doubles)){
+            foreach ($fields as $k => $field) {
+                if (is_string($k) && in_array($k, $this->doubles)) {
                     $table = $k;
-                } else if (isset($this->doubles[$k])){
+                } else if (isset($this->doubles[$k])) {
                     $table = $this->doubles[$k];
                 } else {
                     continue;
                 }
-                if ($field === "*"){
+                if ($field === "*") {
                     $temps[] = "`{$table}`.*";
                 } else {
-                    foreach ($field as $key => $column){
-                        if (is_string($key)){
+                    foreach ($field as $key => $column) {
+                        if (is_string($key)) {
                             $column = $this->real_escape_string($column);
                             $key = $this->real_escape_string($key);
-                            $temps[] = "`{$table}`.`".$key."` AS `$column`";
+                            $temps[] = "`{$table}`.`" . $key . "` AS `$column`";
                         } elseif ($column instanceof \stdClass) {
                             $temps[] = $column->scalar;
                         } else {
                             $column = $this->real_escape_string($column);
-                            $temps[] = "`{$table}`.`".$column."`";
+                            $temps[] = "`{$table}`.`" . $column . "`";
                         }
                     }
                 }
             }
             $fields = join(',', $temps);
         }
-        if ($group){
-            if ($fields){
+        if ($group) {
+            if ($fields) {
                 $groups = [$fields];
             } else {
                 $groups = [];
             }
-            foreach ($group as $key => $values){
-                if (is_string($key) && in_array($key, $this->doubles)){
+            foreach ($group as $key => $values) {
+                if (is_string($key) && in_array($key, $this->doubles)) {
                     $table = $key;
-                } else if (isset($this->doubles[$key])){
+                } else if (isset($this->doubles[$key])) {
                     $table = $this->doubles[$key];
                 } else {
                     continue;
                 }
-                foreach ($values as $ck => $vals){
-                    if (!in_array(strtolower($ck), $this->calcs)){
+                foreach ($values as $ck => $vals) {
+                    if (!in_array(strtolower($ck), $this->calcs)) {
                         throw new TXException(3011, [$ck]);
                     }
-                    foreach ($vals as $k => $value){
+                    foreach ($vals as $k => $value) {
                         $value = $this->real_escape_string($value);
-                        if (is_string($k)){
+                        if (is_string($k)) {
                             $k = $this->real_escape_string($k);
-                            if ($ck == 'distinct'){
+                            if ($ck == 'distinct') {
                                 $groups[] = "COUNT(DISTINCT `{$table}`.`{$k}`) as '{$value}'";
                             } else {
                                 $groups[] = "{$ck}(`{$table}`.`{$k}`) as '{$value}'";
                             }
                         } else {
-                            if ($ck == 'distinct'){
+                            if ($ck == 'distinct') {
                                 $groups[] = "COUNT(DISTINCT `{$table}`.`{$value}`) as '{$value}'";
                             } else {
                                 $groups[] = "{$ck}(`{$table}`.`{$value}`) as '{$value}'";
@@ -324,57 +325,58 @@ class TXDoubleDAO extends TXDAO
      * @param $orderBys
      * @return string
      */
-    protected function buildOrderBy($orderBys){
+    protected function buildOrderBy($orderBys)
+    {
         $orders = [];
-        foreach ($orderBys as $k => $orderBy){
-            if (is_string($k) && in_array($k, $this->doubles)){
+        foreach ($orderBys as $k => $orderBy) {
+            if (is_string($k) && in_array($k, $this->doubles)) {
                 $table = $k;
-            } else if (isset($this->doubles[$k])){
+            } else if (isset($this->doubles[$k])) {
                 $table = $this->doubles[$k];
             } else if (is_string($k)) {
                 $k = $this->real_escape_string($k);
                 //外层循环
-                if (is_array($orderBy)){
+                if (is_array($orderBy)) {
                     $asc = isset($orderBy[0]) ? $orderBy[0] : 'ASC';
                     $code = isset($orderBy[1]) ? $orderBy[1] : 'gbk';
-                    if (!in_array(strtoupper($asc), ['ASC', 'DESC'])){
+                    if (!in_array(strtoupper($asc), ['ASC', 'DESC'])) {
                         TXLogger::error("order must be ASC/DESC, {$asc} given", 'sql Error');
                         continue;
                     }
                     $orders[] = "CONVERT(`{$k}` USING {$code}) $asc";
                 } else {
-                    if (!in_array(strtoupper($orderBy), ['ASC', 'DESC'])){
+                    if (!in_array(strtoupper($orderBy), ['ASC', 'DESC'])) {
                         TXLogger::error("order must be ASC/DESC, {$orderBy} given", 'sql Error');
                         continue;
                     }
-                    $orders[] = '`'.$k."` ".$orderBy;
+                    $orders[] = '`' . $k . "` " . $orderBy;
                 }
                 continue;
             } else {
                 continue;
             }
-            foreach ($orderBy as $key => $val){
+            foreach ($orderBy as $key => $val) {
                 $key = $this->real_escape_string($key);
-                if (is_array($val)){
-                    $field = $table.".`".$key.'`';
+                if (is_array($val)) {
+                    $field = $table . ".`" . $key . '`';
                     $asc = isset($val[0]) ? $val[0] : 'ASC';
                     $code = isset($val[1]) ? $val[1] : 'gbk';
-                    if (!in_array(strtoupper($asc), ['ASC', 'DESC'])){
+                    if (!in_array(strtoupper($asc), ['ASC', 'DESC'])) {
                         TXLogger::error("order must be ASC/DESC, {$asc} given", 'sql Error');
                         continue;
                     }
                     $orders[] = "CONVERT({$field} USING {$code}) $asc";
                 } else {
-                    if (!in_array(strtoupper($val), ['ASC', 'DESC'])){
+                    if (!in_array(strtoupper($val), ['ASC', 'DESC'])) {
                         TXLogger::error("order must be ASC/DESC, {$val} given", 'sql Error');
                         continue;
                     }
-                    $orders[] = $table.".`".$key."` ".$val;
+                    $orders[] = $table . ".`" . $key . "` " . $val;
                 }
             }
         }
-        if ($orders){
-            return ' ORDER BY '.join(',', $orders);
+        if ($orders) {
+            return ' ORDER BY ' . join(',', $orders);
         } else {
             return '';
         }
@@ -386,50 +388,50 @@ class TXDoubleDAO extends TXDAO
      * @param array $having
      * @return string
      */
-    protected function buildGroupBy($groupBy, $having=[])
+    protected function buildGroupBy($groupBy, $having = [])
     {
-        if (!$groupBy){
+        if (!$groupBy) {
             return '';
         }
-        if (is_array($groupBy)){
+        if (is_array($groupBy)) {
             $temps = [];
-            foreach ($groupBy as $k => $group){
-                if (is_string($k) && in_array($k, $this->doubles)){
+            foreach ($groupBy as $k => $group) {
+                if (is_string($k) && in_array($k, $this->doubles)) {
                     $table = $k;
-                } else if (isset($this->doubles[$k])){
+                } else if (isset($this->doubles[$k])) {
                     $table = $this->doubles[$k];
                 } else {
                     continue;
                 }
-                if (is_array($group)){
-                    foreach ($group as $column){
-                        if ($column instanceof \stdClass){
+                if (is_array($group)) {
+                    foreach ($group as $column) {
+                        if ($column instanceof \stdClass) {
                             $temps[] = $column->scalar;
                         } else {
                             $column = $this->real_escape_string($column);
-                            $temps[] = $table.".`".$column."`";
+                            $temps[] = $table . ".`" . $column . "`";
                         }
                     }
                 } elseif ($group instanceof \stdClass) {
                     $temps[] = $group->scalar;
                 } else {
                     $column = $this->real_escape_string($group);
-                    $temps[] = $table.".`".$column."`";
+                    $temps[] = $table . ".`" . $column . "`";
                 }
             }
             $groupBy = join(',', $temps);
         }
-        if ($having){
+        if ($having) {
             $havings = [];
-            foreach ($having as $ys => $value){
-                if (!in_array(strtolower($ys), $this->extracts)){
+            foreach ($having as $ys => $value) {
+                if (!in_array(strtolower($ys), $this->extracts)) {
                     continue;
                 }
-                foreach ($value as $arrk => $arrv){
+                foreach ($value as $arrk => $arrv) {
                     $arrk = $this->real_escape_string($arrk);
-                    if (is_null($arrv)){
+                    if (is_null($arrv)) {
                         $havings[] = "`{$arrk}`{$ys} NULL";
-                    }elseif (is_string($arrv)){
+                    } elseif (is_string($arrv)) {
                         $arrv = $this->real_escape_string($arrv);
                         $havings[] = "`{$arrk}`{$ys}'{$arrv}'";
                     } else {
@@ -437,11 +439,11 @@ class TXDoubleDAO extends TXDAO
                     }
                 }
             }
-            if ($havings){
-                $groupBy .= " HAVING ".join(' AND ', $havings);
+            if ($havings) {
+                $groupBy .= " HAVING " . join(' AND ', $havings);
             }
         }
-        return ' GROUP BY '.$groupBy;
+        return ' GROUP BY ' . $groupBy;
     }
 
     /**
@@ -467,25 +469,25 @@ class TXDoubleDAO extends TXDAO
     {
         $doubles = $this->doubles;
         $sets = [];
-        foreach ($set as $k => $val){
-            if (is_string($k) && in_array($k, $doubles)){
+        foreach ($set as $k => $val) {
+            if (is_string($k) && in_array($k, $doubles)) {
                 $table = $k;
-            } else if (isset($doubles[$k])){
+            } else if (isset($doubles[$k])) {
                 $table = $doubles[$k];
             } else {
                 continue;
             }
-            foreach($val as $key => $value) {
+            foreach ($val as $key => $value) {
                 $key = $this->real_escape_string($key);
-                if (is_array($value)){
+                if (is_array($value)) {
                     $k = array_keys($value)[0];
-                    if (!in_array($k, $this->setOps)){
+                    if (!in_array($k, $this->setOps)) {
                         continue;
                     }
                     $val = array_values($value)[0];
-                    if (is_array($val)){
+                    if (is_array($val)) {
                         $arr = [];
-                        foreach ($val as $v){
+                        foreach ($val as $v) {
                             if (is_numeric($v)) {
                                 $arr[] = $v;
                             } else if (strpos($v, '.', 1)) {
@@ -495,7 +497,7 @@ class TXDoubleDAO extends TXDAO
                                 $arr[] = "`{$table}`.`" . $this->real_escape_string($v) . '`';
                             }
                         }
-                        $sets[] = "`{$table}`.`{$key}`= ".join($k, $arr);
+                        $sets[] = "`{$table}`.`{$key}`= " . join($k, $arr);
                     } else {
                         $val = intval($val);
                         $sets[] = "`{$table}`.`{$key}`= `{$table}`.`{$key}` {$k} {$val}";
@@ -524,15 +526,15 @@ class TXDoubleDAO extends TXDAO
     {
         $doubles = $this->doubles;
         $sets = [];
-        foreach ($set as $k => $val){
-            if (is_string($k) && in_array($k, $doubles)){
+        foreach ($set as $k => $val) {
+            if (is_string($k) && in_array($k, $doubles)) {
                 $table = $k;
-            } else if (isset($doubles[$k])){
+            } else if (isset($doubles[$k])) {
                 $table = $doubles[$k];
             } else {
                 continue;
             }
-            foreach($val as $key => $value) {
+            foreach ($val as $key => $value) {
                 if (!is_int($value) || $value == 0) {
                     continue;
                 }
@@ -548,21 +550,21 @@ class TXDoubleDAO extends TXDAO
      * @param $conds
      * @return $this
      */
-    public function on($conds=[])
+    public function on($conds = [])
     {
-        $tmp = &$this->relates[count($this->relates)-1][1];
-        foreach ($conds as $k => $relate){
-            if (is_string($k) && in_array($k, $this->doubles)){
+        $tmp = &$this->relates[count($this->relates) - 1][1];
+        foreach ($conds as $k => $relate) {
+            if (is_string($k) && in_array($k, $this->doubles)) {
                 $table = $k;
-            } else if (isset($this->doubles[$k])){
+            } else if (isset($this->doubles[$k])) {
                 $table = $this->doubles[$k];
             } else {
                 continue;
             }
-            foreach ($relate as $key => $value){
+            foreach ($relate as $key => $value) {
                 $key = "`{$this->real_escape_string($table)}`.`{$this->real_escape_string($key)}`";
-                if (is_array($value) && count($value)>=2 && in_array($value[0], $this->extracts)){
-                    if ($value[1] instanceof \stdClass){
+                if (is_array($value) && count($value) >= 2 && in_array($value[0], $this->extracts)) {
+                    if ($value[1] instanceof \stdClass) {
                         $tmp[] = [$key, [$value[0], $value[1]->scalar]];
                     } else {
                         $tmp[] = [$key, [$value[0], "'{$this->real_escape_string($value[1])}'"]];
@@ -583,7 +585,7 @@ class TXDoubleDAO extends TXDAO
      * @param $cond
      * @return TXDoubleFilter
      */
-    public function filter($cond=[])
+    public function filter($cond = [])
     {
         return $cond ? new TXDoubleFilter($this, $cond, "__and__") : $this;
     }
@@ -593,7 +595,7 @@ class TXDoubleDAO extends TXDAO
      * @param $cond
      * @return TXDoubleFilter
      */
-    public function merge($cond=[])
+    public function merge($cond = [])
     {
         return $cond ? new TXDoubleFilter($this, $cond, "__or__") : $this;
     }

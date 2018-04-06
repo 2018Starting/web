@@ -48,7 +48,8 @@ class CallCenterSpec extends ObjectBehavior
         ArgumentsWildcard $arguments2,
         ArgumentsWildcard $arguments3,
         PromiseInterface $promise
-    ) {
+    )
+    {
         $method1->hasReturnVoid()->willReturn(false);
         $method1->getMethodName()->willReturn('getName');
         $method1->getArgumentsWildcard()->willReturn($arguments1);
@@ -90,7 +91,8 @@ class CallCenterSpec extends ObjectBehavior
         ArgumentsWildcard $arguments2,
         ArgumentsWildcard $arguments3,
         PromiseInterface $promise
-    ) {
+    )
+    {
         $method1->hasReturnVoid()->willReturn(false);
         $method1->getMethodName()->willReturn('getName');
         $method1->getArgumentsWildcard()->willReturn($arguments1);
@@ -127,7 +129,8 @@ class CallCenterSpec extends ObjectBehavior
         $objectProphecy,
         MethodProphecy $method,
         ArgumentsWildcard $arguments
-    ) {
+    )
+    {
         $method->getMethodName()->willReturn('getName');
         $method->getArgumentsWildcard()->willReturn($arguments);
         $arguments->scoreArguments(array('world', 'everything'))->willReturn(false);
@@ -144,7 +147,8 @@ class CallCenterSpec extends ObjectBehavior
         $objectProphecy,
         MethodProphecy $method,
         ArgumentsWildcard $arguments
-    ) {
+    )
+    {
         $method->hasReturnVoid()->willReturn(false);
         $method->getMethodName()->willReturn('getName');
         $method->getArgumentsWildcard()->willReturn($arguments);
@@ -161,7 +165,8 @@ class CallCenterSpec extends ObjectBehavior
     function it_finds_recorded_calls_by_a_method_name_and_arguments_wildcard(
         $objectProphecy,
         ArgumentsWildcard $wildcard
-    ) {
+    )
+    {
         $objectProphecy->getMethodProphecies()->willReturn(array());
 
         $this->makeCall($objectProphecy, 'getName', array('world'));

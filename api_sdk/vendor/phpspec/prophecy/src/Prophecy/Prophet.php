@@ -41,9 +41,9 @@ class Prophet
     /**
      * Initializes Prophet.
      *
-     * @param null|Doubler           $doubler
+     * @param null|Doubler $doubler
      * @param null|RevealerInterface $revealer
-     * @param null|StringUtil        $util
+     * @param null|StringUtil $util
      */
     public function __construct(Doubler $doubler = null, RevealerInterface $revealer = null,
                                 StringUtil $util = null)
@@ -60,9 +60,9 @@ class Prophet
             $doubler->registerClassPatch(new ClassPatch\KeywordPatch);
         }
 
-        $this->doubler  = $doubler;
+        $this->doubler = $doubler;
         $this->revealer = $revealer ?: new Revealer;
-        $this->util     = $util ?: new StringUtil;
+        $this->util = $util ?: new StringUtil;
     }
 
     /**

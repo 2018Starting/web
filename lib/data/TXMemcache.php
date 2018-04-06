@@ -8,6 +8,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 /**
@@ -22,9 +23,9 @@ class TXMemcache
      * @param string $name
      * @return TXMemcache
      */
-    public static function instance($name='memcache')
+    public static function instance($name = 'memcache')
     {
-        if (!isset(self::$_instance[$name])){
+        if (!isset(self::$_instance[$name])) {
             $config = TXApp::$base->app_config->get($name, 'dns');
             self::$_instance[$name] = new self($config);
         }
@@ -61,19 +62,19 @@ class TXMemcache
     {
         $config = $this->connect;
         $this->handler = new \Memcache();
-        if (isset($config['keep-alive']) && $config['keep-alive']){
+        if (isset($config['keep-alive']) && $config['keep-alive']) {
             $fd = $this->handler->pconnect($config['host'], $config['port'], 60);
         } else {
             $fd = $this->handler->connect($config['host'], $config['port']);
         }
-        if (!$fd){
+        if (!$fd) {
             throw new TXException(4004, [$config['host'], $config['port']]);
         }
     }
 
-    public function set($key, $value, $expire=0)
+    public function set($key, $value, $expire = 0)
     {
-        if (!$this->handler){
+        if (!$this->handler) {
             $this->connect();
         }
         return $this->handler->set($key, $value, MEMCACHE_COMPRESSED, $expire);
@@ -87,7 +88,7 @@ class TXMemcache
      */
     public function __call($method, $arguments)
     {
-        if (!$this->handler){
+        if (!$this->handler) {
             $this->connect();
         }
         return call_user_func_array([$this->handler, $method], $arguments);

@@ -38,15 +38,15 @@ class PHP_CodeCoverage_Report_HTML
     /**
      * Constructor.
      *
-     * @param int    $lowUpperBound
-     * @param int    $highLowerBound
+     * @param int $lowUpperBound
+     * @param int $highLowerBound
      * @param string $generator
      */
     public function __construct($lowUpperBound = 50, $highLowerBound = 90, $generator = '')
     {
-        $this->generator      = $generator;
+        $this->generator = $generator;
         $this->highLowerBound = $highLowerBound;
-        $this->lowUpperBound  = $lowUpperBound;
+        $this->lowUpperBound = $lowUpperBound;
 
         $this->templatePath = sprintf(
             '%s%sHTML%sRenderer%sTemplate%s',
@@ -60,7 +60,7 @@ class PHP_CodeCoverage_Report_HTML
 
     /**
      * @param PHP_CodeCoverage $coverage
-     * @param string           $target
+     * @param string $target
      */
     public function process(PHP_CodeCoverage $coverage, $target)
     {
@@ -153,7 +153,7 @@ class PHP_CodeCoverage_Report_HTML
     }
 
     /**
-     * @param  string                     $directory
+     * @param  string $directory
      * @return string
      * @throws PHP_CodeCoverage_Exception
      * @since  Method available since Release 1.2.0

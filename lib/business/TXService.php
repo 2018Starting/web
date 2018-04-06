@@ -10,7 +10,8 @@
 
 namespace biny\lib;
 
-class TXService {
+class TXService
+{
 
     /**
      * 获取Service

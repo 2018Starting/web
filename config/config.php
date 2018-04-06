@@ -73,7 +73,7 @@ return array(
     'cache' => array(
         'pkCache' => 'tb:%s',
         'session' => array(
-            'save_handler'=>'files',  //redis memcache
+            'save_handler' => 'files',  //redis memcache
             'maxlifetime' => 86400    //过期时间s
         ),
         // 开启redis自动序列化存储
@@ -92,7 +92,6 @@ return array(
             403 => '权限不足，无法访问'
         )
     ),
-
 
 
 );

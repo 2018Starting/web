@@ -43,7 +43,7 @@ abstract class PHP_CodeCoverage_Report_Node implements Countable
     /**
      * Constructor.
      *
-     * @param string                       $name
+     * @param string $name
      * @param PHP_CodeCoverage_Report_Node $parent
      */
     public function __construct($name, PHP_CodeCoverage_Report_Node $parent = null)
@@ -52,7 +52,7 @@ abstract class PHP_CodeCoverage_Report_Node implements Countable
             $name = substr($name, 0, -1);
         }
 
-        $this->name   = $name;
+        $this->name = $name;
         $this->parent = $parent;
     }
 

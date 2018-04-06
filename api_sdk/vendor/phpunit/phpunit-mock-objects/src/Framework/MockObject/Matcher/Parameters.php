@@ -79,7 +79,7 @@ class PHPUnit_Framework_MockObject_Matcher_Parameters extends PHPUnit_Framework_
      * does the matcher will get the invoked() method called which should check
      * if an expectation is met.
      *
-     * @param  PHPUnit_Framework_MockObject_Invocation      $invocation
+     * @param  PHPUnit_Framework_MockObject_Invocation $invocation
      *                                                                  Object containing information on a mocked or stubbed method which
      *                                                                  was invoked.
      * @return bool

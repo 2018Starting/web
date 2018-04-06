@@ -9,9 +9,11 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
-class TXDatabase {
+class TXDatabase
+{
     private static $instance = [];
     private static $autocommit = true;
 
@@ -20,10 +22,10 @@ class TXDatabase {
      * @param bool $instance
      * @return TXDatabase
      */
-    public static function instance($name, $instance=true)
+    public static function instance($name, $instance = true)
     {
         // 兼容异步模式
-        if (!$instance){
+        if (!$instance) {
             $dbConfig = TXApp::$base->app_config->get($name, 'dns');
             return new self($dbConfig);
         }
@@ -47,11 +49,11 @@ class TXDatabase {
 
     public function __construct($config)
     {
-        if (!$config || !isset($config['host']) || !isset($config['user']) || !isset($config['password']) || !isset($config['port'])){
+        if (!$config || !isset($config['host']) || !isset($config['user']) || !isset($config['password']) || !isset($config['port'])) {
             throw new TXException(3001, ['unKnown']);
         }
-        if (isset($config['keep-alive']) && $config['keep-alive']){
-            $config['host'] = 'p:'.$config['host'];
+        if (isset($config['keep-alive']) && $config['keep-alive']) {
+            $config['host'] = 'p:' . $config['host'];
         }
         $this->handler = mysqli_connect($config['host'], $config['user'], $config['password'], '', $config['port']);
         if (!$this->handler) {
@@ -59,7 +61,7 @@ class TXDatabase {
         }
         $this->handler->autocommit(self::$autocommit);
         $dataConfig = TXApp::$base->config->get('database');
-        if ($dataConfig['returnIntOrFloat']){
+        if ($dataConfig['returnIntOrFloat']) {
             $this->handler->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE, 1);
         } else {
             $this->handler->options(MYSQLI_OPT_INT_AND_FLOAT_NATIVE, 0);
@@ -84,7 +86,7 @@ class TXDatabase {
     public static function start()
     {
         self::$autocommit = false;
-        foreach (self::$instance as $db){
+        foreach (self::$instance as $db) {
             $db->handler->autocommit(false);
         }
     }
@@ -96,7 +98,7 @@ class TXDatabase {
     {
         self::rollback();
         self::$autocommit = true;
-        foreach (self::$instance as $db){
+        foreach (self::$instance as $db) {
             $db->handler->autocommit(true);
         }
     }
@@ -106,8 +108,8 @@ class TXDatabase {
      */
     public static function rollback()
     {
-        foreach (self::$instance as $db){
-            if (!self::$autocommit){
+        foreach (self::$instance as $db) {
+            if (!self::$autocommit) {
                 $db->handler->rollback();
             }
         }
@@ -118,8 +120,8 @@ class TXDatabase {
      */
     public static function commit()
     {
-        foreach (self::$instance as $db){
-            if (!self::$autocommit){
+        foreach (self::$instance as $db) {
+            if (!self::$autocommit) {
                 $db->handler->commit();
             }
         }
@@ -142,21 +144,21 @@ class TXDatabase {
      * @param int $mode
      * @return array
      */
-    public function sql($sql, $key=null, $mode = self::FETCH_TYPE_ALL)
+    public function sql($sql, $key = null, $mode = self::FETCH_TYPE_ALL)
     {
         $start = microtime(true);
         $rs = mysqli_query($this->handler, $sql, $mode === self::FETCH_TYPE_CURSOR ? MYSQLI_USE_RESULT : MYSQLI_STORE_RESULT);
-        $time = (microtime(true)-$start)*1000;
+        $time = (microtime(true) - $start) * 1000;
         $config = TXApp::$base->config->get('logger');
-        if ($time > ($config['slowQuery'] ?: 1000)){
+        if ($time > ($config['slowQuery'] ?: 1000)) {
             TXLogger::addError(sprintf('Slow Query: %s [%sms]', $sql, $time), 'SQL', WARNING);
             TXLogger::warn(sprintf('Slow Query: %s [%sms]', $sql, $time));
         }
         if ($rs) {
             if ($mode == self::FETCH_TYPE_ALL) {
                 $result = [];
-                while($row = mysqli_fetch_assoc($rs)) {
-                    if ($key){
+                while ($row = mysqli_fetch_assoc($rs)) {
+                    if ($key) {
                         $result[$row[$key]] = $row;
                     } else {
                         $result[] = $row;
@@ -164,7 +166,7 @@ class TXDatabase {
 
                 }
                 return $result;
-            } else if ($mode == self::FETCH_TYPE_CURSOR){
+            } else if ($mode == self::FETCH_TYPE_CURSOR) {
                 return [$rs, $this->handler];
             } else {
                 $result = mysqli_fetch_assoc($rs) ?: [];
@@ -183,11 +185,11 @@ class TXDatabase {
      * @param bool $id
      * @return bool|int|\mysqli_result|string
      */
-    public function execute($sql, $id=false)
+    public function execute($sql, $id = false)
     {
         $dataConfig = TXApp::$base->config->get('database');
-        if (mysqli_query($this->handler, $sql)){
-            if ($id){
+        if (mysqli_query($this->handler, $sql)) {
+            if ($id) {
                 return mysqli_insert_id($this->handler);
             }
             return $dataConfig['returnAffectedRows'] ? mysqli_affected_rows($this->handler) : true;
@@ -203,7 +205,7 @@ class TXDatabase {
      */
     public function __destruct()
     {
-        if (!self::$autocommit){
+        if (!self::$autocommit) {
             $this->handler->rollback();
             $this->handler->autocommit(true);
         }

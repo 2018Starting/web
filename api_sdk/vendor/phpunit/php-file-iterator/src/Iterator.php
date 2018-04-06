@@ -41,10 +41,10 @@ class File_Iterator extends FilterIterator
 
     /**
      * @param Iterator $iterator
-     * @param array    $suffixes
-     * @param array    $prefixes
-     * @param array    $exclude
-     * @param string   $basepath
+     * @param array $suffixes
+     * @param array $prefixes
+     * @param array $exclude
+     * @param string $basepath
      */
     public function __construct(Iterator $iterator, array $suffixes = array(), array $prefixes = array(), array $exclude = array(), $basepath = NULL)
     {
@@ -64,7 +64,7 @@ class File_Iterator extends FilterIterator
 
         $this->prefixes = $prefixes;
         $this->suffixes = $suffixes;
-        $this->exclude  = $exclude;
+        $this->exclude = $exclude;
         $this->basepath = $basepath;
 
         parent::__construct($iterator);
@@ -75,7 +75,7 @@ class File_Iterator extends FilterIterator
      */
     public function accept()
     {
-        $current  = $this->getInnerIterator()->current();
+        $current = $this->getInnerIterator()->current();
         $filename = $current->getFilename();
         $realpath = $current->getRealPath();
 
@@ -89,8 +89,8 @@ class File_Iterator extends FilterIterator
         }
 
         return $this->acceptPath($realpath) &&
-               $this->acceptPrefix($filename) &&
-               $this->acceptSuffix($filename);
+            $this->acceptPrefix($filename) &&
+            $this->acceptSuffix($filename);
     }
 
     /**
@@ -131,8 +131,8 @@ class File_Iterator extends FilterIterator
 
     /**
      * @param  string $filename
-     * @param  array  $subString
-     * @param  int    $type
+     * @param  array $subString
+     * @param  int $type
      * @return bool
      * @since  Method available since Release 1.1.0
      */
@@ -147,7 +147,7 @@ class File_Iterator extends FilterIterator
         foreach ($subStrings as $string) {
             if (($type == self::PREFIX && strpos($filename, $string) === 0) ||
                 ($type == self::SUFFIX &&
-                 substr($filename, -1 * strlen($string)) == $string)) {
+                    substr($filename, -1 * strlen($string)) == $string)) {
                 $matched = TRUE;
                 break;
             }

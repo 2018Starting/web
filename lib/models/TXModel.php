@@ -12,6 +12,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 /**
@@ -52,15 +53,15 @@ class TXModel
      * @return mixed
      * @throws TXException
      */
-    private function create($class, $params=[])
+    private function create($class, $params = [])
     {
         $autoConfig = TXApp::$base->config->get('namespace', 'autoload');
-        if (!isset($autoConfig[$class])){
+        if (!isset($autoConfig[$class])) {
             $config = TXAutoload::loading();
             $autoConfig = $config['namespace'];
         }
         $class = isset($autoConfig[$class]) ? $autoConfig[$class] : $class;
-        if (is_callable([$class, 'init'])){
+        if (is_callable([$class, 'init'])) {
             return call_user_func_array([$class, 'init'], $params);
         } else {
             throw new TXException(7000, $class);

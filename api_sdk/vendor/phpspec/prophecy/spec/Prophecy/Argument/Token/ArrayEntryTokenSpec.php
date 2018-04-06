@@ -54,14 +54,15 @@ class ArrayEntryTokenSpec extends ObjectBehavior
     {
         $key->scoreArgument('key')->willReturn(4);
         $value->scoreArgument('value')->willReturn(6);
-        $this->scoreArgument(array('key'=>'value'))->shouldBe(5);
+        $this->scoreArgument(array('key' => 'value'))->shouldBe(5);
     }
 
     function it_scores_traversable_object_half_of_combined_scores_from_key_and_value_tokens(
         TokenInterface $key,
         TokenInterface $value,
         \Iterator $object
-    ) {
+    )
+    {
         $object->current()->will(function () use ($object) {
             $object->valid()->willReturn(false);
 
@@ -80,11 +81,12 @@ class ArrayEntryTokenSpec extends ObjectBehavior
         TokenInterface $key,
         TokenInterface $value,
         \ArrayAccess $object
-    ) {
+    )
+    {
         $key->__toString()->willReturn('any_token');
-        $this->beConstructedWith($key,$value);
-        $errorMessage = 'You can only use exact value tokens to match key of ArrayAccess object'.PHP_EOL.
-                        'But you used `any_token`.';
+        $this->beConstructedWith($key, $value);
+        $errorMessage = 'You can only use exact value tokens to match key of ArrayAccess object' . PHP_EOL .
+            'But you used `any_token`.';
         $this->shouldThrow(new InvalidArgumentException($errorMessage))->duringScoreArgument($object);
     }
 
@@ -92,7 +94,8 @@ class ArrayEntryTokenSpec extends ObjectBehavior
         ExactValueToken $key,
         TokenInterface $value,
         \ArrayAccess $object
-    ) {
+    )
+    {
         $object->offsetExists('key')->willReturn(true);
         $object->offsetGet('key')->willReturn('value');
         $key->getValue()->willReturn('key');
@@ -105,7 +108,8 @@ class ArrayEntryTokenSpec extends ObjectBehavior
         TokenInterface $key,
         TokenInterface $value,
         \ArrayIterator $object
-    ) {
+    )
+    {
         $this->beConstructedWith($key, $value);
         $object->current()->will(function () use ($object) {
             $object->valid()->willReturn(false);
@@ -152,7 +156,8 @@ class ArrayEntryTokenSpec extends ObjectBehavior
         TokenInterface $key,
         TokenInterface $value,
         \Iterator $object
-    ) {
+    )
+    {
         $object->current()->willReturn('foo');
         $object->current()->will(function () use ($object) {
             $object->valid()->willReturn(false);
@@ -174,7 +179,8 @@ class ArrayEntryTokenSpec extends ObjectBehavior
     function it_does_not_score_array_accessible_object_if_it_has_no_offset_with_key_token_value(
         ExactValueToken $key,
         \ArrayAccess $object
-    ) {
+    )
+    {
         $object->offsetExists('key')->willReturn(false);
         $key->getValue()->willReturn('key');
         $this->scoreArgument($object)->shouldBe(false);
@@ -184,7 +190,8 @@ class ArrayEntryTokenSpec extends ObjectBehavior
         ExactValueToken $key,
         TokenInterface $value,
         \ArrayAccess $object
-    ) {
+    )
+    {
         $object->offsetExists('key')->willReturn(true);
         $object->offsetGet('key')->willReturn('value');
         $key->getValue()->willReturn('key');
@@ -197,6 +204,6 @@ class ArrayEntryTokenSpec extends ObjectBehavior
     {
         $key->scoreArgument('key')->willReturn(10);
         $value->scoreArgument('value')->willReturn(10);
-        $this->scoreArgument(array('key'=>'value'))->shouldBe(8);
+        $this->scoreArgument(array('key' => 'value'))->shouldBe(8);
     }
 }

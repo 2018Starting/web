@@ -60,13 +60,13 @@ class PHPUnit_Runner_StandardTestSuiteLoader implements PHPUnit_Runner_TestSuite
             $testCaseClass = 'PHPUnit_Framework_TestCase';
 
             foreach ($loadedClasses as $loadedClass) {
-                $class     = new ReflectionClass($loadedClass);
+                $class = new ReflectionClass($loadedClass);
                 $classFile = $class->getFileName();
 
                 if ($class->isSubclassOf($testCaseClass) &&
                     !$class->isAbstract()) {
                     $suiteClassName = $loadedClass;
-                    $testCaseClass  = $loadedClass;
+                    $testCaseClass = $loadedClass;
 
                     if ($classFile == realpath($suiteClassFile)) {
                         break;

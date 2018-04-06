@@ -1,6 +1,7 @@
 <?php
 
 namespace app\controller;
+
 use TXApp;
 
 /**
@@ -17,25 +18,36 @@ class loginAction extends baseAction
      */
     public function action_index()
     {
-        if (TXApp::$model->person->exist()){
-            TXApp::$base->request->redirect('/');
-        }
-        $username = $this->param('username');
-        if (!$username){
-            return $this->display('main/login');
-        }
-        if ($user = $this->userDAO->filter(['name'=>$username])->find()){
-            TXApp::$model->person($user['id'])->login();
+        $ref = TXApp::$base->request->getReferrer();
+        if (TXApp::$model->cus->exist()) {
+            TXApp::$base->request->redirect($ref);
+
         } else {
-            $id = $this->userDAO->add(['name'=>$username, 'registerTime'=>time()]);
-            TXApp::$model->person($id)->login();
+            return $this->display('mytest/login');
         }
-        if ($lastUrl = TXApp::$base->session->lastUrl){
-            unset(TXApp::$base->session->lastUrl);
-            TXApp::$base->request->redirect($lastUrl);
-        } else {
-            TXApp::$base->request->redirect('/');
-        }
+
     }
 
+    public function action_yz()
+    {
+
+        $tel = $this->param('tel');
+        $name = $this->param('name');
+        if ($user = $this->cusDAO->filter(['Name' => $name, 'Tel' => $tel])->find()) {
+            TXApp::$model->cus($user['ID'])->login();
+
+            $res['error'] = 0;
+            $res['msg'] = "验证成功。" .;
+            return json_encode($res);
+
+        } else {
+
+            $res['error'] = 1;
+            $res['msg'] = "没有查询到该用户。";
+            return json_encode($res);
+        }
+
+    }
 }
+
+

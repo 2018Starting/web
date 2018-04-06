@@ -36,8 +36,7 @@ class SplFileInfoPatch implements ClassPatchInterface
         }
 
         return 'SplFileInfo' === $node->getParentClass()
-            || is_subclass_of($node->getParentClass(), 'SplFileInfo')
-        ;
+            || is_subclass_of($node->getParentClass(), 'SplFileInfo');
     }
 
     /**
@@ -61,7 +60,7 @@ class SplFileInfoPatch implements ClassPatchInterface
         }
 
         if ($this->nodeIsSplFileObject($node)) {
-            $constructor->setCode('return parent::__construct("' . __FILE__ .'");');
+            $constructor->setCode('return parent::__construct("' . __FILE__ . '");');
 
             return;
         }

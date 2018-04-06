@@ -33,7 +33,8 @@ class LazyDoubleSpec extends ObjectBehavior
         $doubler,
         ProphecySubjectInterface $double1,
         ProphecySubjectInterface $double2
-    ) {
+    )
+    {
         $doubler->double(null, array())->willReturn($double1);
         $doubler->double(null, array())->willReturn($double2);
 
@@ -50,7 +51,8 @@ class LazyDoubleSpec extends ObjectBehavior
     function its_setParentClass_throws_exception_if_prophecy_is_already_created(
         $doubler,
         ProphecySubjectInterface $double
-    ) {
+    )
+    {
         $doubler->double(null, array())->willReturn($double);
 
         $this->getInstance();
@@ -68,7 +70,8 @@ class LazyDoubleSpec extends ObjectBehavior
     function its_addInterface_throws_exception_if_prophecy_is_already_created(
         $doubler,
         ProphecySubjectInterface $double
-    ) {
+    )
+    {
         $doubler->double(null, array())->willReturn($double);
 
         $this->getInstance();

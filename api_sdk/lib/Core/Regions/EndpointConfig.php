@@ -2,13 +2,15 @@
 
 namespace Aliyun\Core\Regions;
 
-class EndpointConfig {
+class EndpointConfig
+{
 
     private static $loaded = false;
 
-    public static function load() {
-        if(self::$loaded) {
-           return;
+    public static function load()
+    {
+        if (self::$loaded) {
+            return;
         }
         $endpoint_filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . "endpoints.xml";
         $xml = simplexml_load_string(file_get_contents($endpoint_filename));

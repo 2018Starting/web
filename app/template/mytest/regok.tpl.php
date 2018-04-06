@@ -126,78 +126,78 @@
 <!-- banner start -->
 <!-- ================ -->
 <div class="statement">
-                
-                <p style="font-size: 3.2rem;font-weight: 300;margin-left: 50px;">尊敬的与会嘉宾：</p>
-                <p style="text-indent: 2em;width: 80%;margin: 0 auto;font-size: 2.2rem;margin-bottom: 25px">
-                 欢迎您选择预登记系统注册本次参会信息，一旦您的会议信息注册成功，您在登记报名时预留的手机号码或者邮箱即可收到我们发送的短信或邮件，会议报道当天，请凭本人名片及以下ID<?= TXApp::$base->session->userId?>，前往会议报到处注册报道即可。谢谢参会。                
-                </p>
 
-                <div class="code">
-                    
-                    
-                    
-                </div>
-                <div style="text-align: center;">
-                    <input type="button" value="会议回执" class="btn1">
-                </div>
-        </div>
+    <p style="font-size: 3.2rem;font-weight: 300;margin-left: 50px;">尊敬的与会嘉宾：</p>
+    <p style="text-indent: 2em;width: 80%;margin: 0 auto;font-size: 2.2rem;margin-bottom: 25px">
+        欢迎您选择预登记系统注册本次参会信息，一旦您的会议信息注册成功，您在登记报名时预留的手机号码或者邮箱即可收到我们发送的短信或邮件，会议报道当天，请凭本人名片及以下ID<?= TXApp::$base->session->userId ?>
+        ，前往会议报到处注册报道即可。谢谢参会。
+    </p>
 
-    <!-- banner end -->
+    <div class="code">
 
-    <!-- footer start -->
+
+    </div>
+    <div style="text-align: center;">
+        <input type="button" value="会议回执" class="btn1">
+    </div>
+</div>
+
+<!-- banner end -->
+
+<!-- footer start -->
+<!-- ================ -->
+<footer id="footer">
+
+
+    <!-- .subfooter start -->
     <!-- ================ -->
-    <footer id="footer">
-
-
-        <!-- .subfooter start -->
-        <!-- ================ -->
-        <div class="subfooter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.
-                        </p>
-                    </div>
+    <div class="subfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Copyright © 2014 Worthy by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a>.
+                    </p>
                 </div>
             </div>
         </div>
-        <!-- .subfooter end -->
+    </div>
+    <!-- .subfooter end -->
 
-    </footer>
-    <!-- footer end -->
+</footer>
+<!-- footer end -->
 
-    <!-- JavaScript files placed at the end of the document so the pages load faster
-    ================================================== -->
-    <!-- Jquery and Bootstap core js files -->
-    <script type="text/javascript" src="plugins/jquery.min.js"></script>
-    <script type="text/javascript" src="<?= $webRoot ?>/static/bootstrap/js/bootstrap.min.js"></script>
+<!-- JavaScript files placed at the end of the document so the pages load faster
+================================================== -->
+<!-- Jquery and Bootstap core js files -->
+<script type="text/javascript" src="plugins/jquery.min.js"></script>
+<script type="text/javascript" src="<?= $webRoot ?>/static/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Modernizr javascript -->
-    <script type="text/javascript" src="plugins/modernizr.js"></script>
+<!-- Modernizr javascript -->
+<script type="text/javascript" src="plugins/modernizr.js"></script>
 
-    <!-- Isotope javascript -->
-    <script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
+<!-- Isotope javascript -->
+<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
 
-    <!-- Backstretch javascript -->
-    <script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
+<!-- Backstretch javascript -->
+<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
 
-    <!-- Appear javascript -->
-    <script type="text/javascript" src="plugins/jquery.appear.js"></script>
+<!-- Appear javascript -->
+<script type="text/javascript" src="plugins/jquery.appear.js"></script>
 
-    <!-- Initialization of Plugins -->
-    <script type="text/javascript" src="<?= $webRoot ?>/static/js/template.js"></script>
+<!-- Initialization of Plugins -->
+<script type="text/javascript" src="<?= $webRoot ?>/static/js/template.js"></script>
 
-    <!-- Custom Scripts -->
-    <script type="text/javascript" src="<?= $webRoot ?>/static/js/custom.js"></script>
-    <!--流程控制语句start-->
-		<script>
+<!-- Custom Scripts -->
+<script type="text/javascript" src="<?= $webRoot ?>/static/js/custom.js"></script>
+<!--流程控制语句start-->
+<script>
 
-        $('.btn1').click(function(){
-            window.location='/hz';
-        })
+    $('.btn1').click(function () {
+        window.location = '/hz';
+    })
 
-    </script>
-		<!--流程控制语句end-->
+</script>
+<!--流程控制语句end-->
 
 </body>
 </html>

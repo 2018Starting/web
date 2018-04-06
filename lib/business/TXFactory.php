@@ -9,9 +9,11 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
-class TXFactory {
+class TXFactory
+{
     /**
      * 对象列表
      *
@@ -25,7 +27,7 @@ class TXFactory {
      * @param string $alias
      * @return TXSingleDAO | mixed
      */
-    public static function create($class, $alias=null)
+    public static function create($class, $alias = null)
     {
         if (null === $alias) {
             $alias = $class;
@@ -35,7 +37,7 @@ class TXFactory {
             if (substr($class, -3) == 'DAO') {
                 $key = substr($class, 0, -3);
                 $dbConfig = TXApp::$base->config->get('dbConfig', 'database');
-                if (isset($dbConfig[$key])){
+                if (isset($dbConfig[$key])) {
                     $dao = new TXSingleDAO($dbConfig[$key], $class);
                     self::$objects[$alias] = $dao;
                 } else {
@@ -56,11 +58,11 @@ class TXFactory {
      */
     private static function loadClass($class, $alias)
     {
-        if (strpos($class, '\\')){
+        if (strpos($class, '\\')) {
             self::$objects[$alias] = new $class();
         }
         $autoConfig = TXApp::$base->config->get('namespace', 'autoload');
-        if (!isset($autoConfig[$class])){
+        if (!isset($autoConfig[$class])) {
             $config = TXAutoload::loading();
             $autoConfig = $config['namespace'];
         }

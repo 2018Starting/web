@@ -6,7 +6,6 @@
  * Time: 下午7:44
  */
 return array(
-    'dbConfig' => array(
-        //'cus' => 'cus'
+    'dbConfig' => array(//'cus' => 'cus'
     )
 );

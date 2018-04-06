@@ -18,7 +18,7 @@ class TXString
      * @param int $len @需要截取的长度
      * @return string
      */
-    public static function cut_chinese($str, $len=10)
+    public static function cut_chinese($str, $len = 10)
     {
         $str = trim($str);
         $result = '';
@@ -26,7 +26,7 @@ class TXString
         $inc = 1;
         for ($j = 0; $j < strlen($str); $j += $inc) {
             if ($length < $len) {
-                if (ord($str[$j]) == 194){
+                if (ord($str[$j]) == 194) {
                     $inc = 2;
                     $length += 1;
                 } else if (ord($str[$j]) > 128) {
@@ -74,12 +74,12 @@ class TXString
     public static function recursionEncode(&$array)
     {
         $newArray = [];
-        foreach ($array as $key => $arr){
-            if (is_array($arr)){
+        foreach ($array as $key => $arr) {
+            if (is_array($arr)) {
                 $arr = self::recursionEncode($arr);
-            } elseif (is_string($arr)){
+            } elseif (is_string($arr)) {
                 $arr = self::encode($arr);
-            } elseif ($arr instanceof TXResponse){
+            } elseif ($arr instanceof TXResponse) {
                 $arr = $arr->getContent();
             }
             $key = is_string($key) ? self::encode($key) : $key;

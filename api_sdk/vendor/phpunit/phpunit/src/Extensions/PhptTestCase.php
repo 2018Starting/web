@@ -92,15 +92,15 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     public function run(PHPUnit_Framework_TestResult $result = null)
     {
         $sections = $this->parse();
-        $code     = $this->render($sections['FILE']);
+        $code = $this->render($sections['FILE']);
 
         if ($result === null) {
             $result = new PHPUnit_Framework_TestResult;
         }
 
-        $php      = PHPUnit_Util_PHP::factory();
-        $skip     = false;
-        $time     = 0;
+        $php = PHPUnit_Util_PHP::factory();
+        $skip = false;
+        $time = 0;
         $settings = $this->settings;
 
         $result->startTest($this);
@@ -128,17 +128,17 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
         if (!$skip) {
             PHP_Timer::start();
             $jobResult = $php->runJob($code, $settings);
-            $time      = PHP_Timer::stop();
+            $time = PHP_Timer::stop();
 
             if (isset($sections['EXPECT'])) {
                 $assertion = 'assertEquals';
-                $expected  = $sections['EXPECT'];
+                $expected = $sections['EXPECT'];
             } else {
                 $assertion = 'assertStringMatchesFormat';
-                $expected  = $sections['EXPECTF'];
+                $expected = $sections['EXPECTF'];
             }
 
-            $output   = preg_replace('/\r\n/', "\n", trim($jobResult['stdout']));
+            $output = preg_replace('/\r\n/', "\n", trim($jobResult['stdout']));
             $expected = preg_replace('/\r\n/', "\n", trim($expected));
 
             try {
@@ -185,11 +185,11 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     private function parse()
     {
         $sections = array();
-        $section  = '';
+        $section = '';
 
         foreach (file($this->filename) as $line) {
             if (preg_match('/^--([_A-Z]+)--/', $line, $result)) {
-                $section            = $result[1];
+                $section = $result[1];
                 $sections[$section] = '';
                 continue;
             } elseif (empty($section)) {
@@ -216,12 +216,12 @@ class PHPUnit_Extensions_PhptTestCase implements PHPUnit_Framework_Test, PHPUnit
     {
         return str_replace(
             array(
-            '__DIR__',
-            '__FILE__'
+                '__DIR__',
+                '__FILE__'
             ),
             array(
-            "'" . dirname($this->filename) . "'",
-            "'" . $this->filename . "'"
+                "'" . dirname($this->filename) . "'",
+                "'" . $this->filename . "'"
             ),
             $code
         );

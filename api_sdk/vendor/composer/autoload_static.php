@@ -6,70 +6,70 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitee70723fd3132b6d05f0ff016c58b71b
 {
-    public static $prefixLengthsPsr4 = array (
-        'p' => 
-        array (
-            'phpDocumentor\\Reflection\\' => 25,
-        ),
-        'W' => 
-        array (
-            'Webmozart\\Assert\\' => 17,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Component\\Yaml\\' => 23,
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Instantiator\\' => 22,
-        ),
-        'A' => 
-        array (
-            'Aliyun\\Test\\' => 12,
-            'Aliyun\\' => 7,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'phpDocumentor\\Reflection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-        ),
-        'Webmozart\\Assert\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webmozart/assert/src',
-        ),
-        'Symfony\\Component\\Yaml\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/yaml',
-        ),
-        'Doctrine\\Instantiator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
-        ),
-        'Aliyun\\Test\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
-        'Aliyun\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/lib',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Prophecy\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+    public static $prefixLengthsPsr4 = array(
+        'p' =>
+            array(
+                'phpDocumentor\\Reflection\\' => 25,
             ),
-        ),
+        'W' =>
+            array(
+                'Webmozart\\Assert\\' => 17,
+            ),
+        'S' =>
+            array(
+                'Symfony\\Component\\Yaml\\' => 23,
+            ),
+        'D' =>
+            array(
+                'Doctrine\\Instantiator\\' => 22,
+            ),
+        'A' =>
+            array(
+                'Aliyun\\Test\\' => 12,
+                'Aliyun\\' => 7,
+            ),
     );
 
-    public static $classMap = array (
+    public static $prefixDirsPsr4 = array(
+        'phpDocumentor\\Reflection\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
+                1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+                2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            ),
+        'Webmozart\\Assert\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/webmozart/assert/src',
+            ),
+        'Symfony\\Component\\Yaml\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/symfony/yaml',
+            ),
+        'Doctrine\\Instantiator\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+            ),
+        'Aliyun\\Test\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/tests',
+            ),
+        'Aliyun\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/lib',
+            ),
+    );
+
+    public static $prefixesPsr0 = array(
+        'P' =>
+            array(
+                'Prophecy\\' =>
+                    array(
+                        0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+                    ),
+            ),
+    );
+
+    public static $classMap = array(
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',

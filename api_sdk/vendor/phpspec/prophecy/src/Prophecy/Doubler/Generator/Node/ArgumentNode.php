@@ -21,10 +21,10 @@ class ArgumentNode
     private $name;
     private $typeHint;
     private $default;
-    private $optional    = false;
+    private $optional = false;
     private $byReference = false;
-    private $isVariadic  = false;
-    private $isNullable  = false;
+    private $isVariadic = false;
+    private $isNullable = false;
 
     /**
      * @param string $name
@@ -62,7 +62,7 @@ class ArgumentNode
     public function setDefault($default = null)
     {
         $this->optional = true;
-        $this->default  = $default;
+        $this->default = $default;
     }
 
     public function isOptional()

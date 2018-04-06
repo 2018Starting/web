@@ -12,10 +12,10 @@ defined('RUN_SHELL') or define('RUN_SHELL', true);
 //dev pre pub
 defined('SYS_ENV') or define('SYS_ENV', 'dev');
 
-ini_set('display_errors','On');
+ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 include __DIR__ . '/lib/TXApp.php';
 
-TXApp::registry(__DIR__. '/app');
+TXApp::registry(__DIR__ . '/app');
 TXApp::shell();

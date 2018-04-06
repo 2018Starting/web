@@ -48,13 +48,13 @@ class TXEvent
      * @return int
      * @throws TXException
      */
-    public static function bind($method, $event, $times=null)
+    public static function bind($method, $event, $times = null)
     {
-        if (!is_callable($method)){
+        if (!is_callable($method)) {
             throw new TXException(5003, isset($method[1]) ? $method[1] : 'null');
         }
         $fh = ++self::$fh;
-        self::$monitors[$event][$fh] = ['m'=>$method, 't'=>$times];
+        self::$monitors[$event][$fh] = ['m' => $method, 't' => $times];
         return $fh;
     }
 
@@ -64,7 +64,7 @@ class TXEvent
      * @param $event
      * @return int
      */
-    public static function on($event, $method=null)
+    public static function on($event, $method = null)
     {
         $method = $method ?: [TXLogger::instance(), 'event'];
         return self::bind($method, $event);
@@ -76,7 +76,7 @@ class TXEvent
      * @param $event
      * @return int
      */
-    public static function one($event, $method=null)
+    public static function one($event, $method = null)
     {
         $method = $method ?: [TXLogger::instance(), 'event'];
         return self::bind($method, $event, 1);
@@ -88,10 +88,10 @@ class TXEvent
      * @param $fh
      * @return bool
      */
-    public static function off($event, $fh=null)
+    public static function off($event, $fh = null)
     {
-        if ($fh){
-            if (isset(self::$monitors[$event][$fh])){
+        if ($fh) {
+            if (isset(self::$monitors[$event][$fh])) {
                 unset(self::$monitors[$event][$fh]);
                 return true;
             } else {
@@ -109,16 +109,16 @@ class TXEvent
      * @param array $params
      * @return bool
      */
-    public static function trigger($event, $params=[])
+    public static function trigger($event, $params = [])
     {
-        if (!isset(self::$monitors[$event])){
+        if (!isset(self::$monitors[$event])) {
             return false;
         }
         array_unshift($params, $event);
-        foreach (self::$monitors[$event] as $fh => &$value){
+        foreach (self::$monitors[$event] as $fh => &$value) {
             $method = $value['m'];
             call_user_func_array($method, $params);
-            if (isset($value['t']) && --$value['t'] <= 0){
+            if (isset($value['t']) && --$value['t'] <= 0) {
                 unset(self::$monitors[$event][$fh]);
             }
         }
@@ -143,7 +143,7 @@ class TXEvent
      */
     public static function onException($event, $code, $params)
     {
-        TXLogger::addError("ERROR CODE: $code\n".join("\n", $params));
+        TXLogger::addError("ERROR CODE: $code\n" . join("\n", $params));
     }
 
     /**
@@ -153,6 +153,6 @@ class TXEvent
      */
     public static function onRequest($event, $request)
     {
-        TXLogger::addLog('request: '.$request->getHostInfo().$request->getUrl());
+        TXLogger::addLog('request: ' . $request->getHostInfo() . $request->getUrl());
     }
 }

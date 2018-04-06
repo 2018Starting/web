@@ -40,10 +40,10 @@ class Generic extends BaseTag implements Factory\StaticMethod
     /**
      * Creates a new tag that represents any unknown tag type.
      *
-     * @param string             $body
-     * @param string             $name
+     * @param string $body
+     * @param string $name
      * @param DescriptionFactory $descriptionFactory
-     * @param TypeContext        $context
+     * @param TypeContext $context
      *
      * @return static
      */
@@ -52,7 +52,8 @@ class Generic extends BaseTag implements Factory\StaticMethod
         $name = '',
         DescriptionFactory $descriptionFactory = null,
         TypeContext $context = null
-    ) {
+    )
+    {
         Assert::string($body);
         Assert::stringNotEmpty($name);
         Assert::notNull($descriptionFactory);
@@ -81,7 +82,7 @@ class Generic extends BaseTag implements Factory\StaticMethod
      */
     private function validateTagName($name)
     {
-        if (! preg_match('/^' . StandardTagFactory::REGEX_TAGNAME . '$/u', $name)) {
+        if (!preg_match('/^' . StandardTagFactory::REGEX_TAGNAME . '$/u', $name)) {
             throw new \InvalidArgumentException(
                 'The tag name "' . $name . '" is not wellformed. Tags may only consist of letters, underscores, '
                 . 'hyphens and backslashes.'

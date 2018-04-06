@@ -9,6 +9,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXShell
@@ -53,9 +54,9 @@ class TXShell
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function param($key, $default=null)
+    public function param($key, $default = null)
     {
-        if (is_int($key)){
+        if (is_int($key)) {
             return isset($this->args[$key]) ? $this->args[$key] : $default;
         } else {
             return isset($this->params[$key]) ? $this->params[$key] : $default;
@@ -66,7 +67,7 @@ class TXShell
      * @param string $ret
      * @return mixed
      */
-    public function correct($ret='success')
+    public function correct($ret = 'success')
     {
         TXLogger::addLog($ret);
         return $ret;
@@ -76,7 +77,7 @@ class TXShell
      * @param string $msg
      * @return string
      */
-    public function error($msg="error")
+    public function error($msg = "error")
     {
         TXEvent::trigger(onError, [$msg]);
         TXLogger::addError($msg);

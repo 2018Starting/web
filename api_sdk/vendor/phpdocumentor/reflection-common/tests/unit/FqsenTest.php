@@ -24,7 +24,7 @@ class FqsenTest extends \PHPUnit_Framework_TestCase
      */
     public function testValidFormats($fqsen, $name)
     {
-        $instance  = new Fqsen($fqsen);
+        $instance = new Fqsen($fqsen);
         $this->assertEquals($name, $instance->getName());
     }
 

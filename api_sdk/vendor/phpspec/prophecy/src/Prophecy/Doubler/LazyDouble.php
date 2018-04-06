@@ -27,7 +27,7 @@ class LazyDouble
     private $doubler;
     private $class;
     private $interfaces = array();
-    private $arguments  = null;
+    private $arguments = null;
     private $double;
 
     /**

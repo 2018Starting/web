@@ -16,7 +16,7 @@ namespace biny\lib;
  * Time: 上午11:50
  * @method TXSingleCond group($groupby)
  * @method TXSingleCond having($having)
- * @method TXSingleCond limit($len, $start=0)
+ * @method TXSingleCond limit($len, $start = 0)
  * @method TXSingleCond order($orderby)
  * @method TXSingleCond addition($additions)
  */
@@ -33,7 +33,7 @@ class TXSingleFilter extends TXFilter
      * @param $cond
      * @return TXSingleFilter
      */
-    public function filter($cond=[])
+    public function filter($cond = [])
     {
         return $cond ? new self($this->DAO, $cond, "__and__", $this->conds[0]) : $this;
     }
@@ -68,7 +68,7 @@ class TXSingleFilter extends TXFilter
      */
     public function __call($method, $args)
     {
-        if (in_array($method, $this->methods) || in_array($method, $this->calcs)){
+        if (in_array($method, $this->methods) || in_array($method, $this->calcs)) {
             $cond = new TXSingleCond($this->DAO);
             $cond->setWhere($this->buildWhere($this->conds));
             return call_user_func_array([$cond, $method], $args);

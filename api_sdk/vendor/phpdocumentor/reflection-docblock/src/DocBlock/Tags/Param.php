@@ -61,7 +61,8 @@ final class Param extends BaseTag implements Factory\StaticMethod
         TypeResolver $typeResolver = null,
         DescriptionFactory $descriptionFactory = null,
         TypeContext $context = null
-    ) {
+    )
+    {
         Assert::stringNotEmpty($body);
         Assert::allNotNull([$typeResolver, $descriptionFactory]);
 
@@ -134,8 +135,8 @@ final class Param extends BaseTag implements Factory\StaticMethod
     public function __toString()
     {
         return ($this->type ? $this->type . ' ' : '')
-        . ($this->isVariadic() ? '...' : '')
-        . '$' . $this->variableName
-        . ($this->description ? ' ' . $this->description : '');
+            . ($this->isVariadic() ? '...' : '')
+            . '$' . $this->variableName
+            . ($this->description ? ' ' . $this->description : '');
     }
 }

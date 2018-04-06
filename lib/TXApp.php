@@ -8,12 +8,12 @@
  */
 
 # 基本加载
-include __DIR__.'/TXAutoload.php';
-include __DIR__.'/config/TXConfig.php';
-include __DIR__.'/business/TXEvent.php';
-include __DIR__.'/logger/TXLogger.php';
-include __DIR__.'/exception/TXException.php';
-include __DIR__.'/models/TXModel.php';
+include __DIR__ . '/TXAutoload.php';
+include __DIR__ . '/config/TXConfig.php';
+include __DIR__ . '/business/TXEvent.php';
+include __DIR__ . '/logger/TXLogger.php';
+include __DIR__ . '/exception/TXException.php';
+include __DIR__ . '/models/TXModel.php';
 
 use biny\lib\TXConfig;
 use biny\lib\TXRequest;
@@ -76,9 +76,9 @@ class TXApp
         self::$base = new self();
         self::$model = new TXModel();
         self::$base_root = dirname(__DIR__);
-        self::$extends_root = self::$base_root.DS."extends";
-        self::$log_root = self::$base_root.DS."logs";
-        if (RUN_SHELL){
+        self::$extends_root = self::$base_root . DS . "extends";
+        self::$log_root = self::$base_root . DS . "logs";
+        if (RUN_SHELL) {
             self::$log_root .= '/shell';
         }
 
@@ -87,8 +87,8 @@ class TXApp
         } else {
             throw new TXException(1001, [$apppath]);
         }
-        self::$view_root = self::$app_root.DS."template";
-        if (!is_writable(self::$log_root) && !mkdir(self::$log_root)){
+        self::$view_root = self::$app_root . DS . "template";
+        if (!is_writable(self::$log_root) && !mkdir(self::$log_root)) {
             throw new TXException(1007, [self::$log_root]);
         }
 
@@ -136,7 +136,7 @@ class TXApp
      */
     public static function handleError($code, $message, $file, $line)
     {
-        if ($code === E_WARNING || $code === E_NOTICE){
+        if ($code === E_WARNING || $code === E_NOTICE) {
             $message = sprintf("%s\n#1 %s(%s)", $message, $file, $line);
             TXLogger::addError($message, 'WARNING', $code);
         } elseif (error_reporting() & $code) {
@@ -194,7 +194,7 @@ class TXApp
      */
     public function __get($name)
     {
-        switch ($name){
+        switch ($name) {
             case 'config':
             case 'app_config':
                 return TXConfig::instance($name);
@@ -210,7 +210,7 @@ class TXApp
                 return TXSession::instance();
             case 'router':
             case 'cache':
-                $module = 'TX'.ucfirst($name);
+                $module = 'TX' . ucfirst($name);
                 return TXFactory::create($module);
 
             default:

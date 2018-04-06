@@ -30,7 +30,7 @@ class PHPUnit_Framework_Constraint_ArraySubset extends PHPUnit_Framework_Constra
 
     /**
      * @param array|ArrayAccess $subset
-     * @param bool              $strict Check for object identity
+     * @param bool $strict Check for object identity
      */
     public function __construct($subset, $strict = false)
     {
@@ -51,12 +51,12 @@ class PHPUnit_Framework_Constraint_ArraySubset extends PHPUnit_Framework_Constra
     {
         //type cast $other & $this->subset as an array to allow 
         //support in standard array functions.
-        if($other instanceof ArrayAccess) {
-            $other = (array) $other;
+        if ($other instanceof ArrayAccess) {
+            $other = (array)$other;
         }
 
-        if($this->subset instanceof ArrayAccess) {
-            $this->subset = (array) $this->subset;
+        if ($this->subset instanceof ArrayAccess) {
+            $this->subset = (array)$this->subset;
         }
 
         $patched = array_replace_recursive($other, $this->subset);

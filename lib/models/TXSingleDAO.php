@@ -8,11 +8,12 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 /**
  * 数据库
- * @method TXSingleCond limit($len, $start=0)
+ * @method TXSingleCond limit($len, $start = 0)
  * @method TXSingleCond group($groupby)
  * @method TXSingleCond having($having)
  * @method TXSingleCond order($orderby)
@@ -31,7 +32,7 @@ class TXSingleDAO extends TXDAO
 
     private $database = null;
 
-    public function __construct($table=null, $called=null)
+    public function __construct($table = null, $called = null)
     {
         if ($table) $this->table = $table;
         if ($called) {
@@ -45,20 +46,20 @@ class TXSingleDAO extends TXDAO
 
     public function setDbTable($table)
     {
-        if (null === $this->database){
-            if (is_string($this->dbConfig) && $db = TXApp::$base->app_config->get($this->dbConfig, 'dns')['database']){
+        if (null === $this->database) {
+            if (is_string($this->dbConfig) && $db = TXApp::$base->app_config->get($this->dbConfig, 'dns')['database']) {
                 $this->database = $db;
-            } else if (is_array($this->dbConfig)){
+            } else if (is_array($this->dbConfig)) {
                 $master = TXApp::$base->app_config->get($this->dbConfig[0], 'dns')['database'];
                 $slave = TXApp::$base->app_config->get($this->dbConfig[1], 'dns')['database'];
-                if ($master === $slave){
+                if ($master === $slave) {
                     $this->database = $master;
                 } else {
                     throw new TXException(3008, [$slave, $master]);
                 }
             }
         }
-        $this->dbTable = $this->database.".`{$table}`";
+        $this->dbTable = $this->database . ".`{$table}`";
     }
 
     /**
@@ -104,7 +105,7 @@ class TXSingleDAO extends TXDAO
      */
     public function choose($id)
     {
-        $this->setDbTable($this->table.'_'.$id);
+        $this->setDbTable($this->table . '_' . $id);
         return $this;
     }
 
@@ -125,15 +126,15 @@ class TXSingleDAO extends TXDAO
      * @return $this|TXDoubleDAO
      * @throws TXException
      */
-    protected function _join($dao, $relate, $type='join')
+    protected function _join($dao, $relate, $type = 'join')
     {
         // todo remove substr
         $selfClass = substr($this->getCalledClass(), 0, -3);
         $relateClass = substr($dao->getCalledClass(), 0, -3);
-        if ($selfClass == $relateClass){
+        if ($selfClass == $relateClass) {
             return $this;
         }
-        if (!$this->checkConfig($dao)){
+        if (!$this->checkConfig($dao)) {
             throw new TXException(3002, "DAOs must be the same Host");
         }
         $DAOs = [
@@ -142,9 +143,9 @@ class TXSingleDAO extends TXDAO
         ];
         $relates = [];
         $join = [];
-        foreach ($relate as $key => $value){
+        foreach ($relate as $key => $value) {
             $key = "`{$this->real_escape_string($selfClass)}`.`{$this->real_escape_string($key)}`";
-            if (is_array($value) && count($value)>=2 && in_array($value[0], $this->extracts)){
+            if (is_array($value) && count($value) >= 2 && in_array($value[0], $this->extracts)) {
                 $join[] = [$key, [$value[0], "`{$this->real_escape_string($relateClass)}`.`{$this->real_escape_string($value[1])}`"]];
             } else {
                 $join[] = [$key, "`{$this->real_escape_string($relateClass)}`.`{$this->real_escape_string($value)}`"];
@@ -160,26 +161,26 @@ class TXSingleDAO extends TXDAO
      * @param string $type
      * @return string
      */
-    public function buildWhere($cond, $type='and')
+    public function buildWhere($cond, $type = 'and')
     {
         if (empty($cond)) {
             return '';
         } else {
             $where = [];
-            foreach($cond as $key => $value) {
+            foreach ($cond as $key => $value) {
                 $key = $this->real_escape_string($key);
-                if (in_array(strtolower($key), $this->extracts)){
-                    foreach ($value as $arrk => $arrv){
+                if (in_array(strtolower($key), $this->extracts)) {
+                    foreach ($value as $arrk => $arrv) {
                         $arrk = $this->real_escape_string($arrk);
-                        if (is_null($arrv)){
+                        if (is_null($arrv)) {
                             $where[] = "`{$arrk}`{$key} NULL";
-                        } elseif (is_string($arrv)){
+                        } elseif (is_string($arrv)) {
                             $arrv = $this->real_escape_string($arrv);
                             $where[] = "`{$arrk}`{$key}'{$arrv}'";
-                        } elseif ($arrv instanceof \stdClass){
+                        } elseif ($arrv instanceof \stdClass) {
                             $where[] = "`{$arrk}`{$key}{$arrv->scalar}";
-                        } else if (is_array($arrv)){
-                            foreach ($arrv as $av){
+                        } else if (is_array($arrv)) {
+                            foreach ($arrv as $av) {
                                 $arrv = $this->real_escape_string($av);
                                 $where[] = "`{$arrk}`{$key}'{$arrv}'";
                             }
@@ -187,16 +188,16 @@ class TXSingleDAO extends TXDAO
                             $where[] = "`{$arrk}`{$key}{$arrv}";
                         }
                     }
-                } elseif ($key === '__like__'){
-                    foreach ($cond[$key] as $arrk => $arrv){
+                } elseif ($key === '__like__') {
+                    foreach ($cond[$key] as $arrk => $arrv) {
                         $arrk = $this->real_escape_string($arrk);
-                        if (is_array($arrv)){
-                            foreach ($arrv as $like){
+                        if (is_array($arrv)) {
+                            foreach ($arrv as $like) {
                                 $like = $this->real_like_string($like);
-                                if (substr($like, 0, 1) !== '^'){
-                                    $like = '%'.$like;
+                                if (substr($like, 0, 1) !== '^') {
+                                    $like = '%' . $like;
                                 }
-                                if (substr($like, -1, 1) !== '$'){
+                                if (substr($like, -1, 1) !== '$') {
                                     $like .= '%';
                                 }
                                 $like = trim($like, "^$");
@@ -204,35 +205,35 @@ class TXSingleDAO extends TXDAO
                             }
                         } else {
                             $arrv = $this->real_like_string($arrv);
-                            if (substr($arrv, 0, 1) !== '^'){
-                                $arrv = '%'.$arrv;
+                            if (substr($arrv, 0, 1) !== '^') {
+                                $arrv = '%' . $arrv;
                             }
-                            if (substr($arrv, -1, 1) !== '$'){
+                            if (substr($arrv, -1, 1) !== '$') {
                                 $arrv .= '%';
                             }
                             $arrv = trim($arrv, "^$");
                             $where[] = "`{$arrk}` like '{$arrv}'";
                         }
                     }
-                } elseif (is_null($value)){
+                } elseif (is_null($value)) {
                     $where[] = "`{$key}`is NULL";
-                } elseif ($value instanceof \stdClass){
+                } elseif ($value instanceof \stdClass) {
                     $where[] = "`{$key}`={$value->scalar}";
                 } elseif (is_string($value)) {
                     $value = $this->real_escape_string($value);
                     $where[] = "`{$key}`='{$value}'";
-                } elseif (is_array($value)){
-                    if (!$value){
+                } elseif (is_array($value)) {
+                    if (!$value) {
                         $where[] = 'FALSE';
                         continue;
                     }
-                    foreach ($value as &$val){
-                        if (is_string($val)){
+                    foreach ($value as &$val) {
+                        if (is_string($val)) {
                             $val = "'{$this->real_escape_string($val)}'";
                         }
                     }
                     unset($val);
-                    $value = "(". join(',', $value).")";
+                    $value = "(" . join(',', $value) . ")";
                     $where[] = "`{$key}` in {$value}";
                 } else {
                     $where[] = "`{$key}`={$value}";
@@ -264,11 +265,12 @@ class TXSingleDAO extends TXDAO
      * @return string
      * @throws TXException
      */
-    protected function buildFields($fields, $group=[]){
-        if (is_array($fields)){
-            foreach ($fields as $key => &$field){
-                if (is_int($key)){
-                    $field = '`'.$this->real_escape_string($field).'`';
+    protected function buildFields($fields, $group = [])
+    {
+        if (is_array($fields)) {
+            foreach ($fields as $key => &$field) {
+                if (is_int($key)) {
+                    $field = '`' . $this->real_escape_string($field) . '`';
                 } elseif ($field instanceof \stdClass) {
                     $field = $field->scalar;
                 } else {
@@ -278,32 +280,32 @@ class TXSingleDAO extends TXDAO
             unset($field);
             $fields = join(',', $fields);
         }
-        if ($group){
-            if ($fields){
+        if ($group) {
+            if ($fields) {
                 $groups = [$fields];
             } else {
                 $groups = [];
             }
-            foreach ($group as $key => $values){
-                if (!in_array(strtolower($key), $this->calcs)){
+            foreach ($group as $key => $values) {
+                if (!in_array(strtolower($key), $this->calcs)) {
                     throw new TXException(3011, [$key]);
                 }
                 $calc = $key == 'distinct' ? "COUNT(DISTINCT " : "{$key}(";
-                if (is_string($values)){
-                    $values = $values === '*' ? $values : '`'.$this->real_escape_string($values).'`';
-                    $groups[] = $calc."{$values}) as '{$key}'";
+                if (is_string($values)) {
+                    $values = $values === '*' ? $values : '`' . $this->real_escape_string($values) . '`';
+                    $groups[] = $calc . "{$values}) as '{$key}'";
                     continue;
-                } else if ($values instanceof \stdClass){
-                    $groups[] = $calc."{$values->scalar}) as '{$key}'";
+                } else if ($values instanceof \stdClass) {
+                    $groups[] = $calc . "{$values->scalar}) as '{$key}'";
                     continue;
                 }
-                foreach ($values as $k => $value){
+                foreach ($values as $k => $value) {
                     $value = $this->real_escape_string($value);
-                    if (is_string($k)){
+                    if (is_string($k)) {
                         $k = $this->real_escape_string($k);
-                        $groups[] = $calc."`{$k}`) as '{$value}'";
+                        $groups[] = $calc . "`{$k}`) as '{$value}'";
                     } else {
-                        $groups[] = $calc."`{$value}`) as '{$value}'";
+                        $groups[] = $calc . "`{$value}`) as '{$value}'";
                     }
                 }
             }
@@ -320,24 +322,24 @@ class TXSingleDAO extends TXDAO
     protected function buildSets($set)
     {
         $sets = [];
-        foreach($set as $key => $value) {
+        foreach ($set as $key => $value) {
             $key = $this->real_escape_string($key);
-            if (is_array($value)){
+            if (is_array($value)) {
                 $k = array_keys($value)[0];
-                if (!in_array($k, $this->setOps)){
+                if (!in_array($k, $this->setOps)) {
                     continue;
                 }
                 $val = array_values($value)[0];
-                if (is_array($val)){
+                if (is_array($val)) {
                     $arr = [];
-                    foreach ($val as $v){
-                        if (is_numeric($v)){
+                    foreach ($val as $v) {
+                        if (is_numeric($v)) {
                             $arr[] = $v;
                         } else {
-                            $arr[] = '`'.$this->real_escape_string($v).'`';
+                            $arr[] = '`' . $this->real_escape_string($v) . '`';
                         }
                     }
-                    $sets[] = "`{$key}`= ".join($k, $arr);
+                    $sets[] = "`{$key}`= " . join($k, $arr);
                 } else {
                     $val = intval($val);
                     $sets[] = "`{$key}`= `{$key}` {$k} {$val}";
@@ -366,8 +368,8 @@ class TXSingleDAO extends TXDAO
     protected function buildCount($set)
     {
         $sets = [];
-        foreach($set as $key => $value) {
-            if (!is_numeric($value) || $value == 0 ) {
+        foreach ($set as $key => $value) {
+            if (!is_numeric($value) || $value == 0) {
                 continue;
             }
             $key = $this->real_escape_string($key);
@@ -382,33 +384,33 @@ class TXSingleDAO extends TXDAO
      * @param array $having
      * @return string
      */
-    protected function buildGroupBy($groupBy, $having=[])
+    protected function buildGroupBy($groupBy, $having = [])
     {
-        if (!$groupBy){
+        if (!$groupBy) {
             return '';
         }
-        if (is_array($groupBy)){
-            foreach ($groupBy as &$group){
-                if ($group instanceof \stdClass){
+        if (is_array($groupBy)) {
+            foreach ($groupBy as &$group) {
+                if ($group instanceof \stdClass) {
                     $group = $group->scalar;
                 } else {
-                    $group = '`'.$this->real_escape_string($group).'`';
+                    $group = '`' . $this->real_escape_string($group) . '`';
                 }
             }
             unset($group);
             $groupBy = join(',', $groupBy);
         }
-        if ($having){
+        if ($having) {
             $havings = [];
-            foreach ($having as $ys => $value){
-                if (!in_array(strtolower($ys), $this->extracts)){
+            foreach ($having as $ys => $value) {
+                if (!in_array(strtolower($ys), $this->extracts)) {
                     continue;
                 }
-                foreach ($value as $arrk => $arrv){
+                foreach ($value as $arrk => $arrv) {
                     $arrk = $this->real_escape_string($arrk);
-                    if (is_null($arrv)){
+                    if (is_null($arrv)) {
                         $havings[] = "`{$arrk}`{$ys} NULL";
-                    }elseif (is_string($arrv)){
+                    } elseif (is_string($arrv)) {
                         $arrv = $this->real_escape_string($arrv);
                         $havings[] = "`{$arrk}`{$ys}'{$arrv}'";
                     } else {
@@ -416,11 +418,11 @@ class TXSingleDAO extends TXDAO
                     }
                 }
             }
-            if ($havings){
-                $groupBy .= " HAVING ".join(' AND ', $havings);
+            if ($havings) {
+                $groupBy .= " HAVING " . join(' AND ', $havings);
             }
         }
-        return ' GROUP BY '.$groupBy;
+        return ' GROUP BY ' . $groupBy;
     }
 
     /**
@@ -433,7 +435,7 @@ class TXSingleDAO extends TXDAO
     {
         $field = [];
         $value = [];
-        foreach ($sets as $key => $val){
+        foreach ($sets as $key => $val) {
             $field[] = "`{$this->real_escape_string($key)}`";
             if ($val === null) {
                 $value[] = "NULL";
@@ -444,7 +446,7 @@ class TXSingleDAO extends TXDAO
                 $value[] = "{$val}";
             }
         }
-        $fields = '('.join(',', $field).') VALUES('.join(',', $value).')';
+        $fields = '(' . join(',', $field) . ') VALUES(' . join(',', $value) . ')';
         return $fields;
     }
 
@@ -456,26 +458,26 @@ class TXSingleDAO extends TXDAO
     protected function buildOrderBy($orderBy)
     {
         $orders = [];
-        foreach ($orderBy as $key => $val){
+        foreach ($orderBy as $key => $val) {
             $key = $this->real_escape_string($key);
-            if (is_array($val)){
+            if (is_array($val)) {
                 $asc = isset($val[0]) ? $val[0] : 'ASC';
                 $code = isset($val[1]) ? $val[1] : 'gbk';
-                if (!in_array(strtoupper($asc), ['ASC', 'DESC'])){
+                if (!in_array(strtoupper($asc), ['ASC', 'DESC'])) {
                     TXLogger::error("order must be ASC/DESC, {$asc} given", 'sql Error');
                     continue;
                 }
                 $orders[] = "CONVERT(`{$key}` USING {$code}) $asc";
             } else {
-                if (!in_array(strtoupper($val), ['ASC', 'DESC'])){
+                if (!in_array(strtoupper($val), ['ASC', 'DESC'])) {
                     TXLogger::error("order must be ASC/DESC, {$val} given", 'sql Error');
                     continue;
                 }
-                $orders[] = '`'.$key."` ".$val;
+                $orders[] = '`' . $key . "` " . $val;
             }
         }
-        if ($orders){
-            return ' ORDER BY '.join(',', $orders);
+        if ($orders) {
+            return ' ORDER BY ' . join(',', $orders);
         } else {
             return '';
         }
@@ -487,7 +489,7 @@ class TXSingleDAO extends TXDAO
      * @param bool $id
      * @return int
      */
-    public function add($sets, $id=true)
+    public function add($sets, $id = true)
     {
         $fields = $this->buildInsert($sets);
         $sql = sprintf("INSERT INTO %s %s", $this->dbTable, $fields);
@@ -501,24 +503,24 @@ class TXSingleDAO extends TXDAO
      * @param int $max
      * @return bool|int|\mysqli_result|string
      */
-    public function addList($values, $max=100)
+    public function addList($values, $max = 100)
     {
-        if (count($values) == 0){
+        if (count($values) == 0) {
             return true;
         }
         $value = $values[0];
         $fields = array_keys($value);
-        foreach ($fields as &$field){
+        foreach ($fields as &$field) {
             $field = $this->real_escape_string($field);
         }
         unset($field);
-        $fields = '(`'.join('`,`', $fields).'`)';
+        $fields = '(`' . join('`,`', $fields) . '`)';
 
         $columns = [];
         $i = 0;
         $flag = true;
-        foreach ($values as $value){
-            foreach ($value as &$val){
+        foreach ($values as $value) {
+            foreach ($value as &$val) {
                 if ($val === null) {
                     $val = "NULL";
                 } else {
@@ -526,22 +528,23 @@ class TXSingleDAO extends TXDAO
                 }
             }
             unset($val);
-            $columns[] = '('.join(',', $value).')';
-            if (++$i == $max){
+            $columns[] = '(' . join(',', $value) . ')';
+            if (++$i == $max) {
                 $values = join(',', $columns);
-                $columns = []; $i = 0;
+                $columns = [];
+                $i = 0;
                 $sql = sprintf("INSERT INTO %s %s VALUES  %s", $this->dbTable, $fields, $values);
                 TXEvent::trigger(onSql, [$sql]);
-                if (!$this->execute($sql, false)){
+                if (!$this->execute($sql, false)) {
                     $flag = false;
                 }
             }
         }
-        if ($columns){
+        if ($columns) {
             $values = join(',', $columns);
             $sql = sprintf("INSERT INTO %s %s VALUES  %s", $this->dbTable, $fields, $values);
             TXEvent::trigger(onSql, [$sql]);
-            if (!$this->execute($sql, false)){
+            if (!$this->execute($sql, false)) {
                 $flag = false;
             }
         }
@@ -555,7 +558,7 @@ class TXSingleDAO extends TXDAO
     public function delete()
     {
         $params = func_get_args();
-        $where = isset($params[0]) && $params[0]->get('where') ? " WHERE ".$params[0]->get('where') : "";
+        $where = isset($params[0]) && $params[0]->get('where') ? " WHERE " . $params[0]->get('where') : "";
         $sql = sprintf("DELETE FROM %s%s", $this->dbTable, $where);
         TXEvent::trigger(onSql, [$sql]);
 
@@ -568,7 +571,7 @@ class TXSingleDAO extends TXDAO
      * @param $sets
      * @return bool|int|\mysqli_result|string
      */
-    public function createOrUpdate($inserts, $sets=[])
+    public function createOrUpdate($inserts, $sets = [])
     {
         $set = $this->buildSets($sets ?: $inserts);
         $fields = $this->buildInsert($inserts);
@@ -601,7 +604,7 @@ class TXSingleDAO extends TXDAO
      * @param $cond
      * @return TXSingleFilter
      */
-    public function filter($cond=[])
+    public function filter($cond = [])
     {
         return $cond ? new TXSingleFilter($this, $cond, "__and__") : $this;
     }
@@ -611,7 +614,7 @@ class TXSingleDAO extends TXDAO
      * @param $cond
      * @return TXSingleFilter
      */
-    public function merge($cond=[])
+    public function merge($cond = [])
     {
         return $cond ? new TXSingleFilter($this, $cond, "__or__") : $this;
     }

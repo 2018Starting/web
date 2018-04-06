@@ -22,7 +22,7 @@ class TXArray extends \ArrayObject
     private $storage = [];
     private $encodes = [];
 
-    public function __construct($storage=[])
+    public function __construct($storage = [])
     {
         $this->storage = $storage;
     }
@@ -34,9 +34,9 @@ class TXArray extends \ArrayObject
 
     public function getIterator()
     {
-        foreach ($this->storage as $key => $value){
+        foreach ($this->storage as $key => $value) {
             $key = $this->encode($key);
-            if (!isset($this->encodes[$key])){
+            if (!isset($this->encodes[$key])) {
                 $this->encodes[$key] = $this->encode($value);
             }
         }
@@ -73,9 +73,9 @@ class TXArray extends \ArrayObject
 
     public function offsetGet($k)
     {
-        if (isset($this->storage[$k])){
+        if (isset($this->storage[$k])) {
             $key = $this->encode($k);
-            if (!isset($this->encodes[$key])){
+            if (!isset($this->encodes[$key])) {
                 $this->encodes[$key] = $this->encode($this->storage[$k]);
             }
             return $this->encodes[$key];
@@ -110,9 +110,9 @@ class TXArray extends \ArrayObject
 
     private function encode($value)
     {
-        if (is_string($value)){
+        if (is_string($value)) {
             $value = TXString::encode($value);
-        } elseif (is_array($value)){
+        } elseif (is_array($value)) {
             $value = new self($value);
         }
         return $value;
@@ -129,9 +129,9 @@ class TXArray extends \ArrayObject
         return serialize($this->storage);
     }
 
-    public function __invoke($key=null)
+    public function __invoke($key = null)
     {
-        if ($key !== null){
+        if ($key !== null) {
             return !empty($this->storage[$key]);
         } else {
             return !empty($this->storage);
@@ -148,15 +148,15 @@ class TXArray extends \ArrayObject
      * @param bool $inner
      * @return array
      */
-    public function values($inner=true)
+    public function values($inner = true)
     {
         $values = [];
-        foreach ($this->storage as $key => $value){
+        foreach ($this->storage as $key => $value) {
             $key = $this->encode($key);
-            if (!isset($this->encodes[$key])){
+            if (!isset($this->encodes[$key])) {
                 $this->encodes[$key] = $this->encode($value);
             }
-            if ($this->encodes[$key] instanceof TXArray){
+            if ($this->encodes[$key] instanceof TXArray) {
                 $values[$key] = $inner ? $this->encodes[$key]->values() : $this->encodes[$key];
             } else {
                 $values[$key] = $this->encodes[$key];
@@ -165,7 +165,7 @@ class TXArray extends \ArrayObject
         return $values;
     }
 
-    public function json_encode($encode=true)
+    public function json_encode($encode = true)
     {
         return $encode ? json_encode($this->values(), JSON_UNESCAPED_UNICODE) : json_encode($this->storage, JSON_UNESCAPED_UNICODE);
     }

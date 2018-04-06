@@ -9,9 +9,11 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
-class TXResponse {
+class TXResponse
+{
     /**
      * @var string 视图名称
      */
@@ -19,9 +21,9 @@ class TXResponse {
     private $params;
     private $objects;
 
-    public $title=null;
-    public $keywords=null;
-    public $descript=null;
+    public $title = null;
+    public $keywords = null;
+    public $descript = null;
 
     private $config;
 
@@ -30,7 +32,7 @@ class TXResponse {
      * @param array $params
      * @param array $objects 直接引用对象
      */
-    public function __construct($view, $params=[], $objects=[])
+    public function __construct($view, $params = [], $objects = [])
     {
         $this->view = $view;
         $this->params = $params;
@@ -64,13 +66,13 @@ class TXResponse {
      */
     public function getContent()
     {
-        if ($this->config['paramsType'] == 'keys'){
+        if ($this->config['paramsType'] == 'keys') {
             //老版本兼容过滤XSS
             foreach ($this->params as $key => &$param) {
-                if (!in_array($key, $this->objects)){
-                    if (is_string($param)){
+                if (!in_array($key, $this->objects)) {
+                    if (is_string($param)) {
                         $param = TXString::encode($param);
-                    } else if (is_array($param)){
+                    } else if (is_array($param)) {
                         $param = new TXArray($param);
                     }
                 }
@@ -79,10 +81,10 @@ class TXResponse {
             extract($this->params);
 
         } else {
-            if (!isset($this->config['objectEncode']) || $this->config['objectEncode']){
+            if (!isset($this->config['objectEncode']) || $this->config['objectEncode']) {
                 //防XSS注入
                 foreach ($this->objects as &$object) {
-                    if (is_string($object)){
+                    if (is_string($object)) {
                         $object = $this->encode($object);
                     } elseif (is_array($object)) {
                         $object = new TXArray($object);
@@ -98,11 +100,11 @@ class TXResponse {
         ob_start();
         //include template
         $lang = TXLanguage::getLanguage();
-        $file = sprintf('%s/template/%s%s.tpl.php', TXApp::$app_root, $this->view, $lang ?'.'.$lang : "");
-        if (!is_readable($file)){
+        $file = sprintf('%s/template/%s%s.tpl.php', TXApp::$app_root, $this->view, $lang ? '.' . $lang : "");
+        if (!is_readable($file)) {
             $file = sprintf('%s/template/%s.tpl.php', TXApp::$app_root, $this->view);
         }
-        if (!is_readable($file)){
+        if (!is_readable($file)) {
             throw new TXException(2005, $this->view);
         }
         include $file;
@@ -126,6 +128,7 @@ class TXResponse {
  * @param $content
  * @return mixed
  */
-function _L($content){
+function _L($content)
+{
     return TXLanguage::getLanguage() ? TXLanguage::getContent($content) : $content;
 }

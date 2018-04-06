@@ -44,7 +44,7 @@ class PHPUnit_Framework_Constraint_StringMatches extends PHPUnit_Framework_Const
     protected function additionalFailureDescription($other)
     {
         $from = preg_split('(\r\n|\r|\n)', $this->string);
-        $to   = preg_split('(\r\n|\r|\n)', $other);
+        $to = preg_split('(\r\n|\r|\n)', $other);
 
         foreach ($from as $index => $line) {
             if (isset($to[$index]) && $line !== $to[$index]) {
@@ -57,7 +57,7 @@ class PHPUnit_Framework_Constraint_StringMatches extends PHPUnit_Framework_Const
         }
 
         $this->string = implode("\n", $from);
-        $other        = implode("\n", $to);
+        $other = implode("\n", $to);
 
         $differ = new Differ("--- Expected\n+++ Actual\n");
 
@@ -68,30 +68,30 @@ class PHPUnit_Framework_Constraint_StringMatches extends PHPUnit_Framework_Const
     {
         $string = str_replace(
             array(
-            '%e',
-            '%s',
-            '%S',
-            '%a',
-            '%A',
-            '%w',
-            '%i',
-            '%d',
-            '%x',
-            '%f',
-            '%c'
+                '%e',
+                '%s',
+                '%S',
+                '%a',
+                '%A',
+                '%w',
+                '%i',
+                '%d',
+                '%x',
+                '%f',
+                '%c'
             ),
             array(
-            '\\' . DIRECTORY_SEPARATOR,
-            '[^\r\n]+',
-            '[^\r\n]*',
-            '.+',
-            '.*',
-            '\s*',
-            '[+-]?\d+',
-            '\d+',
-            '[0-9a-fA-F]+',
-            '[+-]?\.?\d+\.?\d*(?:[Ee][+-]?\d+)?',
-            '.'
+                '\\' . DIRECTORY_SEPARATOR,
+                '[^\r\n]+',
+                '[^\r\n]*',
+                '.+',
+                '.*',
+                '\s*',
+                '[+-]?\d+',
+                '\d+',
+                '[0-9a-fA-F]+',
+                '[+-]?\.?\d+\.?\d*(?:[Ee][+-]?\d+)?',
+                '.'
             ),
             preg_quote($string, '/')
         );

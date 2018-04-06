@@ -12,6 +12,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXLanguage
@@ -24,9 +25,9 @@ class TXLanguage
      * @param string $default
      * @return string
      */
-    public static function getLanguage($default=null)
+    public static function getLanguage($default = null)
     {
-        if (self::$language === null){
+        if (self::$language === null) {
             $requestConfig = TXApp::$base->config->get('request');
             $key = $requestConfig['languageCookie'];
             self::$language = isset($_COOKIE[$key]) ? $_COOKIE[$key] : '';
@@ -39,7 +40,7 @@ class TXLanguage
      * @param $lang
      * @param int $expire
      */
-    public static function setLanguage($lang, $expire=86400)
+    public static function setLanguage($lang, $expire = 86400)
     {
         $requestConfig = TXApp::$base->config->get('request');
         $key = $requestConfig['languageCookie'];
@@ -53,8 +54,8 @@ class TXLanguage
      */
     private static function getContents($lang)
     {
-        if (self::$contents === null){
-            $path = TXApp::$base_root . DS . 'language' . DS . $lang .'.php';
+        if (self::$contents === null) {
+            $path = TXApp::$base_root . DS . 'language' . DS . $lang . '.php';
             self::$contents = is_readable($path) ? require($path) : [];
         }
     }
@@ -67,7 +68,7 @@ class TXLanguage
     public static function getContent($content)
     {
         $lang = self::getLanguage();
-        if ($lang){
+        if ($lang) {
             self::getContents($lang);
             $content = isset(self::$contents[$content]) ? self::$contents[$content] : $content;
         }

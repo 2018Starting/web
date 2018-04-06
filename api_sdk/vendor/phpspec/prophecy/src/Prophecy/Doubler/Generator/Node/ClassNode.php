@@ -22,14 +22,14 @@ use Prophecy\Exception\InvalidArgumentException;
 class ClassNode
 {
     private $parentClass = 'stdClass';
-    private $interfaces  = array();
-    private $properties  = array();
+    private $interfaces = array();
+    private $properties = array();
     private $unextendableMethods = array();
 
     /**
      * @var MethodNode[]
      */
-    private $methods     = array();
+    private $methods = array();
 
     public function getParentClass()
     {
@@ -102,7 +102,7 @@ class ClassNode
 
     public function addMethod(MethodNode $method)
     {
-        if (!$this->isExtendable($method->getName())){
+        if (!$this->isExtendable($method->getName())) {
             $message = sprintf(
                 'Method `%s` is not extendable, so can not be added.', $method->getName()
             );
@@ -149,7 +149,7 @@ class ClassNode
      */
     public function addUnextendableMethod($unextendableMethod)
     {
-        if (!$this->isExtendable($unextendableMethod)){
+        if (!$this->isExtendable($unextendableMethod)) {
             return;
         }
         $this->unextendableMethods[] = $unextendableMethod;

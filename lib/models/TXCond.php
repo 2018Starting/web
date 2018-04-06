@@ -19,8 +19,8 @@ namespace biny\lib;
  * @method int min($field)
  * @method int avg($field)
  * @method array distinct($field)
- * @method array find($field='')
- * @method array count($field='')
+ * @method array find($field = '')
+ * @method array count($field = '')
  * @method array update($sets)
  * @method array addCount($sets)
  */
@@ -28,11 +28,11 @@ class TXCond
 {
     protected $DAO;
     protected $where;
-    protected $limit=[];
-    protected $orderby=[];
-    protected $additions=[];
-    protected $groupby=[];
-    protected $having=[];
+    protected $limit = [];
+    protected $orderby = [];
+    protected $additions = [];
+    protected $groupby = [];
+    protected $having = [];
 
     protected $methods = ['distinct', 'find', 'count', 'update', 'addCount'];
     protected $calcs = ['max', 'min', 'sum', 'avg', 'count'];
@@ -74,7 +74,7 @@ class TXCond
      */
     public function __call($method, $args)
     {
-        if (in_array($method, $this->methods) || in_array($method, $this->calcs)){
+        if (in_array($method, $this->methods) || in_array($method, $this->calcs)) {
             $args = $args ? $args : [''];
             $args[] = $this;
             return call_user_func_array([$this->DAO, $method], $args);
@@ -89,7 +89,7 @@ class TXCond
      * @param null $key
      * @return array
      */
-    public function query($field='', $key=null)
+    public function query($field = '', $key = null)
     {
         return $this->DAO->query($field, $key, $this);
     }
@@ -100,7 +100,7 @@ class TXCond
      * @param bool $instance
      * @return array
      */
-    public function cursor($field='', $instance=true)
+    public function cursor($field = '', $instance = true)
     {
         return $this->DAO->cursor($field, $instance, $this);
     }
@@ -112,7 +112,7 @@ class TXCond
      * @param int $mode
      * @return array
      */
-    public function select($sql, $querys=[], $mode=TXDatabase::FETCH_TYPE_ALL)
+    public function select($sql, $querys = [], $mode = TXDatabase::FETCH_TYPE_ALL)
     {
         return $this->DAO->select($sql, $querys, $mode, $this);
     }
@@ -123,7 +123,7 @@ class TXCond
      * @param $querys
      * @return array
      */
-    public function command($sql, $querys=[])
+    public function command($sql, $querys = [])
     {
         return $this->DAO->command($sql, $querys, $this);
     }

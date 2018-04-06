@@ -38,8 +38,8 @@ class Exporter
      *  - Carriage returns and newlines are normalized to \n
      *  - Recursion and repeated rendering is treated properly
      *
-     * @param  mixed  $value
-     * @param  int    $indentation The indentation level of the 2nd+ line
+     * @param  mixed $value
+     * @param  int $indentation The indentation level of the 2nd+ line
      * @return string
      */
     public function export($value, $indentation = 0)
@@ -48,13 +48,13 @@ class Exporter
     }
 
     /**
-     * @param  mixed   $data
+     * @param  mixed $data
      * @param  Context $context
      * @return string
      */
     public function shortenedRecursiveExport(&$data, Context $context = null)
     {
-        $result   = array();
+        $result = array();
         $exporter = new self();
 
         if (!$context) {
@@ -67,17 +67,13 @@ class Exporter
             if (is_array($value)) {
                 if ($context->contains($data[$key]) !== false) {
                     $result[] = '*RECURSION*';
-                }
-
-                else {
+                } else {
                     $result[] = sprintf(
                         'array(%s)',
                         $this->shortenedRecursiveExport($data[$key], $context)
                     );
                 }
-            }
-
-            else {
+            } else {
                 $result[] = $exporter->shortenedExport($value);
             }
         }
@@ -94,7 +90,7 @@ class Exporter
      * Newlines are replaced by the visible string '\n'.
      * Contents of arrays and objects (if any) are replaced by '...'.
      *
-     * @param  mixed  $value
+     * @param  mixed $value
      * @return string
      * @see    SebastianBergmann\Exporter\Exporter::export
      */
@@ -144,12 +140,12 @@ class Exporter
     public function toArray($value)
     {
         if (!is_object($value)) {
-            return (array) $value;
+            return (array)$value;
         }
 
         $array = array();
 
-        foreach ((array) $value as $key => $val) {
+        foreach ((array)$value as $key => $val) {
             // properties are transformed to keys in the following way:
             // private   $property => "\0Classname\0property"
             // protected $property => "\0*\0property"
@@ -196,9 +192,9 @@ class Exporter
     /**
      * Recursive implementation of export
      *
-     * @param  mixed                                       $value       The value to export
-     * @param  int                                         $indentation The indentation level of the 2nd+ line
-     * @param  \SebastianBergmann\RecursionContext\Context $processed   Previously processed objects
+     * @param  mixed $value The value to export
+     * @param  int $indentation The indentation level of the 2nd+ line
+     * @param  \SebastianBergmann\RecursionContext\Context $processed Previously processed objects
      * @return string
      * @see    SebastianBergmann\Exporter\Exporter::export
      */
@@ -235,8 +231,8 @@ class Exporter
             }
 
             return "'" .
-            str_replace(array("\r\n", "\n\r", "\r"), array("\n", "\n", "\n"), $value) .
-            "'";
+                str_replace(array("\r\n", "\n\r", "\r"), array("\n", "\n", "\n"), $value) .
+                "'";
         }
 
         $whitespace = str_repeat(' ', 4 * $indentation);
@@ -250,7 +246,7 @@ class Exporter
                 return 'Array &' . $key;
             }
 
-            $key    = $processed->add($value);
+            $key = $processed->add($value);
             $values = '';
 
             if (count($value) > 0) {
@@ -276,9 +272,9 @@ class Exporter
                 return sprintf('%s Object &%s', $class, $hash);
             }
 
-            $hash   = $processed->add($value);
+            $hash = $processed->add($value);
             $values = '';
-            $array  = $this->toArray($value);
+            $array = $this->toArray($value);
 
             if (count($array) > 0) {
                 foreach ($array as $k => $v) {

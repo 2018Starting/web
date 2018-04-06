@@ -10,6 +10,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXSession
@@ -44,12 +45,13 @@ class TXSession
         return session_status() == PHP_SESSION_ACTIVE;
     }
 
-    private function start(){
-        if ($cf = TXApp::$base->app_config->get($this->config['save_handler'], 'dns')){
+    private function start()
+    {
+        if ($cf = TXApp::$base->app_config->get($this->config['save_handler'], 'dns')) {
             ini_set("session.save_handler", $this->config['save_handler']);
             ini_set("session.save_path", 'tcp://' . $cf['host'] . ':' . $cf['port']);
         }
-        if ($lifetime = $this->config['maxlifetime']){
+        if ($lifetime = $this->config['maxlifetime']) {
             ini_set("session.gc_maxlifetime", $lifetime);
         }
         @session_start();
@@ -59,7 +61,7 @@ class TXSession
     //解决session死锁问题
     public function close()
     {
-        if ($this->isActive()){
+        if ($this->isActive()) {
             @session_write_close();
             $this->_data = null;
         }
@@ -72,7 +74,7 @@ class TXSession
      */
     public function __get($key)
     {
-        if (!$this->isActive()){
+        if (!$this->isActive()) {
             $this->start();
         }
         return isset($this->_data[$key]) ? $this->_data[$key] : null;
@@ -85,7 +87,7 @@ class TXSession
      */
     public function __set($key, $value)
     {
-        if (!$this->isActive()){
+        if (!$this->isActive()) {
             $this->start();
         }
         $_SESSION[$key] = $this->_data[$key] = $value;
@@ -97,7 +99,7 @@ class TXSession
      */
     public function __unset($key)
     {
-        if (!$this->isActive()){
+        if (!$this->isActive()) {
             $this->start();
         }
         unset($this->_data[$key]);
@@ -110,7 +112,7 @@ class TXSession
      */
     public function __isset($key)
     {
-        if (!$this->isActive()){
+        if (!$this->isActive()) {
             $this->start();
         }
         return isset($this->_data[$key]);
@@ -121,7 +123,7 @@ class TXSession
      */
     public function clear()
     {
-        if (!$this->isActive()){
+        if (!$this->isActive()) {
             $this->start();
         }
         $this->_data = $_SESSION = [];

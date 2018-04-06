@@ -1,4 +1,5 @@
 <?php
+
 class StatusTest extends PHPUnit_Framework_TestCase
 {
     public function testSuccess()

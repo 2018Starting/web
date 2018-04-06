@@ -43,9 +43,9 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
         $process = proc_open(
             $runtime->getBinary() . $this->settingsToParameters($settings),
             array(
-            0 => array('pipe', 'r'),
-            1 => $stdout_handle,
-            2 => array('pipe', 'w')
+                0 => array('pipe', 'r'),
+                1 => $stdout_handle,
+                2 => array('pipe', 'w')
             ),
             $pipes
         );
@@ -75,7 +75,7 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
 
     /**
      * @param resource $pipe
-     * @param string   $job
+     * @param string $job
      *
      * @throws PHPUnit_Framework_Exception
      *
@@ -92,7 +92,7 @@ class PHPUnit_Util_PHP_Windows extends PHPUnit_Util_PHP_Default
 
         fwrite(
             $pipe,
-            '<?php require_once ' . var_export($this->tempFile, true) .  '; ?>'
+            '<?php require_once ' . var_export($this->tempFile, true) . '; ?>'
         );
     }
 

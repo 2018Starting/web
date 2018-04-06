@@ -88,5 +88,7 @@ class ThrowPromiseSpec extends ObjectBehavior
 
 class RequiredArgumentException extends \Exception
 {
-    final public function __construct($message, $code) {}
+    final public function __construct($message, $code)
+    {
+    }
 }

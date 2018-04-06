@@ -9,6 +9,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXConfig
@@ -25,7 +26,7 @@ class TXConfig
      */
     public static function instance($name)
     {
-        if (!isset(self::$instance[$name])){
+        if (!isset(self::$instance[$name])) {
             self::$instance[$name] = new self($name);
         }
         return self::$instance[$name];
@@ -51,7 +52,7 @@ class TXConfig
         if (!isset($this->cfgCaches[$module])) {
             $path = TXApp::$base_root . DS . 'config' . DS . $module . '.php';
 
-            $n_module = $module. (ENV_DEV ? '_dev' : (ENV_PRE ? '_pre' : (ENV_PUB ? '_pub' : '')));
+            $n_module = $module . (ENV_DEV ? '_dev' : (ENV_PRE ? '_pre' : (ENV_PUB ? '_pub' : '')));
             $n_path = TXApp::$base_root . DS . 'config' . DS . $n_module . '.php';
             if (is_readable($path) || is_readable($n_path)) {
                 $config = is_readable($path) ? require($path) : [];
@@ -75,7 +76,7 @@ class TXConfig
         if (!isset($this->appcfgCaches[$module])) {
             $path = TXApp::$app_root . DS . 'config' . DS . $module . '.php';
 
-            $n_module = $module. (ENV_DEV ? '_dev' : (ENV_PRE ? '_pre' : (ENV_PUB ? '_pub' : '')));
+            $n_module = $module . (ENV_DEV ? '_dev' : (ENV_PRE ? '_pre' : (ENV_PUB ? '_pub' : '')));
             $n_path = TXApp::$app_root . DS . 'config' . DS . $n_module . '.php';
             if (is_readable($path) || is_readable($n_path)) {
                 $config = is_readable($path) ? require($path) : [];
@@ -96,7 +97,7 @@ class TXConfig
      * @param bool $alias
      * @return mixed|null
      */
-    public function get($key, $module='config', $alias=true)
+    public function get($key, $module = 'config', $alias = true)
     {
         $config = $this->name === "config" ? $this->loadConfig($module) : $this->loadAppConfig($module);
         if (isset($config[$key])) {
@@ -123,7 +124,7 @@ class TXConfig
      */
     private function getAlias($value)
     {
-        if ($this->alias && is_string($value)){
+        if ($this->alias && is_string($value)) {
             $value = str_replace(array_keys($this->alias), array_values($this->alias), $value);
             return $value;
         } else {

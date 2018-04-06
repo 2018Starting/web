@@ -26,7 +26,7 @@ class TXDoubleCond extends TXCond
      * @param int $start
      * @return $this
      */
-    public function limit($len, $start=0)
+    public function limit($len, $start = 0)
     {
         $this->limit = is_array($len) ? $len : [intval($start), intval($len)];
         return $this;
@@ -39,15 +39,15 @@ class TXDoubleCond extends TXCond
      */
     public function order($orderby)
     {
-        foreach ($orderby as $key => $val){
-            if (is_array($val)){
-                if (!isset($this->orderby[$key])){
+        foreach ($orderby as $key => $val) {
+            if (is_array($val)) {
+                if (!isset($this->orderby[$key])) {
                     $this->orderby[$key] = [];
                 }
-                if (is_string($this->orderby[$key])){
+                if (is_string($this->orderby[$key])) {
                     $this->orderby[$key] = $val;
                 } else {
-                    foreach ($val as $k => $v){
+                    foreach ($val as $k => $v) {
                         $this->orderby[$key][$k] = $v;
                     }
                 }
@@ -65,12 +65,12 @@ class TXDoubleCond extends TXCond
      */
     public function group($groupby)
     {
-        foreach ($groupby as $key => $val){
-            if (is_array($val)){
-                if (!isset($this->groupby[$key])){
+        foreach ($groupby as $key => $val) {
+            if (is_array($val)) {
+                if (!isset($this->groupby[$key])) {
                     $this->groupby[$key] = [];
                 }
-                foreach ($val as $k => $v){
+                foreach ($val as $k => $v) {
                     $this->groupby[$key][$k] = $v;
                 }
             } else {
@@ -87,8 +87,8 @@ class TXDoubleCond extends TXCond
      */
     public function having($having)
     {
-        foreach ($having as $key => $val){
-            foreach ($val as $k => $v){
+        foreach ($having as $key => $val) {
+            foreach ($val as $k => $v) {
                 $this->having[$key][$k] = $v;
             }
         }
@@ -102,12 +102,12 @@ class TXDoubleCond extends TXCond
      */
     public function addition($additions)
     {
-        foreach ($additions as $key => $val){
-            if (is_array($val)){
-                if (!isset($this->additions[$key])){
+        foreach ($additions as $key => $val) {
+            if (is_array($val)) {
+                if (!isset($this->additions[$key])) {
                     $this->additions[$key] = [];
                 }
-                foreach ($val as $k => $v){
+                foreach ($val as $k => $v) {
                     $this->additions[$key][$k] = $v;
                 }
             } else {

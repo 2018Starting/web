@@ -17,18 +17,18 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers SebastianBergmann\Diff\Differ
  *
- * @uses SebastianBergmann\Diff\LCS\MemoryEfficientImplementation
- * @uses SebastianBergmann\Diff\LCS\TimeEfficientImplementation
- * @uses SebastianBergmann\Diff\Chunk
- * @uses SebastianBergmann\Diff\Diff
- * @uses SebastianBergmann\Diff\Line
- * @uses SebastianBergmann\Diff\Parser
+ * @uses   SebastianBergmann\Diff\LCS\MemoryEfficientImplementation
+ * @uses   SebastianBergmann\Diff\LCS\TimeEfficientImplementation
+ * @uses   SebastianBergmann\Diff\Chunk
+ * @uses   SebastianBergmann\Diff\Diff
+ * @uses   SebastianBergmann\Diff\Line
+ * @uses   SebastianBergmann\Diff\Parser
  */
 class DifferTest extends TestCase
 {
     const REMOVED = 2;
-    const ADDED   = 1;
-    const OLD     = 0;
+    const ADDED = 1;
+    const OLD = 0;
 
     /**
      * @var Differ
@@ -41,7 +41,7 @@ class DifferTest extends TestCase
     }
 
     /**
-     * @param array        $expected
+     * @param array $expected
      * @param string|array $from
      * @param string|array $to
      * @dataProvider arrayProvider
@@ -63,7 +63,7 @@ class DifferTest extends TestCase
     }
 
     /**
-     * @param array        $expected
+     * @param array $expected
      * @param string|array $from
      * @param string|array $to
      * @dataProvider arrayProvider
@@ -340,7 +340,7 @@ EOF
  k
 
 EOF
-                ,
+            ,
                 "a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk",
                 "a\np\nc\nd\ne\nf\ng\nh\ni\nw\nk",
             ),
