@@ -10,11 +10,12 @@
 
 namespace biny\lib;
 
-class TXCache {
+class TXCache
+{
     /**
      * @var array
      */
-    private $cache= [];
+    private $cache = [];
 
     /**
      * 获取全局临时缓存

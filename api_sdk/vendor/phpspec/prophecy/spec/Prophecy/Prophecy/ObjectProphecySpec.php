@@ -58,7 +58,8 @@ class ObjectProphecySpec extends ObjectBehavior
         MethodProphecy $method1,
         MethodProphecy $method2,
         ArgumentsWildcard $arguments
-    ) {
+    )
+    {
         $method1->getMethodName()->willReturn('getName');
         $method1->getArgumentsWildcard()->willReturn($arguments);
         $method2->getMethodName()->willReturn('setName');
@@ -91,7 +92,8 @@ class ObjectProphecySpec extends ObjectBehavior
         $lazyDouble,
         CallCenter $callCenter,
         RevealerInterface $revealer
-    ) {
+    )
+    {
         $this->beConstructedWith($lazyDouble, $callCenter, $revealer);
 
         $revealer->reveal(array('question'))->willReturn(array('life'));
@@ -107,7 +109,8 @@ class ObjectProphecySpec extends ObjectBehavior
         CallCenter $callCenter,
         ArgumentsWildcard $wildcard,
         Call $call
-    ) {
+    )
+    {
         $this->beConstructedWith($lazyDouble, $callCenter);
 
         $callCenter->findCalls('setName', $wildcard)->willReturn(array($call));
@@ -118,7 +121,8 @@ class ObjectProphecySpec extends ObjectBehavior
     function its_addMethodProphecy_adds_method_prophecy(
         MethodProphecy $methodProphecy,
         ArgumentsWildcard $argumentsWildcard
-    ) {
+    )
+    {
         $methodProphecy->getArgumentsWildcard()->willReturn($argumentsWildcard);
         $methodProphecy->getMethodName()->willReturn('getUsername');
 
@@ -134,7 +138,8 @@ class ObjectProphecySpec extends ObjectBehavior
         MethodProphecy $methodProphecy2,
         ArgumentsWildcard $argumentsWildcard1,
         ArgumentsWildcard $argumentsWildcard2
-    ) {
+    )
+    {
         $methodProphecy1->getArgumentsWildcard()->willReturn($argumentsWildcard1);
         $methodProphecy1->getMethodName()->willReturn('getUsername');
 
@@ -157,7 +162,8 @@ class ObjectProphecySpec extends ObjectBehavior
         MethodProphecy $methodProphecy2,
         ArgumentsWildcard $argumentsWildcard1,
         ArgumentsWildcard $argumentsWildcard2
-    ) {
+    )
+    {
         $methodProphecy1->getArgumentsWildcard()->willReturn($argumentsWildcard1);
         $methodProphecy1->getMethodName()->willReturn('getUsername');
 
@@ -197,7 +203,8 @@ class ObjectProphecySpec extends ObjectBehavior
         MethodProphecy $methodProphecy1, MethodProphecy $methodProphecy2,
         ArgumentsWildcard $argumentsWildcard1,
         ArgumentsWildcard $argumentsWildcard2
-    ) {
+    )
+    {
         $methodProphecy1->getMethodName()->willReturn('getName');
         $methodProphecy1->getArgumentsWildcard()->willReturn($argumentsWildcard1);
         $methodProphecy1->checkPrediction()
@@ -218,7 +225,8 @@ class ObjectProphecySpec extends ObjectBehavior
     function it_returns_new_MethodProphecy_instance_for_arbitrary_call(
         Doubler $doubler,
         ProphecySubjectInterface $reflection
-    ) {
+    )
+    {
         $doubler->double(Argument::any())->willReturn($reflection);
 
         $return = $this->getProphecy();
@@ -229,7 +237,8 @@ class ObjectProphecySpec extends ObjectBehavior
     function it_returns_same_MethodProphecy_for_same_registered_signature(
         Doubler $doubler,
         ProphecySubjectInterface $reflection
-    ) {
+    )
+    {
         $doubler->double(Argument::any())->willReturn($reflection);
 
         $this->addMethodProphecy($methodProphecy1 = $this->getProphecy(1, 2, 3));
@@ -241,7 +250,8 @@ class ObjectProphecySpec extends ObjectBehavior
     function it_returns_new_MethodProphecy_for_different_signatures(
         Doubler $doubler,
         ProphecySubjectInterface $reflection
-    ) {
+    )
+    {
         $doubler->double(Argument::any())->willReturn($reflection);
 
         $value = new ObjectProphecySpecFixtureB('ABC');
@@ -256,11 +266,14 @@ class ObjectProphecySpec extends ObjectBehavior
     function it_returns_new_MethodProphecy_for_all_callback_signatures(
         Doubler $doubler,
         ProphecySubjectInterface $reflection
-    ) {
+    )
+    {
         $doubler->double(Argument::any())->willReturn($reflection);
 
-        $this->addMethodProphecy($methodProphecy1 = $this->getProphecy(function(){}));
-        $methodProphecy2 = $this->getProphecy(function(){});
+        $this->addMethodProphecy($methodProphecy1 = $this->getProphecy(function () {
+        }));
+        $methodProphecy2 = $this->getProphecy(function () {
+        });
 
         $methodProphecy2->shouldNotBe($methodProphecy1);
     }
@@ -268,7 +281,7 @@ class ObjectProphecySpec extends ObjectBehavior
 
 class ObjectProphecySpecFixtureA
 {
-	public $errors;
+    public $errors;
 }
 
 class ObjectProphecySpecFixtureB extends ObjectProphecySpecFixtureA

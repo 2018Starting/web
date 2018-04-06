@@ -1,4 +1,5 @@
 <?php
+
 namespace foo;
 
 function func()

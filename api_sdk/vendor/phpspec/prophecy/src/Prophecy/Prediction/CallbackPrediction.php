@@ -48,7 +48,7 @@ class CallbackPrediction implements PredictionInterface
     /**
      * Executes preset callback.
      *
-     * @param Call[]         $calls
+     * @param Call[] $calls
      * @param ObjectProphecy $object
      * @param MethodProphecy $method
      */

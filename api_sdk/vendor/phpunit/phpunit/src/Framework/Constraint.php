@@ -34,9 +34,9 @@ abstract class PHPUnit_Framework_Constraint implements Countable, PHPUnit_Framew
      * a boolean value instead: true in case of success, false in case of a
      * failure.
      *
-     * @param mixed  $other        Value or object to evaluate.
-     * @param string $description  Additional information about the test
-     * @param bool   $returnResult Whether to return a result or throw an exception
+     * @param mixed $other Value or object to evaluate.
+     * @param string $description Additional information about the test
+     * @param bool $returnResult Whether to return a result or throw an exception
      *
      * @return mixed
      *
@@ -89,8 +89,8 @@ abstract class PHPUnit_Framework_Constraint implements Countable, PHPUnit_Framew
     /**
      * Throws an exception for the given compared value and test description
      *
-     * @param mixed                                          $other             Evaluated value or object.
-     * @param string                                         $description       Additional information about the test
+     * @param mixed $other Evaluated value or object.
+     * @param string $description Additional information about the test
      * @param SebastianBergmann\Comparator\ComparisonFailure $comparisonFailure
      *
      * @throws PHPUnit_Framework_ExpectationFailedException

@@ -16,7 +16,7 @@ namespace biny\lib;
  * Time: 上午11:50
  * @method TXDoubleCond group($groupby)
  * @method TXDoubleCond having($having)
- * @method TXDoubleCond limit($len, $start=0)
+ * @method TXDoubleCond limit($len, $start = 0)
  * @method TXDoubleCond order($orderby)
  * @method TXDoubleCond addition($additions)
  */
@@ -33,7 +33,7 @@ class TXDoubleFilter extends TXFilter
      * @param $cond
      * @return TXDoubleFilter
      */
-    public function filter($cond=[])
+    public function filter($cond = [])
     {
         return $cond ? new self($this->DAO, $cond, "__and__", $this->conds[0]) : $this;
     }
@@ -57,7 +57,7 @@ class TXDoubleFilter extends TXFilter
      */
     public function __call($method, $args)
     {
-        if (in_array($method, $this->methods) || in_array($method, $this->calcs)){
+        if (in_array($method, $this->methods) || in_array($method, $this->calcs)) {
             $cond = new TXDoubleCond($this->DAO);
             $cond->setWhere($this->buildWhere($this->conds));
             return call_user_func_array([$cond, $method], $args);

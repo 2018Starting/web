@@ -9,6 +9,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXSocket
@@ -19,9 +20,9 @@ class TXSocket
      * @param string $name
      * @return TXSocket
      */
-    public static function instance($name='socket')
+    public static function instance($name = 'socket')
     {
-        if (!isset(self::$_instance[$name])){
+        if (!isset(self::$_instance[$name])) {
             $config = TXApp::$base->app_config->get($name, 'dns');
             self::$_instance[$name] = new self($config);
         }
@@ -56,14 +57,14 @@ class TXSocket
     private function connect()
     {
         $config = $this->connect;
-        if ($config['type'] == SOL_UDP){
+        if ($config['type'] == SOL_UDP) {
             $type = SOCK_DGRAM;
         } else {
             $type = SOCK_STREAM;
         }
         $autoThrow = isset($config['auto-throw']) ? $config['auto-throw'] : true;
-        if( ($this->handler = socket_create(AF_INET, $type, $config['type'] ?: SOL_TCP)) === false) {
-            if ($autoThrow){
+        if (($this->handler = socket_create(AF_INET, $type, $config['type'] ?: SOL_TCP)) === false) {
+            if ($autoThrow) {
                 throw new TXException(4001);
             } else {
                 TXLogger::addError(TXException::fmt_code(4001), 'SOCKET', WARNING);
@@ -71,11 +72,11 @@ class TXSocket
             }
 
         }
-        if ($config['timeout']){
-            socket_set_option($this->handler, SOL_SOCKET, SO_RCVTIMEO, ["sec"=>$config['timeout']/1000, "usec"=>$config['timeout']%1000]);
+        if ($config['timeout']) {
+            socket_set_option($this->handler, SOL_SOCKET, SO_RCVTIMEO, ["sec" => $config['timeout'] / 1000, "usec" => $config['timeout'] % 1000]);
         }
         if (@socket_connect($this->handler, $config['host'], $config['port']) === false) {
-            if ($autoThrow){
+            if ($autoThrow) {
                 throw new TXException(4002, [$config['host'], $config['port']]);
             } else {
                 TXLogger::addError(TXException::fmt_code(4002, [$config['host'], $config['port']]), 'SOCKET', WARNING);
@@ -90,11 +91,12 @@ class TXSocket
      * @param $buff
      * @return bool
      */
-    public function sendBuff($buff){
-        if (!$this->handler){
+    public function sendBuff($buff)
+    {
+        if (!$this->handler) {
             $this->connect();
         }
-        if (is_array($buff)){
+        if (is_array($buff)) {
             $buff = json_encode($buff);
         }
         $len = strlen($buff);
@@ -108,12 +110,13 @@ class TXSocket
      * @return bool|mixed|string
      * @throws TXException
      */
-    public function revBuff(){
-        if (!$this->handler){
+    public function revBuff()
+    {
+        if (!$this->handler) {
             $this->connect();
         }
         $nCnt = @socket_recv($this->handler, $buf, 4, 0);
-        if ($nCnt === false){
+        if ($nCnt === false) {
             return -1;//timeout
         }
         if ($nCnt != 4) {
@@ -121,11 +124,11 @@ class TXSocket
         }
         $ret = unpack("LLen", $buf);
         $len = $ret['Len'];
-        $data='';
+        $data = '';
         $recvlen = $len;
         $i = 0;
         while ($recvlen > 0) {
-            if (++$i == 100){
+            if (++$i == 100) {
                 throw new TXException(4003);
             }
             $nCnt = @socket_recv($this->handler, $buf, $recvlen, 0);
@@ -133,7 +136,7 @@ class TXSocket
             $recvlen -= $nCnt;
         }
 //        $data = chop($data);
-        if ($result = json_decode($data, true)){
+        if ($result = json_decode($data, true)) {
             return $result;
         } else {
             return $data;
@@ -145,11 +148,12 @@ class TXSocket
      * @param $buff
      * @return bool|mixed|string
      */
-    public function send($buff){
-        if (!$this->handler){
+    public function send($buff)
+    {
+        if (!$this->handler) {
             $this->connect();
         }
-        if ($this->sendBuff($buff)){
+        if ($this->sendBuff($buff)) {
             return $this->revBuff();
         }
         return false;

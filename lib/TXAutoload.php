@@ -9,6 +9,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 class TXAutoload
@@ -17,14 +18,15 @@ class TXAutoload
     private static $autoPath;
     private static $isReload = false;
     private static $config;
+
     /**
      * Autoload init
      */
     public static function init()
     {
         self::$config = TXApp::$base->config->get('autoload');
-        self::$autoPath = TXApp::$base_root.DS.self::$config['autoPath'];
-        if (is_readable(self::$autoPath)){
+        self::$autoPath = TXApp::$base_root . DS . self::$config['autoPath'];
+        if (is_readable(self::$autoPath)) {
             self::$loaders = require(self::$autoPath);
         } else {
             self::loading();
@@ -43,22 +45,22 @@ class TXAutoload
         self::$isReload = true;
         $lastTime = is_readable(self::$autoPath) ? filemtime(self::$autoPath) : false;
         // 5秒缓存不更新
-        if (!self::$loaders || !$lastTime || time()-$lastTime > self::$config['autoSkipLoad']){
+        if (!self::$loaders || !$lastTime || time() - $lastTime > self::$config['autoSkipLoad']) {
             $oldLoaders = (array)self::$loaders;
             self::$loaders = [];
             self::getLoads(__DIR__, 'biny\\lib\\');
             self::getLoads(TXApp::$extends_root);
-            self::getLoads(TXApp::$app_root. DS . "controller", 'app\\controller\\');
-            self::getLoads(TXApp::$app_root. DS . "shell", 'app\\shell\\');
-            self::getLoads(TXApp::$app_root. DS . "service", 'app\\service\\');
-            self::getLoads(TXApp::$app_root. DS . "dao", 'app\\dao\\');
-            self::getLoads(TXApp::$app_root. DS . "form", 'app\\form\\');
-            self::getLoads(TXApp::$app_root. DS . "event", 'app\\event\\');
-            self::getLoads(TXApp::$app_root. DS . "model", 'app\\model\\');
+            self::getLoads(TXApp::$app_root . DS . "controller", 'app\\controller\\');
+            self::getLoads(TXApp::$app_root . DS . "shell", 'app\\shell\\');
+            self::getLoads(TXApp::$app_root . DS . "service", 'app\\service\\');
+            self::getLoads(TXApp::$app_root . DS . "dao", 'app\\dao\\');
+            self::getLoads(TXApp::$app_root . DS . "form", 'app\\form\\');
+            self::getLoads(TXApp::$app_root . DS . "event", 'app\\event\\');
+            self::getLoads(TXApp::$app_root . DS . "model", 'app\\model\\');
 
             $needWrite = array_diff_assoc(self::$loaders, $oldLoaders) || array_diff_assoc($oldLoaders, self::$loaders)
-                    || array_diff_assoc(self::$loaders['namespace'], $oldLoaders['namespace']) || array_diff_assoc($oldLoaders['namespace'], self::$loaders['namespace'])
-                    || array_diff_assoc(self::$loaders['file'], $oldLoaders['file']) || array_diff_assoc($oldLoaders['file'], self::$loaders['file']);
+                || array_diff_assoc(self::$loaders['namespace'], $oldLoaders['namespace']) || array_diff_assoc($oldLoaders['namespace'], self::$loaders['namespace'])
+                || array_diff_assoc(self::$loaders['file'], $oldLoaders['file']) || array_diff_assoc($oldLoaders['file'], self::$loaders['file']);
 
             if ($needWrite) { //与之前的不同，写入文件
                 if (!file_exists(self::$autoPath) || is_writeable(self::$autoPath)) {
@@ -78,16 +80,16 @@ class TXAutoload
      * @param $path
      * @return array
      */
-    private static function getLoads($path, $namespace='')
+    private static function getLoads($path, $namespace = '')
     {
-        foreach (glob($path . DS.'*') as $file) {
+        foreach (glob($path . DS . '*') as $file) {
             if (is_dir($file)) {
                 self::getLoads($file, $namespace);
             } else {
                 $name = explode(DS, $file);
                 $class = str_replace('.php', '', end($name));
-                self::$loaders['namespace'][$class] = $namespace.$class;
-                self::$loaders['file'][$namespace.$class] = $file;
+                self::$loaders['namespace'][$class] = $namespace . $class;
+                self::$loaders['file'][$namespace . $class] = $file;
             }
         }
     }
@@ -99,7 +101,7 @@ class TXAutoload
      */
     public static function load($class)
     {
-        if ((!isset(self::$loaders['file'][$class]) || !is_readable(self::$loaders['file'][$class])) && !self::$isReload){
+        if ((!isset(self::$loaders['file'][$class]) || !is_readable(self::$loaders['file'][$class])) && !self::$isReload) {
             self::loading();
         }
 
@@ -112,7 +114,7 @@ class TXAutoload
             }
         } else if (substr($class, -6) == 'Action') {
             throw new TXException(1003, [$class], 404);
-        } else if (self::$config['autoThrow']){
+        } else if (self::$config['autoThrow']) {
             throw new TXException(1003, [$class]);
         }
     }

@@ -22,7 +22,7 @@ final class TaggedValue
 
     /**
      * @param string $tag
-     * @param mixed  $value
+     * @param mixed $value
      */
     public function __construct($tag, $value)
     {

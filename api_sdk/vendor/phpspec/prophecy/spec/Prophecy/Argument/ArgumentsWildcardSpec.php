@@ -12,7 +12,7 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         $this->beConstructedWith(array(42, 'zet', $object));
 
         $class = get_class($object->getWrappedObject());
-        $hash  = spl_object_hash($object->getWrappedObject());
+        $hash = spl_object_hash($object->getWrappedObject());
 
         $this->__toString()->shouldReturn("exact(42), exact(\"zet\"), exact($class:$hash Object (\n    'objectProphecy' => Prophecy\Prophecy\ObjectProphecy Object (*Prophecy*)\n))");
     }
@@ -21,7 +21,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->__toString()->willReturn('token_1');
         $token2->__toString()->willReturn('token_2');
         $token3->__toString()->willReturn('token_3');
@@ -48,7 +49,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->scoreArgument('one')->willReturn(3);
         $token1->isLast()->willReturn(false);
         $token2->scoreArgument(2)->willReturn(5);
@@ -64,7 +66,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->scoreArgument('one')->willReturn(3);
         $token1->isLast()->willReturn(false);
         $token2->scoreArgument(2)->willReturn(5);
@@ -80,7 +83,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->scoreArgument('one')->willReturn(3);
         $token1->isLast()->willReturn(false);
         $token2->scoreArgument(2)->willReturn(5);
@@ -96,7 +100,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->scoreArgument('one')->willReturn(3);
         $token1->isLast()->willReturn(false);
         $token2->scoreArgument(2)->willReturn(false);
@@ -112,7 +117,8 @@ class ArgumentsWildcardSpec extends ObjectBehavior
         TokenInterface $token1,
         TokenInterface $token2,
         TokenInterface $token3
-    ) {
+    )
+    {
         $token1->scoreArgument('one')->willReturn(3);
         $token1->isLast()->willReturn(false);
 

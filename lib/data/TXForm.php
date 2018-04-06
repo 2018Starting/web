@@ -40,14 +40,14 @@ class TXForm
      * @param array $params
      * @param null $method
      */
-    public function init($params=[], $method=null)
+    public function init($params = [], $method = null)
     {
         $this->_params = array_merge($params, TXRouter::$ARGS);
         $this->_method = $method;
-        if ($method && method_exists($this, $method)){
+        if ($method && method_exists($this, $method)) {
             $this->$method();
         }
-        foreach ($this->_rules as $key => $default){
+        foreach ($this->_rules as $key => $default) {
             $this->_data[$key] = isset($this->_params[$key]) ? $this->_params[$key] : (isset($default[1]) ? $default[1] : null);
         }
     }
@@ -72,7 +72,7 @@ class TXForm
         if (substr($name, -7) == 'Service' || substr($name, -3) == 'DAO') {
             return TXFactory::create($name);
         }
-        if (!array_key_exists($name, $this->_data)){
+        if (!array_key_exists($name, $this->_data)) {
             throw new TXException(5001, [$name, get_class($this)]);
         }
         return $this->_data[$name];
@@ -92,7 +92,7 @@ class TXForm
      * @param $arr
      * @return bool
      */
-    protected function error($arr=[])
+    protected function error($arr = [])
     {
         $this->_errorMsg = $arr;
         return false;
@@ -114,86 +114,86 @@ class TXForm
      */
     public function check()
     {
-        foreach ($this->_rules as $key => $value){
-            if (!isset($value[0]) || !$value[0]){
+        foreach ($this->_rules as $key => $value) {
+            if (!isset($value[0]) || !$value[0]) {
                 continue;
             }
-            switch ($value[0]){
+            switch ($value[0]) {
                 case self::typeInt:
-                    if (!is_numeric($this->__get($key))){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!is_numeric($this->__get($key))) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeBool:
-                    if ($this->__get($key) !== "true" && $this->__get($key) !== "false"){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if ($this->__get($key) !== "true" && $this->__get($key) !== "false") {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeArray:
-                    if (!is_array($this->__get($key))){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!is_array($this->__get($key))) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeObject:
-                    if (!is_object($this->__get($key))){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!is_object($this->__get($key))) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeDate:
                     $str = $this->__get($key);
                     $time = strtotime($this->__get($key));
-                    if (!$time){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!$time) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     $match = false;
-                    foreach ($this->_dateFormats as $format){
-                        if (date($format, $time) == $str){
+                    foreach ($this->_dateFormats as $format) {
+                        if (date($format, $time) == $str) {
                             $match = true;
                         }
                     }
-                    if (!$match){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!$match) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeDatetime:
                     $str = $this->__get($key);
                     $time = strtotime($this->__get($key));
-                    if (!$time){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!$time) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     $match = false;
-                    foreach ($this->_datetimeFormats as $format){
-                        if (date($format, $time) !== $str){
+                    foreach ($this->_datetimeFormats as $format) {
+                        if (date($format, $time) !== $str) {
                             $match = true;
                         }
                     }
-                    if (!$match){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $this->__get($key))]);
+                    if (!$match) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $this->__get($key))]);
                     }
                     break;
 
                 case self::typeNonEmpty:
                     $value = $this->__get($key);
-                    if ($value === NULL || (is_string($value) && trim($value) === "")){
-                        return $this->error([$key=>sprintf("type Error [%s] given", $value)]);
+                    if ($value === NULL || (is_string($value) && trim($value) === "")) {
+                        return $this->error([$key => sprintf("type Error [%s] given", $value)]);
                     }
                     break;
 
                 case self::typeRequired:
-                    if (!isset($this->_params[$key])){
-                        return $this->error([$key=>"type Error [NULL] given"]);
+                    if (!isset($this->_params[$key])) {
+                        return $this->error([$key => "type Error [NULL] given"]);
                     }
                     break;
 
                 default:
-                    $value = 'valid_'.$value[1];
-                    if (!isset($this->checkMethods[$value])){
-                        if (!method_exists($this, $value)){
+                    $value = 'valid_' . $value[1];
+                    if (!isset($this->checkMethods[$value])) {
+                        if (!method_exists($this, $value)) {
                             throw new TXException(5002, [$value, get_class($this)]);
                         }
                         $this->checkMethods[$value] = $this->$value();

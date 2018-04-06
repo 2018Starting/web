@@ -30,9 +30,9 @@ class ObjectStateToken implements TokenInterface
     /**
      * Initializes token.
      *
-     * @param string            $methodName
-     * @param mixed             $value             Expected return value
-     * @param null|StringUtil   $util
+     * @param string $methodName
+     * @param mixed $value Expected return value
+     * @param null|StringUtil $util
      * @param ComparatorFactory $comparatorFactory
      */
     public function __construct(
@@ -40,10 +40,11 @@ class ObjectStateToken implements TokenInterface
         $value,
         StringUtil $util = null,
         ComparatorFactory $comparatorFactory = null
-    ) {
-        $this->name  = $methodName;
+    )
+    {
+        $this->name = $methodName;
         $this->value = $value;
-        $this->util  = $util ?: new StringUtil;
+        $this->util = $util ?: new StringUtil;
 
         $this->comparatorFactory = $comparatorFactory ?: ComparatorFactory::getInstance();
     }

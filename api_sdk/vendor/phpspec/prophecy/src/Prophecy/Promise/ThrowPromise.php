@@ -60,7 +60,7 @@ class ThrowPromise implements PromiseInterface
     /**
      * Throws predefined exception.
      *
-     * @param array          $args
+     * @param array $args
      * @param ObjectProphecy $object
      * @param MethodProphecy $method
      *
@@ -69,8 +69,8 @@ class ThrowPromise implements PromiseInterface
     public function execute(array $args, ObjectProphecy $object, MethodProphecy $method)
     {
         if (is_string($this->exception)) {
-            $classname   = $this->exception;
-            $reflection  = new ReflectionClass($classname);
+            $classname = $this->exception;
+            $reflection = new ReflectionClass($classname);
             $constructor = $reflection->getConstructor();
 
             if ($constructor->isPublic() && 0 == $constructor->getNumberOfRequiredParameters()) {

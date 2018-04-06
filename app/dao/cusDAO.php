@@ -1,6 +1,7 @@
 <?php
 
 namespace app\dao;
+
 use biny\lib\TXSingleDAO;
 use TXApp;
 
@@ -13,7 +14,7 @@ class cusDAO extends TXSingleDAO
     protected $_pk = 'ID';
     protected $_pkCache = false;
 
-     /**
+    /**
      * 获取PK
      * @return mixed
      */
@@ -29,7 +30,7 @@ class cusDAO extends TXSingleDAO
      */
     private function buildPK($pk)
     {
-        if (is_array($this->_pk)){
+        if (is_array($this->_pk)) {
             return array_combine($this->_pk, $pk);
         } else {
             return [$this->_pk => $pk];
@@ -43,12 +44,12 @@ class cusDAO extends TXSingleDAO
      */
     public function getByPk($pk)
     {
-        if ($this->_pkCache && $cache = $this->getCache($pk)){
+        if ($this->_pkCache && $cache = $this->getCache($pk)) {
             return $cache;
         }
         $cond = $this->buildPK($pk);
         $result = $this->filter($cond)->find();
-        if ($this->_pkCache){
+        if ($this->_pkCache) {
             $this->setCache($pk, $result);
         }
         return $result;
@@ -64,7 +65,7 @@ class cusDAO extends TXSingleDAO
     {
         $cond = $this->buildPK($pk);
         $flag = $this->filter($cond)->update($sets);
-        if ($flag && $this->_pkCache && $cache = $this->getCache($pk)){
+        if ($flag && $this->_pkCache && $cache = $this->getCache($pk)) {
             $cache = array_merge($cache, $sets);
             $this->setCache($pk, $cache);
         }
@@ -80,7 +81,7 @@ class cusDAO extends TXSingleDAO
     {
         $cond = $this->buildPK($pk);
         $flag = $this->filter($cond)->delete();
-        if ($flag && $this->_pkCache){
+        if ($flag && $this->_pkCache) {
             $this->delCache($pk);
         }
         return $flag;
@@ -93,7 +94,7 @@ class cusDAO extends TXSingleDAO
      */
     private function getHash($pk)
     {
-        if (is_array($this->_pk)){
+        if (is_array($this->_pk)) {
             $pk = implode('_', $pk);
         }
         return $pk;
@@ -106,7 +107,7 @@ class cusDAO extends TXSingleDAO
      */
     private function getCache($pk)
     {
-        if ($this->_pkCache){
+        if ($this->_pkCache) {
             $hash = $this->getHash($pk);
             return TXApp::$base->redis->hget($this->cacheKey, $hash);
         } else {
@@ -123,7 +124,7 @@ class cusDAO extends TXSingleDAO
      */
     private function setCache($pk, $value)
     {
-        if ($this->_pkCache){
+        if ($this->_pkCache) {
             $hash = $this->getHash($pk);
             return TXApp::$base->redis->hset($this->cacheKey, $hash, $value);
         }
@@ -136,7 +137,7 @@ class cusDAO extends TXSingleDAO
      */
     private function delCache($pk)
     {
-        if ($this->_pkCache){
+        if ($this->_pkCache) {
             $hash = $this->getHash($pk);
             return TXApp::$base->redis->hdel($this->cacheKey, $hash);
         }
@@ -148,11 +149,10 @@ class cusDAO extends TXSingleDAO
      */
     public function clearCache()
     {
-        if ($this->_pkCache){
+        if ($this->_pkCache) {
             return TXApp::$base->redis->del($this->cacheKey);
         }
     }
-
 
 
 }

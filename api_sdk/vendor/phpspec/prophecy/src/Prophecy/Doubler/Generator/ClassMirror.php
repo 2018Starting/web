@@ -38,7 +38,7 @@ class ClassMirror
     /**
      * Reflects provided arguments into class node.
      *
-     * @param ReflectionClass   $class
+     * @param ReflectionClass $class
      * @param ReflectionClass[] $interfaces
      *
      * @return Node\ClassNode
@@ -52,7 +52,7 @@ class ClassMirror
         if (null !== $class) {
             if (true === $class->isInterface()) {
                 throw new InvalidArgumentException(sprintf(
-                    "Could not reflect %s as a class, because it\n".
+                    "Could not reflect %s as a class, because it\n" .
                     "is interface - use the second argument instead.",
                     $class->getName()
                 ));
@@ -64,14 +64,14 @@ class ClassMirror
         foreach ($interfaces as $interface) {
             if (!$interface instanceof ReflectionClass) {
                 throw new InvalidArgumentException(sprintf(
-                    "[ReflectionClass \$interface1 [, ReflectionClass \$interface2]] array expected as\n".
+                    "[ReflectionClass \$interface1 [, ReflectionClass \$interface2]] array expected as\n" .
                     "a second argument to `ClassMirror::reflect(...)`, but got %s.",
-                    is_object($interface) ? get_class($interface).' class' : gettype($interface)
+                    is_object($interface) ? get_class($interface) . ' class' : gettype($interface)
                 ));
             }
             if (false === $interface->isInterface()) {
                 throw new InvalidArgumentException(sprintf(
-                    "Could not reflect %s as an interface, because it\n".
+                    "Could not reflect %s as an interface, because it\n" .
                     "is class - use the first argument instead.",
                     $interface->getName()
                 ));
@@ -144,7 +144,7 @@ class ClassMirror
         }
 
         if (version_compare(PHP_VERSION, '7.0', '>=') && $method->hasReturnType()) {
-            $returnType = (string) $method->getReturnType();
+            $returnType = (string)$method->getReturnType();
             $returnTypeLower = strtolower($returnType);
 
             if ('self' === $returnTypeLower) {
@@ -229,7 +229,7 @@ class ClassMirror
         }
 
         if (version_compare(PHP_VERSION, '7.0', '>=') && true === $parameter->hasType()) {
-            return (string) $parameter->getType();
+            return (string)$parameter->getType();
         }
 
         return null;

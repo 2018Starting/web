@@ -18,8 +18,7 @@ class regokAction extends baseAction
             echo $user['ID'];
             return $this->display('mytest/regok');
             //TXApp::$base->request->redirect('/');
-        }
-         else {
+        } else {
             TXApp::$base->request->redirect('/');
         }
     }
@@ -27,18 +26,19 @@ class regokAction extends baseAction
     //添加用户name=bo&A=&company=&title=&mobile=&yzm=&email=
     public function action_adduser()
     {
-         $username = $this->param('name');
-         $sex =$this->param('A');
-         $company = $this->param('company');
-         $title =$this->param('title');
-         $mobile = $this->param('mobile');
-         $email = $this->param('email');
-         $cjxm = implode(',',$this->param('B')); 
-         $id = $this->cusDAO->add(['Name' => $username,'Sex'=> $sex, 'Company'=>$company,'Position'=>$title,'Tel'=>$mobile,'Email'=>$email,'CJXM'=>$cjxm,'RegDate'=>date("Y/m/d"),'RegTime'=>date("h:i:s")]);
-         TXApp::$model->cus($id)->login();//TXApp::$base->session->userId = $this->_pk;
-         //TXApp::$base->request->redirect('/reg ?id='.$id);
-         return $this->display('mytest/regok',$id);
+        $username = $this->param('name');
+        $sex = $this->param('A');
+        $company = $this->param('company');
+        $title = $this->param('title');
+        $mobile = $this->param('mobile');
+        $email = $this->param('email');
+        $cjxm = implode(',', $this->param('B'));
+        $id = $this->cusDAO->add(['Name' => $username, 'Sex' => $sex, 'Company' => $company, 'Position' => $title, 'Tel' => $mobile, 'Email' => $email, 'CJXM' => $cjxm, 'RegDate' => date("Y/m/d"), 'RegTime' => date("h:i:s")]);
+        TXApp::$model->cus($id)->login();//TXApp::$base->session->userId = $this->_pk;
+        //TXApp::$base->request->redirect('/reg ?id='.$id);
+        return $this->display('mytest/regok', $id);
     }
+
     //测试方法  http://localhost/reg/print   reg  模块  print 方法
 
     public function action_print()
@@ -58,10 +58,10 @@ class regokAction extends baseAction
         $tel = $this->param('mobile');
 
 //查询是否注册 verifyData('Tel', $tel)
-       
+
         if ($this->cusDAO->filter(['Tel' => $tel])->find()) {
             $result['error'] = 1;
-            $result['msg'] ="已经注册。";
+            $result['msg'] = "已经注册。";
             echo json_encode($result);
         } else {
 //随机生成一个4位数的数字验证码  

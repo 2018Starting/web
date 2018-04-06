@@ -47,7 +47,7 @@ final class Since extends BaseTag implements Factory\StaticMethod
     {
         Assert::nullOrStringNotEmpty($version);
 
-        $this->version     = $version;
+        $this->version = $version;
         $this->description = $description;
     }
 
@@ -62,7 +62,7 @@ final class Since extends BaseTag implements Factory\StaticMethod
         }
 
         $matches = [];
-        if (! preg_match('/^(' . self::REGEX_VECTOR . ')\s*(.+)?$/sux', $body, $matches)) {
+        if (!preg_match('/^(' . self::REGEX_VECTOR . ')\s*(.+)?$/sux', $body, $matches)) {
             return null;
         }
 

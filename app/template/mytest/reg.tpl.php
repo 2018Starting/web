@@ -100,7 +100,7 @@
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class="active"><a href="#banner">Home</a></li>
                                         <li><a href="/reg">登记</a></li>
-                                        <li><a href="#services">登记</a></li>
+                                        <li><a href="/hz">回执</a></li>
                                         <li><a href="#portfolio">Portfolio</a></li>
                                         <li><a href="#clients">Clients</a></li>
                                         <li><a href="#contact">Contact</a></li>
@@ -264,141 +264,141 @@
     <!-- Custom Scripts -->
     <script type="text/javascript" src="<?= $webRoot ?>/static/js/custom.js"></script>
     <!--流程控制语句start-->
-		<script type="text/javascript">
-			
-			$(function(){
-				
-				var validCode = true;
-				var yzm_num = $('[name="yzm_num"]').value
-				
-				//验证码start
-				$(".yzm").click(function(){
-					var time = 60;
-					var code=$(this);
-					var yzm=$('#phone').val();
-					 if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(yzm))){ 
-     				 alert("请输入正确的手机号"); 
-           			 return false; 
-    			} 
-					$.ajax({
-						url:'/reg/getcode',
-						data:{'mobile':yzm},
-						type:'post',
-						dataType:'json',
-						async:false,
-						timeout:10000,
-						success:function(result){
-							if(result.error==1){
-								alert(result.msg);
-							}else{
-								alert(result.msg);
-								
-							}
-						},
-						error:function(){
-							console.log("ajax请求失败")
-						}
-					})
-					
+    <script type="text/javascript">
+
+        $(function () {
+
+            var validCode = true;
+            var yzm_num = $('[name="yzm_num"]').value
+
+            //验证码start
+            $(".yzm").click(function () {
+                var time = 60;
+                var code = $(this);
+                var yzm = $('#phone').val();
+                if (!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(yzm))) {
+                    alert("请输入正确的手机号");
+                    return false;
+                }
+                $.ajax({
+                    url: '/reg/getcode',
+                    data: {'mobile': yzm},
+                    type: 'post',
+                    dataType: 'json',
+                    async: false,
+                    timeout: 10000,
+                    success: function (result) {
+                        if (result.error == 1) {
+                            alert(result.msg);
+                        } else {
+                            alert(result.msg);
+
+                        }
+                    },
+                    error: function () {
+                        console.log("ajax请求失败")
+                    }
+                })
+
 //					if(yzm_num==){
 //						
 //					}
-					
-					if(validCode){
-						validCode = false;
-						code.addClass("msg1").attr("disabled","disabled");
-						var t = setInterval(function(){
-							time --;
-							code.val(time + "秒");
-							
-							if(time == 0){
-								clearInterval(t);
-								code.val("重新获取");
-								code.removeClass("msg1").removeAttr("disabled","disabled");
-							}
-							console.log(validCode)
-						},1000)
-					}else if(validCode==false){
-						code.addClass("msg1").attr("disabled","disabled");
-						var t = setInterval(function(){
-							time --;
-							code.val(time + "秒");
-							
-							if(time == 0){
-								clearInterval(t);
-								code.val("重新获取");
-								code.removeClass("msg1").removeAttr("disabled","disabled");
-							}
-							
-						},1000)
-					}
-				})
-				
-				//验证码end
-				
-				
-				//表单验证start
-				var demo = $(".demoform").Validform({
-					btnSubmit:".get",
-					showAllError:true,
-					 tiptype:function(msg,o,cssctl){
-					 	if(o.type==3){
-					 		// $(o.obj).nextAll().filter('span').addClass('Validform_wrong').html(msg);
-					 	$(o.obj).nextAll().filter('span').addClass('Validform_wrong').html(msg);
-					 		$(o.obj).parents().children('span').addClass('Validform_wrong').html(msg);
-					 	}else{
-					 	$(o.obj).nextAll().filter('span').removeClass('Validform_wrong').html('');
-					 		$(o.obj).parents().children('span').removeClass('Validform_wrong').html('');
-					 	}						
-					},
-					ajaxPost:true,
-					datatype:{
-						"z1-9":/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/,
-					},
-					callback:function(data){	
-						if(data.error==0){
-							alert(data.msg);
-							window.location="../content/reg2.php?id="+data.id;
-						}else{
-							alert(data.msg);
-						}
-		            }
-				});
+
+                if (validCode) {
+                    validCode = false;
+                    code.addClass("msg1").attr("disabled", "disabled");
+                    var t = setInterval(function () {
+                        time--;
+                        code.val(time + "秒");
+
+                        if (time == 0) {
+                            clearInterval(t);
+                            code.val("重新获取");
+                            code.removeClass("msg1").removeAttr("disabled", "disabled");
+                        }
+                        console.log(validCode)
+                    }, 1000)
+                } else if (validCode == false) {
+                    code.addClass("msg1").attr("disabled", "disabled");
+                    var t = setInterval(function () {
+                        time--;
+                        code.val(time + "秒");
+
+                        if (time == 0) {
+                            clearInterval(t);
+                            code.val("重新获取");
+                            code.removeClass("msg1").removeAttr("disabled", "disabled");
+                        }
+
+                    }, 1000)
+                }
+            })
+
+            //验证码end
 
 
-				demo.addRule([
+            //表单验证start
+            var demo = $(".demoform").Validform({
+                btnSubmit: ".get",
+                showAllError: true,
+                tiptype: function (msg, o, cssctl) {
+                    if (o.type == 3) {
+                        // $(o.obj).nextAll().filter('span').addClass('Validform_wrong').html(msg);
+                        $(o.obj).nextAll().filter('span').addClass('Validform_wrong').html(msg);
+                        $(o.obj).parents().children('span').addClass('Validform_wrong').html(msg);
+                    } else {
+                        $(o.obj).nextAll().filter('span').removeClass('Validform_wrong').html('');
+                        $(o.obj).parents().children('span').removeClass('Validform_wrong').html('');
+                    }
+                },
+                ajaxPost: true,
+                datatype: {
+                    "z1-9": /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/,
+                },
+                callback: function (data) {
+                    if (data.error == 0) {
+                        alert(data.msg);
+                        window.location = "../content/reg2.php?id=" + data.id;
+                    } else {
+                        alert(data.msg);
+                    }
+                }
+            });
 
-				    {
-				        ele:"#id_num",
-				        datatype:"z1-9",
-				        nullmsg:"请输入身份证号码！",
-				        errormsg:"请输入18位身份证号码！"
-				    }
 
-			    ]);
-			    
-				
-				//表单验证end
-				
-				
-				$(".readmore").click(function(){
-					$(".statement").slideToggle("slow");
-				})
+            demo.addRule([
 
-				$(".other_person").click(function(){
-				$(".other").removeClass("other").attr( "dataType","*");
-			})
-			
-			$(".guest").click(function(){
-				$('[name="other"]').addClass("other").removeAttr("dataType","*").val('');
-				
-			})
+                {
+                    ele: "#id_num",
+                    datatype: "z1-9",
+                    nullmsg: "请输入身份证号码！",
+                    errormsg: "请输入18位身份证号码！"
+                }
 
-				
-			})
-			
-		</script>
-		<!--流程控制语句end-->
+            ]);
+
+
+            //表单验证end
+
+
+            $(".readmore").click(function () {
+                $(".statement").slideToggle("slow");
+            })
+
+            $(".other_person").click(function () {
+                $(".other").removeClass("other").attr("dataType", "*");
+            })
+
+            $(".guest").click(function () {
+                $('[name="other"]').addClass("other").removeAttr("dataType", "*").val('');
+
+            })
+
+
+        })
+
+    </script>
+    <!--流程控制语句end-->
 
 </body>
 </html>

@@ -31,7 +31,7 @@ final class Context
      */
     public function __construct()
     {
-        $this->arrays  = array();
+        $this->arrays = array();
         $this->objects = new \SplObjectStorage;
     }
 

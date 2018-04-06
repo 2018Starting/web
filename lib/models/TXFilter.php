@@ -19,12 +19,12 @@ namespace biny\lib;
  * @method int min($field)
  * @method int avg($field)
  * @method array distinct($field)
- * @method array find($field='')
- * @method array query($field='', $key=null)
- * @method array cursor($field='', $instance=true)
- * @method array select($sql, $querys=array())
- * @method array command($sql, $querys=array())
- * @method array count($field='')
+ * @method array find($field = '')
+ * @method array query($field = '', $key = null)
+ * @method array cursor($field = '', $instance = true)
+ * @method array select($sql, $querys = array())
+ * @method array command($sql, $querys = array())
+ * @method array count($field = '')
  * @method array update($sets)
  * @method array addCount($sets)
  */
@@ -49,9 +49,9 @@ class TXFilter
      * @return TXDoubleFilter|TXSingleFilter
      * @throws TXException
      */
-    public static function create($DAO, $filter, $type="__and__", $cond=null)
+    public static function create($DAO, $filter, $type = "__and__", $cond = null)
     {
-        if ($DAO instanceof TXSingleDAO){
+        if ($DAO instanceof TXSingleDAO) {
             return new TXSingleFilter($DAO, $filter, $type, $cond);
         } elseif ($DAO instanceof TXDoubleDAO) {
             return new TXDoubleFilter($DAO, $filter, $type, $cond);
@@ -68,21 +68,21 @@ class TXFilter
      * @param null $cond
      * @throws TXException
      */
-    public function __construct($DAO, $filter, $type="__and__", $cond=null)
+    public function __construct($DAO, $filter, $type = "__and__", $cond = null)
     {
-        if (!($DAO instanceof TXSingleDAO || $DAO instanceof TXDoubleDAO)){
+        if (!($DAO instanceof TXSingleDAO || $DAO instanceof TXDoubleDAO)) {
             throw new TXException(3003, gettype($DAO));
         }
-        if (!$filter){
+        if (!$filter) {
             throw new TXException(3007);
-        } elseif (is_array($filter)){
-            if ($cond){
+        } elseif (is_array($filter)) {
+            if ($cond) {
                 $this->conds = [[$type => [[self::valueKey => $filter], $cond]]];
             } else {
                 $this->conds = [[$type => [[self::valueKey => $filter]]]];
             }
         } elseif (null === $cond) {
-           throw new TXException(3006, gettype($filter));
+            throw new TXException(3006, gettype($filter));
         } elseif (!$filter instanceof TXFilter) {
             throw new TXException(3004, gettype($filter));
         } elseif ($filter->getDAO() !== $DAO) {
@@ -102,28 +102,28 @@ class TXFilter
      * @param string $type
      * @return string
      */
-    protected function buildWhere($conds, $type='and')
+    protected function buildWhere($conds, $type = 'and')
     {
         $wheres = [];
-        foreach ($conds as $values){
-            foreach ($values as $key => $cond){
-                if ($key == "__and__" || $key == "__or__"){
+        foreach ($conds as $values) {
+            foreach ($values as $key => $cond) {
+                if ($key == "__and__" || $key == "__or__") {
                     $key = str_replace("_", "", $key);
                     $sCond = $this->buildWhere($cond, $key);
-                    if ($sCond){
+                    if ($sCond) {
                         $wheres[] = $sCond;
                     }
-                } elseif ($key == self::valueKey){
+                } elseif ($key == self::valueKey) {
                     $sCond = $this->DAO->buildWhere($cond, $type);
-                    if ($sCond){
+                    if ($sCond) {
                         $wheres[] = $sCond;
                     }
                 }
             }
         }
-        if (!$wheres){
+        if (!$wheres) {
             return '';
-        } elseif (count($wheres) == 1){
+        } elseif (count($wheres) == 1) {
             return $wheres[0];
         }
         return "(" . join(") {$type} (", $wheres) . ")";

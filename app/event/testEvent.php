@@ -1,6 +1,7 @@
 <?php
 
 namespace app\event;
+
 use biny\lib\TXLogger;
 
 /**
@@ -9,11 +10,10 @@ use biny\lib\TXLogger;
  * Date: 15-11-5
  * Time: 下午5:18
  */
-
 class testEvent
 {
     public function test($event)
     {
-        TXLogger::info("tigger in event".$event);
+        TXLogger::info("tigger in event" . $event);
     }
 }

@@ -7,6 +7,7 @@
  */
 
 namespace app\model;
+
 use biny\lib\TXFactory;
 use biny\lib\TXString;
 
@@ -34,9 +35,9 @@ class baseModel
      * @param null $id
      * @return person
      */
-    public static function init($id=null)
+    public static function init($id = null)
     {
-        if (!isset(static::$_instance[$id])){
+        if (!isset(static::$_instance[$id])) {
             static::$_instance[$id] = new static($id);
         }
         return static::$_instance[$id];
@@ -59,7 +60,7 @@ class baseModel
 
     public function __set($key, $value)
     {
-        if (array_key_exists($key, $this->_data)){
+        if (array_key_exists($key, $this->_data)) {
             $this->_data[$key] = $value;
             $this->_dirty = true;
         } else {
@@ -74,7 +75,7 @@ class baseModel
 
     public function save()
     {
-        if ($this->_dirty && $this->_data && $this->DAO){
+        if ($this->_dirty && $this->_data && $this->DAO) {
             $this->DAO->updateByPK($this->_pk, $this->_data);
             $this->_dirty = false;
         }

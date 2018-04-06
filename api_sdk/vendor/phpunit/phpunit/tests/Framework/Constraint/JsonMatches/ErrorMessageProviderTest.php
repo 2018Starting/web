@@ -15,7 +15,7 @@ class Framework_Constraint_JsonMatches_ErrorMessageProviderTest extends PHPUnit_
 {
     /**
      * @dataProvider translateTypeToPrefixDataprovider
-     * @covers PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider::translateTypeToPrefix
+     * @covers       PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider::translateTypeToPrefix
      */
     public function testTranslateTypeToPrefix($expected, $type)
     {
@@ -27,7 +27,7 @@ class Framework_Constraint_JsonMatches_ErrorMessageProviderTest extends PHPUnit_
 
     /**
      * @dataProvider determineJsonErrorDataprovider
-     * @covers PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider::determineJsonError
+     * @covers       PHPUnit_Framework_Constraint_JsonMatches_ErrorMessageProvider::determineJsonError
      */
     public function testDetermineJsonError($expected, $error, $prefix)
     {
@@ -43,7 +43,7 @@ class Framework_Constraint_JsonMatches_ErrorMessageProviderTest extends PHPUnit_
     public static function determineJsonErrorDataprovider()
     {
         return array(
-            'JSON_ERROR_NONE'  => array(
+            'JSON_ERROR_NONE' => array(
                 null, 'json_error_none', ''
             ),
             'JSON_ERROR_DEPTH' => array(
@@ -76,8 +76,8 @@ class Framework_Constraint_JsonMatches_ErrorMessageProviderTest extends PHPUnit_
     {
         return array(
             'expected' => array('Expected value JSON decode error - ', 'expected'),
-            'actual'   => array('Actual value JSON decode error - ', 'actual'),
-            'default'  => array('', ''),
+            'actual' => array('Actual value JSON decode error - ', 'actual'),
+            'default' => array('', ''),
         );
     }
 }

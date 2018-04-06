@@ -43,7 +43,8 @@ class ProphecySubjectPatchSpec extends ObjectBehavior
         MethodNode $method1,
         MethodNode $method2,
         MethodNode $method3
-    ) {
+    )
+    {
         $node->addInterface('Prophecy\Prophecy\ProphecySubjectInterface')->willReturn(null);
         $node->addProperty('objectProphecy', 'private')->willReturn(null);
         $node->hasMethod(Argument::any())->willReturn(false);

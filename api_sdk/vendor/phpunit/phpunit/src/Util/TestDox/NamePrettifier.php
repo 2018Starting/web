@@ -91,7 +91,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
             return trim(str_replace('_', ' ', $name));
         }
 
-        $max        = strlen($name);
+        $max = strlen($name);
         $wasNumeric = false;
 
         for ($i = 0; $i < $max; $i++) {
@@ -103,7 +103,7 @@ class PHPUnit_Util_TestDox_NamePrettifier
                 $isNumeric = is_numeric($name[$i]);
 
                 if (!$wasNumeric && $isNumeric) {
-                    $buffer    .= ' ';
+                    $buffer .= ' ';
                     $wasNumeric = true;
                 }
 

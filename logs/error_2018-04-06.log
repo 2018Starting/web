@@ -1,0 +1,1391 @@
+[NOTICE]2018-04-06 11:21:26:609[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:611[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:612[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:613[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:614[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:614[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:615[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 11:21:26:616[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 11:21:26:618[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 11:21:28:879[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 11:21:28:880[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 11:21:33:933[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 11:21:33:979[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 11:21:35:216[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 11:21:35:217[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 11:21:35:221[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 11:24:18:313[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 11:24:18:313[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 11:24:18:318[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 12:23:41:634[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:23:41:634[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 12:23:46:376[::1] /login
+ERROR CODE: 1000
+System Error [syntax error, unexpected '}']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[NOTICE]2018-04-06 12:24:09:043[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:24:09:043[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 12:24:09:043[::1] /login
+ERROR CODE: 1000
+System Error [Call to undefined method app\controller\loginAction::para()]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[NOTICE]2018-04-06 12:24:25:410[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:24:25:410[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:24:25:410[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:24:25:410[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 12:24:25:441[::1] /login
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`is NULL and `Tel`is NULL]
+[ERROR]2018-04-06 12:24:25:441[::1] /login
+ERROR CODE: 2005
+template [mytest/relogin] is not Exist
+#0 E:\github\web\lib\business\TXResponse.php(120): biny\lib\TXResponse->getContent()
+#1 E:\github\web\lib\business\TXController.php(107): biny\lib\TXResponse->__toString()
+#2 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#3 E:\github\web\index.php(21): TXApp::run()
+#4 {main}
+[NOTICE]2018-04-06 12:35:31:402[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:35:31:402[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:35:31:402[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 12:35:31:402[::1] /login
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 12:35:31:418[::1] /login
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`is NULL and `Tel`is NULL]
+[NOTICE]2018-04-06 13:06:30:899[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:06:38:137[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:07:43:466[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:09:30:830[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:09:31:719[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:09:32:125[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:09:36:836[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:10:33:263[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:10:39:722[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:10:44:636[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:10:44:963[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:10:45:197[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:11:06:366[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:12:14:136[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:12:28:817[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:13:24:183[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:13:47:365[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:17:41:023[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:17:53:409[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:18:34:408[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:52:555[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:56:424[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:56:783[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:56:861[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:57:235[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:57:610[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:57:968[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:19:58:062[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:20:02:539[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:21:57:484[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:22:02:289[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:22:12:647[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:647[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:648[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:648[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:649[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:649[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:649[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 13:22:12:650[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 13:22:12:651[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 13:22:14:630[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 13:22:15:457[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 13:22:18:683[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:22:18:683[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:22:18:684[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:22:18:684[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:22:18:699[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 13:22:18:703[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`is NULL and `Tel`is NULL]
+[ERROR]2018-04-06 13:22:18:784[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 13:22:58:362[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:26:062[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:31:647[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:32:958[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:33:348[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:33:426[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:33:862[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:33:956[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:34:065[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:34:502[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:34:939[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:23:54:631[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:24:30:420[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:28:24:417[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:28:28:318[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:28:33:279[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:28:33:279[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:28:33:279[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:28:33:279[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 13:28:33:295[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`is NULL and `Tel`is NULL]
+[NOTICE]2018-04-06 13:29:22:308[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:29:39:671[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:29:40:155[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:29:40:233[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:29:46:130[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:35:33:417[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:35:33:916[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:35:34:353[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:35:45:553[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:35:45:553[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:35:45:553[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 13:35:45:553[::1] /login/yz
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[ERROR]2018-04-06 13:35:45:569[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kk@dk.com' and `Tel`='122']
+[NOTICE]2018-04-06 13:37:02:323[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 13:37:08:064[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kk@dk.com' and `Tel`='1']
+[NOTICE]2018-04-06 13:39:29:345[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:40:47:799[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:40:48:252[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 13:40:52:947[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kk@dk.com' and `Tel`='1']
+[NOTICE]2018-04-06 13:40:53:010[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 13:42:54:757[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kk@dk.com' and `Tel`='123']
+[NOTICE]2018-04-06 13:42:54:804[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:44:51:887[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:44:57:878[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:57:15:383[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 13:57:22:435[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:00:02:106[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:00:24:588[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:00:35:320[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:00:52:605[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:01:01:154[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:08:12:365[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:08:18:706[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:12:34:944[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:12:35:064[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:12:35:802[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:12:35:924[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:12:36:043[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:12:36:116[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:12:36:211[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:12:36:284[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 14:12:52:896[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kz3@k.ccom' and `Tel`='lll']
+[NOTICE]2018-04-06 14:12:52:900[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:12:59:737[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 14:13:42:958[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kz3@k.ccom' and `Tel`='jk']
+[NOTICE]2018-04-06 14:13:42:971[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:45:380[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:13:47:198[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:47:282[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:13:47:471[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:47:541[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:13:47:584[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:47:665[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:13:47:724[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:47:800[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:13:47:858[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:47:933[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 14:13:53:580[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kz3@k.ccom' and `Tel`='k']
+[NOTICE]2018-04-06 14:13:53:599[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:13:56:495[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 14:14:03:194[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:14:12:221[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:15:11:531[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:531[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:531[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:533[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:533[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:533[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:533[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 14:15:11:533[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 14:15:11:536[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 14:15:13:371[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:15:28:183[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='jk@jl.com' and `Tel`='123']
+[NOTICE]2018-04-06 14:15:28:199[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:15:41:986[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:18:32:847[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:18:40:804[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:18:52:411[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:18:55:125[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:18:57:091[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:19:01:193[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:19:21:431[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='k@jhk.com' and `Tel`='kkk']
+[NOTICE]2018-04-06 14:19:21:446[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:21:55:269[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:22:03:958[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:25:49:461[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 14:25:50:694[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 14:25:59:617[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='kk@dk.com' and `Tel`='k']
+[NOTICE]2018-04-06 16:28:38:124[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 16:29:35:239[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:239[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:240[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:240[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:241[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:241[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:241[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:29:35:241[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 16:29:35:243[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 16:30:53:376[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:376[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:377[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:384[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:385[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:386[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:387[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 16:30:53:388[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 16:30:53:394[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 16:32:42:253[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 16:32:42:863[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 16:32:42:863[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[ERROR]2018-04-06 16:33:03:273[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:33:12:694[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[NOTICE]2018-04-06 16:36:05:349[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 16:36:27:005[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:36:41:564[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:36:57:152[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:37:03:689[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:38:39:044[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:38:54:401[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[ERROR]2018-04-06 16:39:05:305[::1] /login/yz
+sql Error => sql Error: Table 'mice.biny_user' doesn't exist [SELECT * FROM mice.`Biny_User` WHERE `Name`='xbbbb' and `Tel`='13061454471']
+[NOTICE]2018-04-06 16:44:43:103[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(36)
+[NOTICE]2018-04-06 16:45:34:744[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 16:45:47:267[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(36)
+[NOTICE]2018-04-06 16:45:47:313[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 16:47:02:187[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(36)
+[NOTICE]2018-04-06 16:47:54:866[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 16:48:30:793[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(36)
+[ERROR]2018-04-06 17:04:23:237[::1] /login
+ERROR CODE: 1000
+System Error [syntax error, unexpected '}']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[NOTICE]2018-04-06 17:05:35:027[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:05:47:641[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:05:53:951[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:06:53:415[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:06:57:240[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:07:08:631[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:07:38:524[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:07:59:648[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:10:05:908[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:10:20:832[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:12:05:640[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:12:19:151[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:12:24:463[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:12:25:856[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:13:31:532[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:13:45:057[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:20:51:457[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:21:11:666[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:24:29:441[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:25:42:245[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:27:07:667[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:27:23:046[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:28:13:926[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:28:35:971[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 17:28:36:165[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 17:45:00:851[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:00:852[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:032[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:032[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:033[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:033[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:034[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:034[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:035[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:035[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:035[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:036[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:036[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:037[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:037[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 17:45:09:038[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[WARNING]2018-04-06 17:45:09:038[::1] /reg/adduser
+WARNING => implode(): Invalid arguments passed
+#1 E:\github\web\app\controller\regAction.php(209)
+[NOTICE]2018-04-06 17:45:09:099[::1] /regok
+WARNING => Undefined variable: user
+#1 E:\github\web\app\controller\regokAction.php(18)
+[NOTICE]2018-04-06 17:45:12:032[::1] /hz
+WARNING => Undefined variable: tel
+#1 E:\github\web\app\template\mytest\hz.tpl.php(146)
+[NOTICE]2018-04-06 21:38:46:784[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:827[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:827[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:828[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:828[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:829[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:830[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:38:46:831[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 21:38:46:835[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 21:38:48:617[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:38:49:294[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:39:07:815[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:39:07:890[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:39:07:980[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:39:40:933[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:39:41:018[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:39:41:199[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:41:52:694[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:42:12:951[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:42:14:180[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:42:16:251[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:42:16:466[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:42:24:633[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:42:24:839[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:42:34:356[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:43:19:248[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:248[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:249[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:250[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:250[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:251[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:251[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[NOTICE]2018-04-06 21:43:19:252[::1] /images/favicon.ico
+WARNING => Array to string conversion
+#1 E:\github\web\lib\TXAutoload.php(59)
+[ERROR]2018-04-06 21:43:19:258[::1] /images/favicon.ico
+ERROR CODE: 1003
+Autoload file[imagesAction] is fails
+#0 [internal function]: biny\lib\TXAutoload::load('imagesAction')
+#1 E:\github\web\lib\business\TXFactory.php(68): spl_autoload_call('imagesAction')
+#2 E:\github\web\lib\business\TXFactory.php(45): biny\lib\TXFactory::loadClass('imagesAction', 'imagesAction')
+#3 E:\github\web\lib\business\TXRequest.php(236): biny\lib\TXFactory::create('imagesAction')
+#4 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#5 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#6 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#7 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#8 E:\github\web\index.php(21): TXApp::run()
+#9 {main}
+[NOTICE]2018-04-06 21:43:21:495[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[ERROR]2018-04-06 21:43:22:597[::1] /favicon.ico
+ERROR CODE: 2001
+Action[favicon.icoAction] is not exists.
+#0 E:\github\web\lib\business\TXController.php(54): biny\lib\TXRequest->getModule(true)
+#1 E:\github\web\lib\business\TXController.php(42): biny\lib\TXController->call(Object(biny\lib\TXRequest))
+#2 E:\github\web\lib\business\TXController.php(105): biny\lib\TXController->execute()
+#3 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#4 E:\github\web\index.php(21): TXApp::run()
+#5 {main}
+[NOTICE]2018-04-06 21:43:31:656[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:43:42:290[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:46:00:291[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:46:28:039[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:47:08:468[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:47:22:849[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 21:47:22:850[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 21:49:45:680[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:49:55:713[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:49:55:823[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:50:10:519[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:50:10:778[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:51:54:452[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:51:55:053[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:51:55:290[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:52:09:997[::1] /login/yz
+WARNING => Undefined index: id
+#1 E:\github\web\app\controller\loginAction.php(37)
+[NOTICE]2018-04-06 21:52:17:052[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:56:05:939[::1] /login
+WARNING => Undefined variable: SwebRoot
+#1 E:\github\web\app\template\mytest\login.tpl.php(16)
+[NOTICE]2018-04-06 21:56:31:725[::1] /hz
+WARNING => Undefined variable: tel
+#1 E:\github\web\app\template\mytest\hz.tpl.php(146)
+[ERROR]2018-04-06 22:01:36:404[::1] /hz
+ERROR CODE: 1006
+TXAPP has no property [model]
+#0 E:\github\web\app\template\mytest\hz.tpl.php(143): TXApp->__get('model')
+#1 E:\github\web\lib\business\TXResponse.php(108): include('E:\\github\\web\\a...')
+#2 E:\github\web\lib\business\TXResponse.php(120): biny\lib\TXResponse->getContent()
+#3 E:\github\web\lib\business\TXController.php(107): biny\lib\TXResponse->__toString()
+#4 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#5 E:\github\web\index.php(21): TXApp::run()
+#6 {main}
+[ERROR]2018-04-06 22:02:38:775[::1] /hz
+ERROR CODE: 1000
+System Error [Cannot use object of type app\model\cus as array]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:02:47:948[::1] /hz
+ERROR CODE: 1000
+System Error [Cannot use object of type app\model\cus as array]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:09:31:884[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected ''Name'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:10:03:194[::1] /hz
+ERROR CODE: 1000
+System Error [Object of class app\model\cus could not be converted to string]
+#0 E:\github\web\app\template\mytest\hz.tpl.php(146): TXApp::handleError(4096, 'Object of class...', 'E:\\github\\web\\a...', 146, Array)
+#1 E:\github\web\lib\business\TXResponse.php(108): include('E:\\github\\web\\a...')
+#2 E:\github\web\lib\business\TXResponse.php(120): biny\lib\TXResponse->getContent()
+#3 E:\github\web\lib\business\TXController.php(107): biny\lib\TXResponse->__toString()
+#4 E:\github\web\lib\TXApp.php(178): biny\lib\TXController->dispatcher()
+#5 E:\github\web\index.php(21): TXApp::run()
+#6 {main}
+[ERROR]2018-04-06 22:50:28:395[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected 'return' (T_RETURN)]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:51:06:492[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected 'echo' (T_ECHO)]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:51:07:600[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected 'echo' (T_ECHO)]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[ERROR]2018-04-06 22:52:57:865[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected 'echo' (T_ECHO)]
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}
+[NOTICE]2018-04-06 22:55:50:111[::1] /reg
+WARNING => Undefined variable: user
+#1 E:\github\web\app\controller\regAction.php(176)
+[NOTICE]2018-04-06 22:55:50:111[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 22:55:50:111[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(479)
+[NOTICE]2018-04-06 23:21:03:031[::1] /reg
+WARNING => Undefined variable: user
+#1 E:\github\web\app\controller\regAction.php(175)
+[NOTICE]2018-04-06 23:21:03:031[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:03:031[::1] /reg
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:754[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:769[::1] /reg/adduser
+WARNING => Undefined index: CONTENT_TYPE
+#1 E:\github\web\lib\business\TXRequest.php(482)
+[NOTICE]2018-04-06 23:21:40:832[::1] /regok
+WARNING => Undefined variable: user
+#1 E:\github\web\app\controller\regokAction.php(18)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant DDDate - assumed 'DDDate'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant DDTime - assumed 'DDTime'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant DDJT - assumed 'DDJT'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant DDJZ - assumed 'DDJZ'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant LKDate - assumed 'LKDate'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant LKTime - assumed 'LKTime'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant LKJT - assumed 'LKJT'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant LKSZ - assumed 'LKSZ'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant ZSYQ1 - assumed 'ZSYQ1'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant ZSYQ2 - assumed 'ZSYQ2'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:32:064[::1] /hz/renew
+WARNING => Use of undefined constant CGLX - assumed 'CGLX'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[ERROR]2018-04-06 23:22:32:064[::1] /hz/renew
+sql Error: => sql Error: Incorrect date value: '$DDDate' for column 'DDDate' at row 1 [UPDATE mice.`cus` SET `DDDate`='$DDDate', `DDTime`='$DDTime', `DDJT`='$DDJT', `DDJZ`='$DDJZ', `LKDate`='$LKDate', `LKTime`='$LKTime', `LKJT`='$LKJT', `LKSZ`='$LKSZ', `ZSYQ1`='$ZSYQ1', `ZSYQ2`='$ZSYQ2', `CGLX`='$CGLX']
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant DDDate - assumed 'DDDate'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant DDTime - assumed 'DDTime'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant DDJT - assumed 'DDJT'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant DDJZ - assumed 'DDJZ'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant LKDate - assumed 'LKDate'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant LKTime - assumed 'LKTime'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant LKJT - assumed 'LKJT'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant LKSZ - assumed 'LKSZ'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant ZSYQ1 - assumed 'ZSYQ1'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant ZSYQ2 - assumed 'ZSYQ2'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[NOTICE]2018-04-06 23:22:46:634[::1] /hz/renew
+WARNING => Use of undefined constant CGLX - assumed 'CGLX'
+#1 E:\github\web\app\controller\hzAction.php(45)
+[ERROR]2018-04-06 23:22:46:634[::1] /hz/renew
+sql Error: => sql Error: Incorrect date value: '$DDDate' for column 'DDDate' at row 1 [UPDATE mice.`cus` SET `DDDate`='$DDDate', `DDTime`='$DDTime', `DDJT`='$DDJT', `DDJZ`='$DDJZ', `LKDate`='$LKDate', `LKTime`='$LKTime', `LKJT`='$LKJT', `LKSZ`='$LKSZ', `ZSYQ1`='$ZSYQ1', `ZSYQ2`='$ZSYQ2', `CGLX`='$CGLX']
+[ERROR]2018-04-06 23:36:00:416[::1] /hz
+ERROR CODE: 1000
+System Error [syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ')']
+#0 [internal function]: TXApp::handleFatalError()
+#1 {main}

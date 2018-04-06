@@ -21,7 +21,8 @@ class ClassCodeGeneratorSpec extends ObjectBehavior
         ArgumentNode $argument12,
         ArgumentNode $argument21,
         ArgumentNode $argument31
-    ) {
+    )
+    {
         $class->getParentClass()->willReturn('RuntimeException');
         $class->getInterfaces()->willReturn(array(
             'Prophecy\Doubler\Generator\MirroredInterface', 'ArrayAccess', 'ArrayIterator'
@@ -185,7 +186,8 @@ PHP;
         ArgumentNode $argument2,
         ArgumentNode $argument3,
         ArgumentNode $argument4
-    ) {
+    )
+    {
         $class->getParentClass()->willReturn('stdClass');
         $class->getInterfaces()->willReturn(array('Prophecy\Doubler\Generator\MirroredInterface'));
         $class->getProperties()->willReturn(array());
@@ -282,7 +284,8 @@ PHP;
         ClassNode $class,
         MethodNode $method,
         ArgumentNode $argument
-    ) {
+    )
+    {
         $class->getParentClass()->willReturn('RuntimeException');
         $class->getInterfaces()->willReturn(array('Prophecy\Doubler\Generator\MirroredInterface'));
         $class->getProperties()->willReturn(array());
@@ -305,7 +308,7 @@ PHP;
         $argument->isNullable()->willReturn(false);
 
         $code = $this->generate('CustomClass', $class);
-        $expected =<<<'PHP'
+        $expected = <<<'PHP'
 namespace  {
 class CustomClass extends \RuntimeException implements \Prophecy\Doubler\Generator\MirroredInterface {
 
@@ -328,7 +331,7 @@ PHP;
         $class->getMethods()->willReturn(array());
 
         $code = $this->generate('CustomClass', $class);
-        $expected =<<<'PHP'
+        $expected = <<<'PHP'
 namespace  {
 class CustomClass extends \stdClass implements \Prophecy\Doubler\Generator\MirroredInterface {
 
@@ -348,7 +351,7 @@ PHP;
         $class->getMethods()->willReturn(array());
 
         $code = $this->generate('My\Awesome\CustomClass', $class);
-        $expected =<<<'PHP'
+        $expected = <<<'PHP'
 namespace My\Awesome {
 class CustomClass extends \stdClass implements \Prophecy\Doubler\Generator\MirroredInterface {
 

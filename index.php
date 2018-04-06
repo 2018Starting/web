@@ -7,17 +7,17 @@ defined('SYS_CONSOLE') or define('SYS_CONSOLE', true);
 defined('SYS_ENV') or define('SYS_ENV', 'dev');
 defined('isMaintenance') or define('isMaintenance', false);
 
-if (SYS_DEBUG){
-    ini_set('display_errors','On');
+if (SYS_DEBUG) {
+    ini_set('display_errors', 'On');
 }
 error_reporting(E_ALL ^ E_NOTICE);
 
-include __DIR__.'/lib/TXApp.php';
+include __DIR__ . '/lib/TXApp.php';
 
 //include __DIR__.'/../lib/XHProf.php';
 //XHProf::start();
 
-TXApp::registry(realpath(__DIR__. '/app'));
+TXApp::registry(realpath(__DIR__ . '/app'));
 TXApp::run();
 
 //$data = XHProf::end();

@@ -30,7 +30,7 @@ final class DocBlockFactory implements DocBlockFactoryInterface
      * Initializes this factory with the required subcontractors.
      *
      * @param DescriptionFactory $descriptionFactory
-     * @param TagFactory         $tagFactory
+     * @param TagFactory $tagFactory
      */
     public function __construct(DescriptionFactory $descriptionFactory, TagFactory $tagFactory)
     {
@@ -66,7 +66,7 @@ final class DocBlockFactory implements DocBlockFactoryInterface
      * @param object|string $docblock A string containing the DocBlock to parse or an object supporting the
      *                                getDocComment method (such as a ReflectionClass object).
      * @param Types\Context $context
-     * @param Location      $location
+     * @param Location $location
      *
      * @return DocBlock
      */
@@ -93,7 +93,7 @@ final class DocBlockFactory implements DocBlockFactoryInterface
         return new DocBlock(
             $summary,
             $description ? $this->descriptionFactory->create($description, $context) : null,
-            array_filter($this->parseTagBlock($tags, $context), function($tag) {
+            array_filter($this->parseTagBlock($tags, $context), function ($tag) {
                 return $tag instanceof Tag;
             }),
             $context,

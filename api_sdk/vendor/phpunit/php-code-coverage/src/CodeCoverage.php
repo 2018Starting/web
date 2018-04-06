@@ -89,8 +89,8 @@ class PHP_CodeCoverage
     /**
      * Constructor.
      *
-     * @param  PHP_CodeCoverage_Driver    $driver
-     * @param  PHP_CodeCoverage_Filter    $filter
+     * @param  PHP_CodeCoverage_Driver $driver
+     * @param  PHP_CodeCoverage_Filter $filter
      * @throws PHP_CodeCoverage_Exception
      */
     public function __construct(PHP_CodeCoverage_Driver $driver = null, PHP_CodeCoverage_Filter $filter = null)
@@ -127,8 +127,8 @@ class PHP_CodeCoverage
     public function clear()
     {
         $this->currentId = null;
-        $this->data      = array();
-        $this->tests     = array();
+        $this->data = array();
+        $this->tests = array();
     }
 
     /**
@@ -145,7 +145,7 @@ class PHP_CodeCoverage
      * Returns the collected code coverage data.
      * Set $raw = true to bypass all filters.
      *
-     * @param  bool  $raw
+     * @param  bool $raw
      * @return array
      * @since  Method available since Release 1.1.0
      */
@@ -200,8 +200,8 @@ class PHP_CodeCoverage
     /**
      * Start collection of code coverage information.
      *
-     * @param  mixed                      $id
-     * @param  bool                       $clear
+     * @param  mixed $id
+     * @param  bool $clear
      * @throws PHP_CodeCoverage_Exception
      */
     public function start($id, $clear = false)
@@ -225,9 +225,9 @@ class PHP_CodeCoverage
     /**
      * Stop collection of code coverage information.
      *
-     * @param  bool                       $append
-     * @param  mixed                      $linesToBeCovered
-     * @param  array                      $linesToBeUsed
+     * @param  bool $append
+     * @param  mixed $linesToBeCovered
+     * @param  array $linesToBeUsed
      * @return array
      * @throws PHP_CodeCoverage_Exception
      */
@@ -258,11 +258,11 @@ class PHP_CodeCoverage
     /**
      * Appends code coverage data.
      *
-     * @param  array                      $data
-     * @param  mixed                      $id
-     * @param  bool                       $append
-     * @param  mixed                      $linesToBeCovered
-     * @param  array                      $linesToBeUsed
+     * @param  array $data
+     * @param  mixed $id
+     * @param  bool $append
+     * @param  mixed $linesToBeCovered
+     * @param  array $linesToBeUsed
      * @throws PHP_CodeCoverage_Exception
      */
     public function append(array $data, $id = null, $append = true, $linesToBeCovered = array(), array $linesToBeUsed = array())
@@ -295,7 +295,7 @@ class PHP_CodeCoverage
             return;
         }
 
-        $size   = 'unknown';
+        $size = 'unknown';
         $status = null;
 
         if ($id instanceof PHPUnit_Framework_TestCase) {
@@ -310,10 +310,10 @@ class PHP_CodeCoverage
             }
 
             $status = $id->getStatus();
-            $id     = get_class($id) . '::' . $id->getName();
+            $id = get_class($id) . '::' . $id->getName();
         } elseif ($id instanceof PHPUnit_Extensions_PhptTestCase) {
             $size = 'large';
-            $id   = $id->getName();
+            $id = $id->getName();
         }
 
         $this->tests[$id] = array('size' => $size, 'status' => $status);
@@ -375,7 +375,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      * @since  Method available since Release 1.1.0
      */
@@ -400,7 +400,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      * @since  Method available since Release 2.0.0
      */
@@ -417,7 +417,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      */
     public function setForceCoversAnnotation($flag)
@@ -433,7 +433,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      */
     public function setMapTestClassNameToCoveredClassName($flag)
@@ -449,7 +449,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      */
     public function setAddUncoveredFilesFromWhitelist($flag)
@@ -465,7 +465,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      */
     public function setProcessUncoveredFilesFromWhitelist($flag)
@@ -481,7 +481,7 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  bool                       $flag
+     * @param  bool $flag
      * @throws PHP_CodeCoverage_Exception
      */
     public function setDisableIgnoredLines($flag)
@@ -499,9 +499,9 @@ class PHP_CodeCoverage
     /**
      * Applies the @covers annotation filtering.
      *
-     * @param  array                                                 $data
-     * @param  mixed                                                 $linesToBeCovered
-     * @param  array                                                 $linesToBeUsed
+     * @param  array $data
+     * @param  mixed $linesToBeCovered
+     * @param  array $linesToBeUsed
      * @throws PHP_CodeCoverage_Exception_UnintentionallyCoveredCode
      */
     private function applyCoversAnnotationFilter(array &$data, $linesToBeCovered, array $linesToBeUsed)
@@ -591,7 +591,7 @@ class PHP_CodeCoverage
      */
     private function addUncoveredFilesFromWhitelist()
     {
-        $data           = array();
+        $data = array();
         $uncoveredFiles = array_diff(
             $this->filter->getWhitelist(),
             array_keys($this->data)
@@ -624,8 +624,8 @@ class PHP_CodeCoverage
 
     /**
      * @param string $uncoveredFile
-     * @param array  $data
-     * @param array  $uncoveredFiles
+     * @param array $data
+     * @param array $uncoveredFiles
      */
     private function processUncoveredFileFromWhitelist($uncoveredFile, array &$data, array $uncoveredFiles)
     {
@@ -650,7 +650,7 @@ class PHP_CodeCoverage
     /**
      * Returns the lines of a source file that should be ignored.
      *
-     * @param  string                     $filename
+     * @param  string $filename
      * @return array
      * @throws PHP_CodeCoverage_Exception
      * @since  Method available since Release 2.0.0
@@ -671,9 +671,9 @@ class PHP_CodeCoverage
                 return $this->ignoredLines[$filename];
             }
 
-            $ignore   = false;
-            $stop     = false;
-            $lines    = file($filename);
+            $ignore = false;
+            $stop = false;
+            $lines = file($filename);
             $numLines = count($lines);
 
             foreach ($lines as $index => $line) {
@@ -689,19 +689,19 @@ class PHP_CodeCoverage
             }
 
             $classes = array_merge($tokens->getClasses(), $tokens->getTraits());
-            $tokens  = $tokens->tokens();
+            $tokens = $tokens->tokens();
 
             foreach ($tokens as $token) {
                 switch (get_class($token)) {
                     case 'PHP_Token_COMMENT':
                     case 'PHP_Token_DOC_COMMENT':
                         $_token = trim($token);
-                        $_line  = trim($lines[$token->getLine() - 1]);
+                        $_line = trim($lines[$token->getLine() - 1]);
 
                         if ($_token == '// @codeCoverageIgnore' ||
                             $_token == '//@codeCoverageIgnore') {
                             $ignore = true;
-                            $stop   = true;
+                            $stop = true;
                         } elseif ($_token == '// @codeCoverageIgnoreStart' ||
                             $_token == '//@codeCoverageIgnoreStart') {
                             $ignore = true;
@@ -712,7 +712,7 @@ class PHP_CodeCoverage
 
                         if (!$ignore) {
                             $start = $token->getLine();
-                            $end   = $start + substr_count($token, "\n");
+                            $end = $start + substr_count($token, "\n");
 
                             // Do not ignore the first line when there is a token
                             // before the comment
@@ -726,7 +726,7 @@ class PHP_CodeCoverage
 
                             // A DOC_COMMENT token or a COMMENT token starting with "/*"
                             // does not contain the final \n character in its text
-                            if (isset($lines[$i-1]) && 0 === strpos($_token, '/*') && '*/' === substr(trim($lines[$i-1]), -2)) {
+                            if (isset($lines[$i - 1]) && 0 === strpos($_token, '/*') && '*/' === substr(trim($lines[$i - 1]), -2)) {
                                 $this->ignoredLines[$filename][] = $i;
                             }
                         }
@@ -765,7 +765,7 @@ class PHP_CodeCoverage
                                         $classes[$token->getName()]['methods']
                                     );
                                 } while ($lastMethod !== null &&
-                                    substr($lastMethod['signature'], 0, 18) == 'anonymous function');
+                                substr($lastMethod['signature'], 0, 18) == 'anonymous function');
 
                                 if ($lastMethod === null) {
                                     $lastMethod = $firstMethod;
@@ -802,7 +802,7 @@ class PHP_CodeCoverage
 
                     if ($stop) {
                         $ignore = false;
-                        $stop   = false;
+                        $stop = false;
                     }
                 }
             }
@@ -820,9 +820,9 @@ class PHP_CodeCoverage
     }
 
     /**
-     * @param  array                                                 $data
-     * @param  array                                                 $linesToBeCovered
-     * @param  array                                                 $linesToBeUsed
+     * @param  array $data
+     * @param  array $linesToBeCovered
+     * @param  array $linesToBeUsed
      * @throws PHP_CodeCoverage_Exception_UnintentionallyCoveredCode
      * @since Method available since Release 2.0.0
      */

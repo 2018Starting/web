@@ -25,7 +25,7 @@ interface PromiseInterface
     /**
      * Evaluates promise.
      *
-     * @param array          $args
+     * @param array $args
      * @param ObjectProphecy $object
      * @param MethodProphecy $method
      *

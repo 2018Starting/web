@@ -7,7 +7,9 @@
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  * Action config class
  */
+
 namespace biny\lib;
+
 use TXApp;
 
 /**
@@ -58,7 +60,7 @@ class TXAction
      */
     public function __construct()
     {
-        if ($this->restApi){
+        if ($this->restApi) {
             parse_str(file_get_contents('php://input'), $this->params);
             $this->params = array_merge($this->params, $_GET);
         } else {
@@ -67,11 +69,11 @@ class TXAction
         $this->posts = $_POST;
         $this->gets = $_GET;
         //判断是否维护中
-        if (isMaintenance){
+        if (isMaintenance) {
             echo $this->display('Main/maintenance');
             exit;
         }
-        if ($this->csrfValidate && !TXApp::$base->request->validateCsrfToken()){
+        if ($this->csrfValidate && !TXApp::$base->request->validateCsrfToken()) {
             header(TXApp::$base->config->get(401, 'http'));
             echo $this->error("Unauthorized");
             exit;
@@ -104,21 +106,21 @@ class TXAction
      */
     private function valid_privilege()
     {
-        if (method_exists($this, 'privilege') && $privileges = $this->privilege()){
+        if (method_exists($this, 'privilege') && $privileges = $this->privilege()) {
             $request = TXApp::$base->request;
-            foreach ($privileges as $method => $privilege){
-                if (is_callable([$this->privilegeService, $method])){
-                    if (!isset($privilege['requires']) || empty($privilege['requires'])){
-                        $privilege['requires'] = [['actions'=>$privilege['actions'] ?: [],
-                            'params'=>isset($privilege['params']) ? $privilege['params'] : []]];
+            foreach ($privileges as $method => $privilege) {
+                if (is_callable([$this->privilegeService, $method])) {
+                    if (!isset($privilege['requires']) || empty($privilege['requires'])) {
+                        $privilege['requires'] = [['actions' => $privilege['actions'] ?: [],
+                            'params' => isset($privilege['params']) ? $privilege['params'] : []]];
                     }
-                    foreach ($privilege['requires'] as $require){
+                    foreach ($privilege['requires'] as $require) {
                         $actions = $require['actions'];
-                        if ($actions === '*' || (is_array($actions) && in_array($request->getMethod(true), $actions))){
+                        if ($actions === '*' || (is_array($actions) && in_array($request->getMethod(true), $actions))) {
                             $params = isset($require['params']) ? $require['params'] : [];
                             array_unshift($params, $this);
-                            if (!call_user_func_array([$this->privilegeService, $method], $params)){
-                                if (isset($privilege['callBack']) && is_callable($privilege['callBack'])){
+                            if (!call_user_func_array([$this->privilegeService, $method], $params)) {
+                                if (isset($privilege['callBack']) && is_callable($privilege['callBack'])) {
                                     call_user_func_array($privilege['callBack'], [$this, $this->privilegeService->getError()]);
                                 }
                                 throw new TXException(6001, [$method, $this->privilegeService->getError()], 403);
@@ -137,7 +139,7 @@ class TXAction
      * @param array $objects
      * @return TXResponse
      */
-    public function display($view, $params=[], $objects=[])
+    public function display($view, $params = [], $objects = [])
     {
         return new TXResponse($view, $params, $objects);
     }
@@ -149,9 +151,9 @@ class TXAction
      * @param null $method
      * @return TXForm
      */
-    public function getForm($name, $method=null)
+    public function getForm($name, $method = null)
     {
-        $name = $name.'Form';
+        $name = $name . 'Form';
         /**
          * @var TXForm $form
          */
@@ -175,9 +177,20 @@ class TXAction
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function getParam($key, $default=null){return $this->param($key, $default);}
-    public function getGet($key, $default=null){return $this->get($key, $default);}
-    public function getPost($key, $default=null){return $this->post($key, $default);}
+    public function getParam($key, $default = null)
+    {
+        return $this->param($key, $default);
+    }
+
+    public function getGet($key, $default = null)
+    {
+        return $this->get($key, $default);
+    }
+
+    public function getPost($key, $default = null)
+    {
+        return $this->post($key, $default);
+    }
 
     /**
      * 获取请求参数
@@ -185,9 +198,9 @@ class TXAction
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function param($key, $default=null)
+    public function param($key, $default = null)
     {
-        if (TXApp::$base->request->getContentType() == 'application/json' || TXApp::$base->request->getContentType() == 'text/json'){
+        if (TXApp::$base->request->getContentType() == 'application/json' || TXApp::$base->request->getContentType() == 'text/json') {
             return $this->getJson($key, $default);
         } else {
             return isset($this->params[$key]) ? $this->params[$key] : $default;
@@ -200,7 +213,7 @@ class TXAction
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function post($key, $default=null)
+    public function post($key, $default = null)
     {
         return isset($this->posts[$key]) ? $this->posts[$key] : $default;
     }
@@ -211,7 +224,7 @@ class TXAction
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function get($key, $default=null)
+    public function get($key, $default = null)
     {
         return isset($this->gets[$key]) ? $this->gets[$key] : $default;
     }
@@ -222,8 +235,9 @@ class TXAction
      * @param null $default
      * @return float|int|mixed|null
      */
-    public function getJson($key, $default=null){
-        if ($this->jsons === NULL){
+    public function getJson($key, $default = null)
+    {
+        if ($this->jsons === NULL) {
             $this->jsons = json_decode($this->getRowPost(), true) ?: [];
         }
         return isset($this->jsons[$key]) ? $this->jsons[$key] : $default;
@@ -235,10 +249,10 @@ class TXAction
      * @param bool $encode
      * @return TXJSONResponse
      */
-    public function json($data, $encode=false)
+    public function json($data, $encode = false)
     {
         $config = TXApp::$base->config->get('response');
-        if ($config['jsonContentType']){
+        if ($config['jsonContentType']) {
             TXApp::$base->request->setContentType($config['jsonContentType']);
         }
         return new TXJSONResponse($data, $encode);
@@ -249,7 +263,7 @@ class TXAction
      * @param bool $encode
      * @return TXJSONResponse
      */
-    public function correct($ret=[], $encode=false)
+    public function correct($ret = [], $encode = false)
     {
         $data = ["flag" => true, "ret" => $ret];
         return $this->json($data, $encode);
@@ -261,12 +275,12 @@ class TXAction
      * @param bool $encode
      * @return TXJSONResponse|TXResponse
      */
-    public function error($msg="数据异常", $json=false, $encode=false)
+    public function error($msg = "数据异常", $json = false, $encode = false)
     {
         TXEvent::trigger(onError, [$msg]);
-        if (!$json && (TXApp::$base->request->isShowTpl() || !TXApp::$base->request->isAjax())){
+        if (!$json && (TXApp::$base->request->isShowTpl() || !TXApp::$base->request->isAjax())) {
             $config = TXApp::$base->config->get('exception');
-            return $this->display($config['errorTpl'], ['msg'=> $msg]);
+            return $this->display($config['errorTpl'], ['msg' => $msg]);
         } else {
             $data = ["flag" => false, "error" => $msg];
             return $this->json($data, $encode);

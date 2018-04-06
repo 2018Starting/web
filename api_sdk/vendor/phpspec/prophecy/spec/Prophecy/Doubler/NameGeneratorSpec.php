@@ -21,7 +21,8 @@ class NameGeneratorSpec extends ObjectBehavior
     function its_name_generates_name_based_on_interface_shortnames(
         \ReflectionClass $interface1,
         \ReflectionClass $interface2
-    ) {
+    )
+    {
         $interface1->getShortName()->willReturn('HandlerInterface');
         $interface2->getShortName()->willReturn('LoaderInterface');
 
@@ -39,7 +40,8 @@ class NameGeneratorSpec extends ObjectBehavior
         \ReflectionClass $class,
         \ReflectionClass $interface1,
         \ReflectionClass $interface2
-    ) {
+    )
+    {
         $class->getName()->willReturn('Some\Custom\Class');
         $interface1->getShortName()->willReturn('HandlerInterface');
         $interface2->getShortName()->willReturn('LoaderInterface');

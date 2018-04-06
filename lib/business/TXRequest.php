@@ -9,15 +9,17 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
-class TXRequest {
+class TXRequest
+{
     private $module;
     /**
      * @var TXAction
      */
-    private $action=null;
-    private $method=null;
+    private $action = null;
+    private $method = null;
     private $csrfToken = null;
     private $_hostInfo = null;
     private $_securePort = null;
@@ -36,9 +38,9 @@ class TXRequest {
      * @param null $method
      * @return null|TXRequest
      */
-    public static function create($module, $method=null)
+    public static function create($module, $method = null)
     {
-        if (NULL === self::$_instance){
+        if (NULL === self::$_instance) {
             self::$_instance = new self($module, $method);
         }
         return self::$_instance;
@@ -49,13 +51,13 @@ class TXRequest {
      */
     public static function getInstance()
     {
-        if (NULL === self::$_instance){
+        if (NULL === self::$_instance) {
             return new self(null);
         }
         return self::$_instance;
     }
 
-    private function __construct($module, $method=null)
+    private function __construct($module, $method = null)
     {
         $this->config = TXApp::$base->config->get('request');
         $this->module = $module;
@@ -67,9 +69,9 @@ class TXRequest {
      * @param null $key
      * @return mixed
      */
-    public function getCookie($key=null)
+    public function getCookie($key = null)
     {
-        if ($key){
+        if ($key) {
             return isset($_COOKIE[$key]) ? $_COOKIE[$key] : null;
         } else {
             return $_COOKIE;
@@ -84,9 +86,9 @@ class TXRequest {
      * @param string $path
      * @param null $domain
      */
-    public function setCookie($key, $value, $expire=86400, $path='/', $domain=null)
+    public function setCookie($key, $value, $expire = 86400, $path = '/', $domain = null)
     {
-        setcookie($key, $value, time()+$expire, $path, $domain);
+        setcookie($key, $value, time() + $expire, $path, $domain);
     }
 
     /**
@@ -95,7 +97,7 @@ class TXRequest {
      */
     public function createCsrfToken()
     {
-        if (!$this->csrfToken || !$this->getCookie($this->config['trueToken'])){
+        if (!$this->csrfToken || !$this->getCookie($this->config['trueToken'])) {
             $trueToken = $this->generateCsrf();
             $this->csrfToken = $this->createCsrfCookie($trueToken);
             $trueKey = $this->config['trueToken'];
@@ -155,7 +157,7 @@ class TXRequest {
         $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $code = '';
         for ($i = 0; $i < $len; $i++) {
-            $code .= substr($chars, mt_rand(0, strlen($chars)-1), 1);
+            $code .= substr($chars, mt_rand(0, strlen($chars) - 1), 1);
         }
         return $code;
     }
@@ -166,7 +168,8 @@ class TXRequest {
      * @param $cidr
      * @return bool
      */
-    private function matchCIDR($addr, $cidr) {
+    private function matchCIDR($addr, $cidr)
+    {
         list($ip, $mask) = explode('/', $cidr);
         return (ip2long($addr) >> (32 - $mask) == ip2long($ip) >> (32 - $mask));
     }
@@ -185,14 +188,14 @@ class TXRequest {
             return true;
         }
         $ips = $this->config['csrfWhiteIps'];
-        foreach ($ips as $ip){
-            if ($this->matchCIDR($this->getUserIp(), $ip)){
+        foreach ($ips as $ip) {
+            if ($this->matchCIDR($this->getUserIp(), $ip)) {
                 return true;
             }
         }
         $trueToken = $this->config['trueToken'];
         $csrfPost = $this->config['csrfPost'];
-        $csrfHeader = 'HTTP_'.str_replace('-', '_', $this->config['csrfHeader']);
+        $csrfHeader = 'HTTP_' . str_replace('-', '_', $this->config['csrfHeader']);
 
         $trueToken = $_COOKIE[$trueToken];
         $test = @hash_hmac('sha256', '', '', false);
@@ -206,7 +209,7 @@ class TXRequest {
             return false;
         }
         $mask = mb_substr($token, 0, 8, '8bit');
-        $token = mb_substr($token, 8, $n-8, '8bit');
+        $token = mb_substr($token, 8, $n - 8, '8bit');
 
         $n1 = mb_strlen($mask, '8bit');
         $n2 = mb_strlen($token, '8bit');
@@ -226,14 +229,14 @@ class TXRequest {
      * @return TXAction|TXSingleDAO|mixed
      * @throws TXException
      */
-    public function getModule($action=false)
+    public function getModule($action = false)
     {
-        if ($action){
-            if (null === $this->action){
-                if (!preg_match("/^[\\w_]+$/", $this->module)){
-                    throw new TXException(2001, $this->module."Action");
+        if ($action) {
+            if (null === $this->action) {
+                if (!preg_match("/^[\\w_]+$/", $this->module)) {
+                    throw new TXException(2001, $this->module . "Action");
                 }
-                $this->action = TXFactory::create($this->module."Action");
+                $this->action = TXFactory::create($this->module . "Action");
             }
             return $this->action;
         } else {
@@ -246,18 +249,18 @@ class TXRequest {
      * @param bool $row
      * @return null|string
      */
-    public function getMethod($row=false)
+    public function getMethod($row = false)
     {
-        if ($row){
+        if ($row) {
             return $this->method;
         } else {
-            if ($this->action && $this->action->getRestful()){
+            if ($this->action && $this->action->getRestful()) {
                 if (isset($_SERVER['HTTP_X_HTTP_METHOD_OVERRIDE'])) {
                     $method = strtoupper($_SERVER['HTTP_X_HTTP_METHOD_OVERRIDE']);
                 } else {
                     $method = isset($_SERVER['REQUEST_METHOD']) ? strtoupper($_SERVER['REQUEST_METHOD']) : 'GET';
                 }
-                return $method."_".$this->method;
+                return $method . "_" . $this->method;
             } else {
                 return 'action_' . $this->method;
             }
@@ -271,7 +274,7 @@ class TXRequest {
      */
     public function header($key)
     {
-        $key = 'HTTP_'.strtoupper(str_replace('-', '_', $key));
+        $key = 'HTTP_' . strtoupper(str_replace('-', '_', $key));
         return isset($_SERVER[$key]) ? $_SERVER[$key] : null;
     }
 
@@ -298,7 +301,7 @@ class TXRequest {
      * @return mixed|string
      * @throws TXException
      */
-    public function getUrl($query=true)
+    public function getUrl($query = true)
     {
         if (RUN_SHELL) {
             global $argv;
@@ -318,7 +321,7 @@ class TXRequest {
         } else {
             throw new TXException(6000);
         }
-        if (!$query && strpos($requestUri, '?')){
+        if (!$query && strpos($requestUri, '?')) {
             $requestUri = strstr($requestUri, '?', true);
         }
         return $requestUri;
@@ -329,13 +332,13 @@ class TXRequest {
      * @param bool $host
      * @return string
      */
-    public function getBaseUrl($host=false)
+    public function getBaseUrl($host = false)
     {
-        if (RUN_SHELL){
+        if (RUN_SHELL) {
             global $argv;
             return $argv[1];
         } else {
-            return $host ? $this->getHostInfo().TXApp::$base->router->rootPath : TXApp::$base->router->rootPath;
+            return $host ? $this->getHostInfo() . TXApp::$base->router->rootPath : TXApp::$base->router->rootPath;
         }
     }
 
@@ -367,7 +370,7 @@ class TXRequest {
     public function getPort()
     {
         if ($this->_port === null) {
-            $this->_port = !$this->getIsSecureConnection() && isset($_SERVER['SERVER_PORT']) ? (int) $_SERVER['SERVER_PORT'] : 80;
+            $this->_port = !$this->getIsSecureConnection() && isset($_SERVER['SERVER_PORT']) ? (int)$_SERVER['SERVER_PORT'] : 80;
         }
 
         return $this->_port;
@@ -378,7 +381,7 @@ class TXRequest {
      */
     public function getIsSecureConnection()
     {
-        if ($this->_isSecure === null){
+        if ($this->_isSecure === null) {
             $this->_isSecure = isset($_SERVER['HTTPS']) && (strcasecmp($_SERVER['HTTPS'], 'on') === 0 || $_SERVER['HTTPS'] == 1)
                 || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strcasecmp($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') === 0;
         }
@@ -391,7 +394,7 @@ class TXRequest {
     public function getSecurePort()
     {
         if ($this->_securePort === null) {
-            $this->_securePort = $this->getIsSecureConnection() && isset($_SERVER['SERVER_PORT']) ? (int) $_SERVER['SERVER_PORT'] : 443;
+            $this->_securePort = $this->getIsSecureConnection() && isset($_SERVER['SERVER_PORT']) ? (int)$_SERVER['SERVER_PORT'] : 443;
         }
 
         return $this->_securePort;
@@ -410,7 +413,7 @@ class TXRequest {
      */
     public function getServerPort()
     {
-        return (int) $_SERVER['SERVER_PORT'];
+        return (int)$_SERVER['SERVER_PORT'];
     }
 
     /**
@@ -444,7 +447,7 @@ class TXRequest {
      */
     public function getUserIP()
     {
-        if (isset($this->config['userIP']) && $this->config['userIP']){
+        if (isset($this->config['userIP']) && $this->config['userIP']) {
             $userIP = $this->header($this->config['userIP']);
             return $userIP ?: (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : null);
         } else {
@@ -480,9 +483,9 @@ class TXRequest {
     }
 
     //设置默认编码
-    public function setContentType($contentType='text/html', $charset='utf-8')
+    public function setContentType($contentType = 'text/html', $charset = 'utf-8')
     {
-        header('Content-type: ' . $contentType.'; charset='.$charset);
+        header('Content-type: ' . $contentType . '; charset=' . $charset);
     }
 
     public function redirect($url)

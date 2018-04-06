@@ -8,6 +8,7 @@
  */
 
 namespace biny\lib;
+
 use TXApp;
 
 /**
@@ -46,23 +47,23 @@ class TXDAO
         $dDbConfig = $dao->getDbConfig();
         $dMaster = is_array($dDbConfig) ? $dDbConfig[0] : $dDbConfig;
         $dSlave = is_array($dDbConfig) ? $dDbConfig[1] : $dDbConfig;
-        if ($tMaster === $dMaster && $tSlave === $dSlave){
+        if ($tMaster === $dMaster && $tSlave === $dSlave) {
             return true;
         }
-        if ($tMaster !== $dMaster){
+        if ($tMaster !== $dMaster) {
             $tConfig = TXApp::$base->app_config->get($tMaster, 'dns');
             $dConfig = TXApp::$base->app_config->get($dMaster, 'dns');
             unset($tConfig['database']);
             unset($dConfig['database']);
-            if (array_diff($tConfig, $dConfig)){
+            if (array_diff($tConfig, $dConfig)) {
                 return false;
             }
-        } else if ($tSlave !== $dSlave){
+        } else if ($tSlave !== $dSlave) {
             $tConfig = TXApp::$base->app_config->get($tSlave, 'dns');
             $dConfig = TXApp::$base->app_config->get($dSlave, 'dns');
             unset($tConfig['database']);
             unset($dConfig['database']);
-            if (array_diff($tConfig, $dConfig)){
+            if (array_diff($tConfig, $dConfig)) {
                 return false;
             }
         }
@@ -120,7 +121,8 @@ class TXDAO
      * @param bool $id
      * @return bool|int|\mysqli_result|string
      */
-    protected function execute($sql, $id=false) {
+    protected function execute($sql, $id = false)
+    {
         $dns = is_array($this->dbConfig) ? $this->dbConfig[0] : $this->dbConfig;
         return TXDatabase::instance($dns)->execute($sql, $id);
     }
@@ -133,7 +135,8 @@ class TXDAO
      * @param bool $instance
      * @return array
      */
-    private function sql($sql, $key=null, $mode=TXDatabase::FETCH_TYPE_ALL, $instance=true) {
+    private function sql($sql, $key = null, $mode = TXDatabase::FETCH_TYPE_ALL, $instance = true)
+    {
         $dns = is_array($this->dbConfig) ? $this->dbConfig[1] : $this->dbConfig;
         return TXDatabase::instance($dns, $instance)->sql($sql, $key, $mode);
     }
@@ -145,7 +148,7 @@ class TXDAO
      * @param int $mode
      * @return array
      */
-    public function select($sql, $querys=[], $mode=TXDatabase::FETCH_TYPE_ALL)
+    public function select($sql, $querys = [], $mode = TXDatabase::FETCH_TYPE_ALL)
     {
         $params = func_get_args();
         $cond = isset($params[3]) ? $params[3] : null;
@@ -162,7 +165,7 @@ class TXDAO
      * @param $querys
      * @return bool|int|\mysqli_result|string
      */
-    public function command($sql, $querys=[])
+    public function command($sql, $querys = [])
     {
         $params = func_get_args();
         $cond = isset($params[2]) ? $params[2] : null;
@@ -182,22 +185,22 @@ class TXDAO
     private function buildQuery($querys, $cond)
     {
         $keys = $values = [];
-        foreach ($querys as $k => $arg){
+        foreach ($querys as $k => $arg) {
             $keys[] = ":$k";
-            if (is_array($arg)){
+            if (is_array($arg)) {
                 $karg = $arg;
-                foreach ($arg as &$value){
+                foreach ($arg as &$value) {
                     $value = is_int($value) ? $value : "'{$this->real_escape_string($value, false)}'";
                 }
                 unset($value);
                 $values[] = join(",", $arg);
                 //keys
                 $keys[] = ";$k";
-                foreach ($karg as &$value){
+                foreach ($karg as &$value) {
                     $value = "`{$this->real_escape_string($value)}`";
                 }
                 $values[] = join(",", $karg);
-            } else if (is_string($arg)){
+            } else if (is_string($arg)) {
                 $values[] = "'{$this->real_escape_string($arg, false)}'";
                 //keys
                 $keys[] = ";$k";
@@ -206,23 +209,23 @@ class TXDAO
                 $values[] = $arg;
             }
         }
-        if (!in_array(":where", $keys) && $cond){
+        if (!in_array(":where", $keys) && $cond) {
             $keys[] = ":where";
             $values[] = $cond->get('where');
         }
-        if (!in_array(":table", $keys)){
+        if (!in_array(":table", $keys)) {
             $keys[] = ":table";
             $values[] = $this->getTable();
         }
-        if (!in_array(":order", $keys) && $cond){
+        if (!in_array(":order", $keys) && $cond) {
             $keys[] = ":order";
             $values[] = $this->buildOrderBy($cond->get('orderby'));
         }
-        if (!in_array(":group", $keys) && $cond){
+        if (!in_array(":group", $keys) && $cond) {
             $keys[] = ":group";
             $values[] = $this->buildGroupBy($cond->get('groupby'), $cond->get('having'));
         }
-        if (!in_array(":addition", $keys) && $cond){
+        if (!in_array(":addition", $keys) && $cond) {
             $keys[] = ":addition";
             $values[] = $this->buildFields('', $cond->get('additions'));
         }
@@ -236,7 +239,8 @@ class TXDAO
      * @param bool $ignore
      * @return mixed|string
      */
-    protected function real_escape_string($string, $ignore=true){
+    protected function real_escape_string($string, $ignore = true)
+    {
         $string = addslashes($string);
         return $ignore ? str_replace('`', '\`', $string) : $string;
     }
@@ -246,7 +250,8 @@ class TXDAO
      * @param $str
      * @return mixed
      */
-    protected function real_like_string($str){
+    protected function real_like_string($str)
+    {
         return str_replace(["_", "%"], ["\\_", "\\%"], addslashes($str));
     }
 
@@ -255,10 +260,10 @@ class TXDAO
      * @param string $fields
      * @return array
      */
-    public function find($fields='')
+    public function find($fields = '')
     {
         $params = func_get_args();
-        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE ".$params[1]->get('where') : "";
+        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE " . $params[1]->get('where') : "";
         $fields = $this->buildFields($fields, isset($params[1]) ? $params[1]->get('additions') : []);
         $orderBy = $this->buildOrderBy(isset($params[1]) ? $params[1]->get('orderby') : []);
         $sql = sprintf("SELECT %s FROM %s%s%s", $fields, $this->getTable(), $where, $orderBy);
@@ -273,10 +278,10 @@ class TXDAO
      * @param null $key
      * @return array
      */
-    public function query($fields='', $key=null)
+    public function query($fields = '', $key = null)
     {
         $params = func_get_args();
-        $where = isset($params[2]) && $params[2]->get('where') ? " WHERE ".$params[2]->get('where') : "";
+        $where = isset($params[2]) && $params[2]->get('where') ? " WHERE " . $params[2]->get('where') : "";
         $limit = $this->buildLimit(isset($params[2]) ? $params[2]->get('limit') : []);
         $orderBy = $this->buildOrderBy(isset($params[2]) ? $params[2]->get('orderby') : []);
         $fields = $this->buildFields($fields, isset($params[2]) ? $params[2]->get('additions') : []);
@@ -293,10 +298,10 @@ class TXDAO
      * @param bool $instance
      * @return array
      */
-    public function cursor($fields='', $instance=true)
+    public function cursor($fields = '', $instance = true)
     {
         $params = func_get_args();
-        $where = isset($params[2]) && $params[2]->get('where') ? " WHERE ".$params[2]->get('where') : "";
+        $where = isset($params[2]) && $params[2]->get('where') ? " WHERE " . $params[2]->get('where') : "";
         $limit = $this->buildLimit(isset($params[2]) ? $params[2]->get('limit') : []);
         $orderBy = $this->buildOrderBy(isset($params[2]) ? $params[2]->get('orderby') : []);
         $fields = $this->buildFields($fields, isset($params[2]) ? $params[2]->get('additions') : []);
@@ -312,10 +317,10 @@ class TXDAO
      * @param string $fields
      * @return array
      */
-    public function distinct($fields='')
+    public function distinct($fields = '')
     {
         $params = func_get_args();
-        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE ".$params[1]->get('where') : "";
+        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE " . $params[1]->get('where') : "";
         $limit = $this->buildLimit(isset($params[1]) ? $params[1]->get('limit') : []);
         $orderBy = $this->buildOrderBy(isset($params[1]) ? $params[1]->get('orderby') : []);
         $fields = $this->buildFields($fields, isset($params[1]) ? $params[1]->get('additions') : []);
@@ -331,11 +336,11 @@ class TXDAO
      * @param string $field
      * @return int
      */
-    public function count($field='')
+    public function count($field = '')
     {
         $params = func_get_args();
-        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE ".$params[1]->get('where') : "";
-        $field = $field ? 'DISTINCT '.$this->buildFields($field) : '0';
+        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE " . $params[1]->get('where') : "";
+        $field = $field ? 'DISTINCT ' . $this->buildFields($field) : '0';
         $groupBy = $this->buildGroupBy(isset($params[1]) ? $params[1]->get('groupby') : [], isset($params[1]) ? $params[1]->get('having') : []);
         $sql = sprintf("SELECT COUNT(%s) as count FROM %s%s%s", $field, $this->getTable(), $where, $groupBy);
         TXEvent::trigger(onSql, [$sql]);
@@ -352,7 +357,7 @@ class TXDAO
     public function update($sets)
     {
         $params = func_get_args();
-        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE ".$params[1]->get('where') : "";
+        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE " . $params[1]->get('where') : "";
         $set = $this->buildSets($sets);
         $sql = sprintf("UPDATE %s SET %s%s", $this->getTable(), $set, $where);
         TXEvent::trigger(onSql, [$sql]);
@@ -369,7 +374,7 @@ class TXDAO
     {
         TXLogger::addError('function addCount is deprecated and will be removed in the future. use update instead', 'deprecated', WARNING);
         $params = func_get_args();
-        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE ".$params[1]->get('where') : "";
+        $where = isset($params[1]) && $params[1]->get('where') ? " WHERE " . $params[1]->get('where') : "";
         $set = $this->buildCount($sets);
         $sql = sprintf("UPDATE %s SET %s%s", $this->getTable(), $set, $where);
         TXEvent::trigger(onSql, [$sql]);
@@ -385,15 +390,15 @@ class TXDAO
      */
     public function __call($method, $args)
     {
-        if (in_array($method, $this->methods)){
-            if ($this instanceof TXSingleDAO){
+        if (in_array($method, $this->methods)) {
+            if ($this instanceof TXSingleDAO) {
                 $cond = new TXSingleCond($this);
             } else {
                 $cond = new TXDoubleCond($this);
             }
             return call_user_func_array([$cond, $method], $args);
-        } else if (in_array($method, $this->calcs)){
-            $where = isset($args[1]) && $args[1]->get('where') ? " WHERE ".$args[1]->get('where') : "";
+        } else if (in_array($method, $this->calcs)) {
+            $where = isset($args[1]) && $args[1]->get('where') ? " WHERE " . $args[1]->get('where') : "";
             $sql = sprintf("SELECT %s(`%s`) as `%s` FROM %s%s", $method, $args[0], $method, $this->getTable(), $where);
             TXEvent::trigger(onSql, [$sql]);
 

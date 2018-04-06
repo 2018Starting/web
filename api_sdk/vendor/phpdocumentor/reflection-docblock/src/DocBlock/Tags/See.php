@@ -49,11 +49,12 @@ class See extends BaseTag implements Factory\StaticMethod
         FqsenResolver $resolver = null,
         DescriptionFactory $descriptionFactory = null,
         TypeContext $context = null
-    ) {
+    )
+    {
         Assert::string($body);
         Assert::allNotNull([$resolver, $descriptionFactory]);
 
-        $parts       = preg_split('/\s+/Su', $body, 2);
+        $parts = preg_split('/\s+/Su', $body, 2);
         $description = isset($parts[1]) ? $descriptionFactory->create($parts[1], $context) : null;
 
         return new static($resolver->resolve($parts[0], $context), $description);

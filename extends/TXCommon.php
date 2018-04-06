@@ -1,5 +1,7 @@
 <?php
+
 use biny\lib\TXLogger;
+
 /**
  * Created by PhpStorm.
  * User: billge

@@ -30,7 +30,7 @@ class ExporterTest extends \PHPUnit_Framework_TestCase
         $obj2 = new \stdClass;
         $obj2->foo = 'bar';
 
-        $obj3 = (object)array(1,2,"Test\r\n",4,5,6,7,8);
+        $obj3 = (object)array(1, 2, "Test\r\n", 4, 5, 6, 7, 8);
 
         $obj = new \stdClass;
         //@codingStandardsIgnoreStart
@@ -59,8 +59,8 @@ class ExporterTest extends \PHPUnit_Framework_TestCase
             array(1.2, '1.2'),
             array(fopen('php://memory', 'r'), 'resource(%d) of type (stream)'),
             array('1', "'1'"),
-            array(array(array(1,2,3), array(3,4,5)),
-        <<<EOF
+            array(array(array(1, 2, 3), array(3, 4, 5)),
+                <<<EOF
 Array &0 (
     0 => Array &1 (
         0 => 1
@@ -77,7 +77,7 @@ EOF
             ),
             // \n\r and \r is converted to \n
             array("this\nis\na\nvery\nvery\nvery\nvery\nvery\nvery\rlong\n\rtext",
-            <<<EOF
+                <<<EOF
 'this
 is
 a
@@ -93,7 +93,7 @@ EOF
             ),
             array(new \stdClass, 'stdClass Object &%x ()'),
             array($obj,
-            <<<EOF
+                <<<EOF
 stdClass Object &%x (
     'null' => null
     'boolean' => true
@@ -124,7 +124,7 @@ EOF
             ),
             array(array(), 'Array &%d ()'),
             array($storage,
-            <<<EOF
+                <<<EOF
 SplObjectStorage Object &%x (
     'foo' => stdClass Object &%x (
         'foo' => 'bar'
@@ -137,7 +137,7 @@ SplObjectStorage Object &%x (
 EOF
             ),
             array($obj3,
-            <<<EOF
+                <<<EOF
 stdClass Object &%x (
     0 => 1
     1 => 2
@@ -312,8 +312,8 @@ EOF;
 
         try {
             $this->assertSame(
-              "'いろはにほへとちりぬるをわかよたれそつねならむうゐのおくや...しゑひもせす'",
-              $this->trimNewline($this->exporter->shortenedExport('いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす'))
+                "'いろはにほへとちりぬるをわかよたれそつねならむうゐのおくや...しゑひもせす'",
+                $this->trimNewline($this->exporter->shortenedExport('いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす'))
             );
         } catch (\Exception $e) {
             mb_internal_encoding($oldMbInternalEncoding);

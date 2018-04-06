@@ -1,6 +1,7 @@
 <?php
 
 namespace app\form;
+
 use biny\lib\TXForm;
 
 /**
@@ -12,9 +13,9 @@ use biny\lib\TXForm;
 class testForm extends TXForm
 {
     protected $_rules = [
-        'id'=>[self::typeInt],
-        'name'=>[self::typeNonEmpty],
-        'status'=>['testCmp']
+        'id' => [self::typeInt],
+        'name' => [self::typeNonEmpty],
+        'status' => ['testCmp']
     ];
 
     public function get_user()

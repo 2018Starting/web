@@ -56,7 +56,7 @@ class PHPUnit_Framework_Constraint_Count extends PHPUnit_Framework_Constraint
                 $iterator = $other;
             }
 
-            $key   = $iterator->key();
+            $key = $iterator->key();
             $count = iterator_count($iterator);
 
             // manually rewind $iterator to previous key, since iterator_count

@@ -120,7 +120,7 @@ class DescriptionFactory
     {
         $count = count($tokens);
         $tagCount = 0;
-        $tags  = [];
+        $tags = [];
 
         for ($i = 1; $i < $count; $i += 2) {
             $tags[] = $this->tagFactory->create($tokens[$i], $context);

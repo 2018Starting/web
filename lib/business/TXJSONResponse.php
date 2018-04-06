@@ -10,7 +10,8 @@
 
 namespace biny\lib;
 
-class TXJSONResponse {
+class TXJSONResponse
+{
     private $data;
 
     /**
@@ -18,10 +19,10 @@ class TXJSONResponse {
      * @param $data
      * @param bool $encode
      */
-    public function __construct($data, $encode=true)
+    public function __construct($data, $encode = true)
     {
         $data = $encode ? TXString::recursionEncode($data) : $data;
-        if (SYS_CONSOLE && TXLogger::$ConsoleOut){
+        if (SYS_CONSOLE && TXLogger::$ConsoleOut) {
             TXLogger::format();
             $data['__logs'] = TXLogger::$ConsoleOut;
             TXLogger::$ConsoleOut = [];

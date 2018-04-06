@@ -86,7 +86,7 @@ class PHP_CodeCoverage_Driver_Xdebug implements PHP_CodeCoverage_Driver
     private function getNumberOfLinesInFile($file)
     {
         $buffer = file_get_contents($file);
-        $lines  = substr_count($buffer, "\n");
+        $lines = substr_count($buffer, "\n");
 
         if (substr($buffer, -1) !== "\n") {
             $lines++;

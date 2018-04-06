@@ -1,6 +1,7 @@
 <?php
 
 namespace app\model;
+
 use TXApp;
 
 /**
@@ -20,10 +21,10 @@ class person extends baseModel
      * @param null $id
      * @return person
      */
-    public static function init($id=null)
+    public static function init($id = null)
     {
         $id = $id ?: TXApp::$base->session->userId;
-        if (!isset(self::$_instance[$id])){
+        if (!isset(self::$_instance[$id])) {
             self::$_instance[$id] = new self($id);
         }
         return self::$_instance[$id];
@@ -32,7 +33,7 @@ class person extends baseModel
     protected function __construct($id)
     {
         $this->DAO = $this->userDAO;
-        if ($id !== NULL){
+        if ($id !== NULL) {
             $this->_data = $this->DAO->getByPk($id);
             $this->_pk = $id;
         }
@@ -61,7 +62,7 @@ class person extends baseModel
      */
     public function login()
     {
-        $this->DAO->updateByPk($this->_pk, ['loginTime'=>time(), 'count'=>['+'=>1]]);
+        $this->DAO->updateByPk($this->_pk, ['loginTime' => time(), 'count' => ['+' => 1]]);
         TXApp::$base->session->userId = $this->_pk;
     }
 

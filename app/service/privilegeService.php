@@ -1,5 +1,7 @@
 <?php
+
 namespace app\service;
+
 use biny\lib\TXService;
 use TXApp;
 
@@ -20,7 +22,7 @@ class privilegeService extends TXService
      */
     public function login_required($action)
     {
-        if (!$this->checkUser()){
+        if (!$this->checkUser()) {
 //            return $this->error();
             TXApp::$base->session->lastUrl = $_SERVER['REQUEST_URI'];
             TXApp::$base->request->redirect('/login/');
@@ -42,7 +44,7 @@ class privilegeService extends TXService
     private function checkUser()
     {
         $user = TXApp::$model->person;
-        if ($user->exist()){
+        if ($user->exist()) {
             return true;
         } else {
             return false;
@@ -63,7 +65,7 @@ class privilegeService extends TXService
      * @param $msg
      * @return bool
      */
-    private function error($msg='校验失败')
+    private function error($msg = '校验失败')
     {
         $this->_errors = $msg;
         return false;

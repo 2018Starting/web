@@ -30,7 +30,7 @@ class PHP_CodeCoverage_Report_XML_Node
 
     protected function setContextNode(DOMElement $context)
     {
-        $this->dom         = $context->ownerDocument;
+        $this->dom = $context->ownerDocument;
         $this->contextNode = $context;
     }
 

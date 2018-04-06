@@ -123,7 +123,7 @@ class PHP_CodeCoverage_FilterTest extends PHPUnit_Framework_TestCase
     public function testAddingFilesToTheBlacklistWorks()
     {
         $facade = new File_Iterator_Facade;
-        $files  = $facade->getFilesAsArray(
+        $files = $facade->getFilesAsArray(
             TEST_FILES_PATH,
             $suffixes = '.php'
         );
@@ -197,7 +197,7 @@ class PHP_CodeCoverage_FilterTest extends PHPUnit_Framework_TestCase
     public function testAddingFilesToTheWhitelistWorks()
     {
         $facade = new File_Iterator_Facade;
-        $files  = $facade->getFilesAsArray(
+        $files = $facade->getFilesAsArray(
             TEST_FILES_PATH,
             $suffixes = '.php'
         );

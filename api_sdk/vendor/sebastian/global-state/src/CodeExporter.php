@@ -55,7 +55,7 @@ class CodeExporter
     }
 
     /**
-     * @param  mixed  $variable
+     * @param  mixed $variable
      * @return string
      */
     private function exportVariable($variable)

@@ -48,7 +48,7 @@ class Argument
      * Checks that argument object has specific state.
      *
      * @param string $methodName
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return Token\ObjectStateToken
      */
@@ -116,7 +116,7 @@ class Argument
     /**
      * Checks that argument array contains (key, value) pair
      *
-     * @param mixed $key   exact value or token
+     * @param mixed $key exact value or token
      * @param mixed $value exact value or token
      *
      * @return Token\ArrayEntryToken

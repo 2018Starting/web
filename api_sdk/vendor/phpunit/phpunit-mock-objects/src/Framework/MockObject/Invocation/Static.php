@@ -21,25 +21,25 @@ class PHPUnit_Framework_MockObject_Invocation_Static implements PHPUnit_Framewor
      * @var array
      */
     protected static $uncloneableExtensions = array(
-      'mysqli'    => true,
-      'SQLite'    => true,
-      'sqlite3'   => true,
-      'tidy'      => true,
-      'xmlwriter' => true,
-      'xsl'       => true
+        'mysqli' => true,
+        'SQLite' => true,
+        'sqlite3' => true,
+        'tidy' => true,
+        'xmlwriter' => true,
+        'xsl' => true
     );
 
     /**
      * @var array
      */
     protected static $uncloneableClasses = array(
-      'Closure',
-      'COMPersistHelper',
-      'IteratorIterator',
-      'RecursiveIteratorIterator',
-      'SplFileObject',
-      'PDORow',
-      'ZipArchive'
+        'Closure',
+        'COMPersistHelper',
+        'IteratorIterator',
+        'RecursiveIteratorIterator',
+        'SplFileObject',
+        'PDORow',
+        'ZipArchive'
     );
 
     /**
@@ -60,12 +60,12 @@ class PHPUnit_Framework_MockObject_Invocation_Static implements PHPUnit_Framewor
     /**
      * @param string $className
      * @param string $methodname
-     * @param array  $parameters
-     * @param bool   $cloneObjects
+     * @param array $parameters
+     * @param bool $cloneObjects
      */
     public function __construct($className, $methodName, array $parameters, $cloneObjects = false)
     {
-        $this->className  = $className;
+        $this->className = $className;
         $this->methodName = $methodName;
         $this->parameters = $parameters;
 
@@ -108,7 +108,7 @@ class PHPUnit_Framework_MockObject_Invocation_Static implements PHPUnit_Framewor
     protected function cloneObject($original)
     {
         $cloneable = null;
-        $object    = new ReflectionObject($original);
+        $object = new ReflectionObject($original);
 
         // Check the blacklist before asking PHP reflection to work around
         // https://bugs.php.net/bug.php?id=53967
@@ -131,7 +131,7 @@ class PHPUnit_Framework_MockObject_Invocation_Static implements PHPUnit_Framewor
         }
 
         if ($cloneable === null && $object->hasMethod('__clone')) {
-            $method    = $object->getMethod('__clone');
+            $method = $object->getMethod('__clone');
             $cloneable = $method->isPublic();
         }
 
